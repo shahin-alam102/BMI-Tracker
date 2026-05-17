@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-
+    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:id="@+id/main"
     android:background="?android:attr/windowBackground"
     android:fillViewport="true">
 
@@ -17,13 +16,15 @@
             android:id="@+id/tvTitle"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/noto_sans_bengali_thin"
             android:text="@string/bmi_calculator"
             android:textColor="?android:attr/textColorPrimary"
             android:textSize="24sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="@id/btnReset"
-            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toStartOf="@id/btnReset"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.40" />
 
@@ -55,6 +56,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
+            android:fontFamily="@font/noto_sans_bengali_thin"
             android:text="@string/ideal_weight"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tvCategory" />
@@ -78,7 +80,6 @@
                 android:orientation="vertical"
                 android:padding="10dp">
 
-
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -93,17 +94,15 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:hint="@string/age"
-                        android:maxWidth="140dp"
-                        app:boxStrokeWidth="1dp"
-                        app:boxStrokeWidthFocused="1.2dp"
-                        app:boxStrokeColor="#A0A0A0"
-                        app:boxCornerRadiusTopStart="8dp"
-                        app:boxCornerRadiusTopEnd="8dp"
-                        app:boxCornerRadiusBottomStart="8dp"
-                        app:boxCornerRadiusBottomEnd="8dp"
                         app:boxBackgroundColor="#FFFFFF"
                         app:boxBackgroundMode="outline"
-                        android:fontFamily="@font/noto_sans_bengali_thin"
+                        app:boxCornerRadiusBottomEnd="8dp"
+                        app:boxCornerRadiusBottomStart="8dp"
+                        app:boxCornerRadiusTopEnd="8dp"
+                        app:boxCornerRadiusTopStart="8dp"
+                        app:boxStrokeColor="#A0A0A0"
+                        app:boxStrokeWidth="1dp"
+                        app:boxStrokeWidthFocused="1.2dp"
                         app:hintTextColor="?attr/colorOnSurfaceVariant">
 
                         <com.google.android.material.textfield.TextInputEditText
@@ -111,43 +110,41 @@
                             style="@style/Widget.BMITracker.TextInputEditText"
                             android:layout_width="match_parent"
                             android:layout_height="54dp"
+                            android:fontFamily="@font/noto_sans_bengali_thin"
+                            android:gravity="center_vertical"
                             android:imeOptions="actionNext"
                             android:inputType="numberDecimal"
-                            android:gravity="center_vertical"
+                            android:maxLength="3"
                             android:paddingTop="0dp"
                             android:paddingBottom="0dp"
-                            android:textSize="16sp"
-                            android:maxLength="3"
                             android:textColor="?attr/colorOnSurface"
-                            android:textColorHint="?attr/colorOnSurfaceVariant" />
+                            android:textColorHint="?attr/colorOnSurfaceVariant"
+                            android:textSize="16sp" />
                     </com.google.android.material.textfield.TextInputLayout>
 
                     <com.google.android.material.button.MaterialButton
-                            android:id="@+id/dropdownGender"
-                            style="@style/Widget.MaterialComponents.Button.TextButton"
-                            android:layout_width="57dp"
-                            android:layout_height="57dp"
-                            android:layout_marginStart="12dp"
-                            android:paddingTop="0dp"
-                            android:paddingBottom="0dp"
-                            android:background="@drawable/circle_button"
-                            app:backgroundTint="@null"
-                            app:backgroundTintMode="add"
-                            android:insetLeft="0dp"
-                            android:insetTop="0dp"
-                            android:insetRight="0dp"
-                            android:insetBottom="0dp"
-                            android:text="Male"
-                            android:textAllCaps="false"
-                            android:textColor="#FFFFFF"
-                            android:textSize="10sp"
-                            app:icon="@drawable/outline_man_24"
-                            app:iconGravity="top"
-                            app:iconSize="30dp"
-                            app:iconTint="#FFFFFF"
-                            app:shapeAppearanceOverlay="@style/ShapeAppearance.MaterialComponents.SmallComponent" />
-
-
+                        android:id="@+id/dropdownGender"
+                        style="@style/Widget.MaterialComponents.Button.TextButton"
+                        android:layout_width="57dp"
+                        android:layout_height="57dp"
+                        android:layout_marginStart="12dp"
+                        android:background="@drawable/circle_button"
+                        android:contentDescription="@string/gender"
+                        android:insetLeft="0dp"
+                        android:insetTop="0dp"
+                        android:insetRight="0dp"
+                        android:insetBottom="0dp"
+                        android:text="@string/gender_male"
+                        android:textAllCaps="false"
+                        android:textColor="#FFFFFF"
+                        android:textSize="12sp"
+                        app:backgroundTint="@null"
+                        app:backgroundTintMode="add"
+                        app:icon="@drawable/outline_man_24"
+                        app:iconGravity="top"
+                        app:iconSize="30dp"
+                        app:iconTint="#FFFFFF"
+                        app:shapeAppearanceOverlay="@style/ShapeAppearance.MaterialComponents.SmallComponent" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -164,16 +161,15 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:hint="@string/enter_height"
-                        android:maxWidth="240dp"
-                        app:boxStrokeWidth="1dp"
-                        app:boxStrokeWidthFocused="1.2dp"
-                        app:boxStrokeColor="#A0A0A0"
-                        app:boxCornerRadiusTopStart="8dp"
-                        app:boxCornerRadiusTopEnd="8dp"
-                        app:boxCornerRadiusBottomStart="8dp"
-                        app:boxCornerRadiusBottomEnd="8dp"
                         app:boxBackgroundColor="#FFFFFF"
                         app:boxBackgroundMode="outline"
+                        app:boxCornerRadiusBottomEnd="8dp"
+                        app:boxCornerRadiusBottomStart="8dp"
+                        app:boxCornerRadiusTopEnd="8dp"
+                        app:boxCornerRadiusTopStart="8dp"
+                        app:boxStrokeColor="#A0A0A0"
+                        app:boxStrokeWidth="1dp"
+                        app:boxStrokeWidthFocused="1.2dp"
                         app:hintTextColor="?attr/colorOnSurfaceVariant">
 
                         <com.google.android.material.textfield.TextInputEditText
@@ -181,14 +177,14 @@
                             style="@style/Widget.BMITracker.TextInputEditText"
                             android:layout_width="match_parent"
                             android:layout_height="54dp"
+                            android:fontFamily="@font/noto_sans_bengali_thin"
                             android:imeOptions="actionNext"
                             android:inputType="numberDecimal"
                             android:paddingTop="0dp"
                             android:paddingBottom="0dp"
-                            android:textSize="16sp"
-                            android:fontFamily="@font/noto_sans_bengali_thin"
                             android:textColor="?attr/colorOnSurface"
-                            android:textColorHint="?attr/colorOnSurfaceVariant" />
+                            android:textColorHint="?attr/colorOnSurfaceVariant"
+                            android:textSize="16sp" />
                     </com.google.android.material.textfield.TextInputLayout>
 
                     <com.google.android.material.button.MaterialButton
@@ -198,16 +194,17 @@
                         android:layout_height="57dp"
                         android:layout_marginStart="12dp"
                         android:background="@drawable/circle_button"
-                        app:backgroundTint="@null"
+                        android:contentDescription="@string/unit_cm"
                         android:insetLeft="0dp"
                         android:insetTop="0dp"
                         android:insetRight="0dp"
                         android:insetBottom="0dp"
-                        android:text="CM"
+                        android:text="@string/unit_cm"
                         android:textAllCaps="true"
                         android:textColor="#FFFFFF"
-                        android:textSize="14sp"
+                        android:textSize="12sp"
                         android:textStyle="bold"
+                        app:backgroundTint="@null"
                         app:icon="@drawable/outline_height_24"
                         app:iconGravity="top"
                         app:iconSize="24dp"
@@ -217,8 +214,8 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:baselineAligned="false"
                     android:layout_marginTop="8dp"
+                    android:baselineAligned="false"
                     android:orientation="horizontal">
 
                     <com.google.android.material.textfield.TextInputLayout
@@ -228,16 +225,15 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:hint="@string/enter_weight"
-                        android:maxWidth="240dp"
-                        app:boxStrokeWidth="1dp"
-                        app:boxStrokeWidthFocused="1.2dp"
-                        app:boxStrokeColor="#A0A0A0"
-                        app:boxCornerRadiusTopStart="8dp"
-                        app:boxCornerRadiusTopEnd="8dp"
-                        app:boxCornerRadiusBottomStart="8dp"
-                        app:boxCornerRadiusBottomEnd="8dp"
                         app:boxBackgroundColor="#FFFFFF"
                         app:boxBackgroundMode="outline"
+                        app:boxCornerRadiusBottomEnd="8dp"
+                        app:boxCornerRadiusBottomStart="8dp"
+                        app:boxCornerRadiusTopEnd="8dp"
+                        app:boxCornerRadiusTopStart="8dp"
+                        app:boxStrokeColor="#A0A0A0"
+                        app:boxStrokeWidth="1dp"
+                        app:boxStrokeWidthFocused="1.2dp"
                         app:hintTextColor="?attr/colorOnSurfaceVariant">
 
                         <com.google.android.material.textfield.TextInputEditText
@@ -245,40 +241,39 @@
                             style="@style/Widget.BMITracker.TextInputEditText"
                             android:layout_width="match_parent"
                             android:layout_height="54dp"
+                            android:fontFamily="@font/noto_sans_bengali_thin"
+                            android:imeOptions="actionDone"
                             android:inputType="numberDecimal"
                             android:paddingTop="0dp"
                             android:paddingBottom="0dp"
-                            android:textSize="16sp"
-                            android:imeOptions="actionDone"
-                            android:fontFamily="@font/noto_sans_bengali_thin"
                             android:textColor="?attr/colorOnSurface"
-                            android:textColorHint="?attr/colorOnSurfaceVariant" />
+                            android:textColorHint="?attr/colorOnSurfaceVariant"
+                            android:textSize="16sp" />
                     </com.google.android.material.textfield.TextInputLayout>
 
-
                     <com.google.android.material.button.MaterialButton
-                            android:id="@+id/dropdownWeightUnit"
-                            style="@style/Widget.MaterialComponents.Button.TextButton"
-                            android:layout_width="57dp"
-                            android:layout_height="57dp"
-                            android:layout_marginStart="12dp"
-                            android:layout_gravity="center_vertical"
-                            android:background="@drawable/circle_button"
-                            app:backgroundTint="@null"
-                            android:insetLeft="0dp"
-                            android:insetTop="0dp"
-                            android:insetRight="0dp"
-                            android:insetBottom="0dp"
-                            android:text="KG"
-                            android:textAllCaps="false"
-                            android:textColor="#FFFFFF"
-                            android:textSize="14sp"
-                            android:textStyle="bold"
-                            app:icon="@drawable/outline_monitor_weight_24"
-                            app:iconGravity="top"
-                            app:iconSize="24dp"
-                            app:iconTint="#FFFFFF" />
-
+                        android:id="@+id/dropdownWeightUnit"
+                        style="@style/Widget.MaterialComponents.Button.TextButton"
+                        android:layout_width="57dp"
+                        android:layout_height="57dp"
+                        android:layout_marginStart="12dp"
+                        android:layout_gravity="center_vertical"
+                        android:background="@drawable/circle_button"
+                        android:contentDescription="@string/unit_kg"
+                        android:insetLeft="0dp"
+                        android:insetTop="0dp"
+                        android:insetRight="0dp"
+                        android:insetBottom="0dp"
+                        android:text="@string/unit_kg"
+                        android:textAllCaps="false"
+                        android:textColor="#FFFFFF"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        app:backgroundTint="@null"
+                        app:icon="@drawable/outline_monitor_weight_24"
+                        app:iconGravity="top"
+                        app:iconSize="24dp"
+                        app:iconTint="#FFFFFF" />
                 </LinearLayout>
             </LinearLayout>
         </com.google.android.material.card.MaterialCardView>
@@ -301,6 +296,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
+            android:fontFamily="@font/noto_sans_bengali_thin"
             android:text="@string/category"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
@@ -310,6 +306,7 @@
             android:id="@+id/lblDifference"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/noto_sans_bengali_thin"
             android:text="@string/difference"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
@@ -320,33 +317,32 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
-            android:textColor="?attr/colorPrimary"
-            android:textStyle="bold"
-            android:textSize="16sp"
+            android:fontFamily="@font/noto_sans_bengali_thin"
             android:text="@string/placeholder_dash"
+            android:textColor="?attr/colorPrimary"
+            android:textSize="16sp"
+            android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/lblDifference"
-             />
-
-
+            app:layout_constraintTop_toBottomOf="@id/lblDifference" />
 
         <TextView
             android:id="@+id/tvCategory"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
+            android:fontFamily="@font/noto_sans_bengali_thin"
+            android:text="@string/placeholder_dash"
             android:textColor="?attr/colorPrimary"
             android:textSize="16sp"
             android:textStyle="bold"
-            android:text="@string/placeholder_dash"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tvLabelCategory"
-            />
+            app:layout_constraintTop_toBottomOf="@id/tvLabelCategory" />
 
         <TextView
             android:id="@+id/tvNormalWeightRange"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/noto_sans_bengali_thin"
             android:text="@string/_00_00_00_00_kg"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="@id/lblNormal" />
@@ -367,46 +363,125 @@
             android:stretchColumns="0"
             app:layout_constraintTop_toBottomOf="@id/divider2">
 
-            <TableRow android:id="@+id/tvChartVerySeverelyUnderweight" android:paddingVertical="2dp">
-                <TextView android:text="@string/very_severely_underweight" android:textColor="@color/text_secondary_dynamic" />
-                <TextView android:gravity="end" android:text="@string/lt_15_9" android:textColor="@color/text_secondary_dynamic" />
+            <TableRow
+                android:id="@+id/tvChartVerySeverelyUnderweight"
+                android:paddingVertical="2dp">
+                <TextView
+                    android:fontFamily="@font/noto_sans_bengali_thin"
+                    android:text="@string/very_severely_underweight"
+                    android:textColor="@color/text_secondary_dynamic" />
+                <TextView
+                    android:layout_gravity="end"
+                    android:fontFamily="@font/noto_sans_bengali_thin"
+                    android:gravity="end"
+                    android:text="@string/lt_15_9"
+                    android:textColor="@color/text_secondary_dynamic" />
             </TableRow>
 
-            <TableRow android:id="@+id/tvChartSeverelyUnderweight" android:paddingVertical="2dp">
-                <TextView android:text="@string/severely_underweight" android:textColor="@color/text_secondary_dynamic" />
-                <TextView android:gravity="end" android:text="@string/_16_0_16_9" android:textColor="@color/text_secondary_dynamic" />
+            <TableRow
+                android:id="@+id/tvChartSeverelyUnderweight"
+                android:paddingVertical="2dp">
+                <TextView
+                    android:fontFamily="@font/noto_sans_bengali_thin"
+                    android:text="@string/severely_underweight"
+                    android:textColor="@color/text_secondary_dynamic" />
+                <TextView
+                    android:layout_gravity="end"
+                    android:fontFamily="@font/noto_sans_bengali_thin"
+                    android:gravity="end"
+                    android:text="@string/_16_0_16_9"
+                    android:textColor="@color/text_secondary_dynamic" />
             </TableRow>
 
-            <TableRow android:id="@+id/tvChartUnderweight" android:paddingVertical="2dp">
-                <TextView android:text="@string/underweight" android:textColor="@color/text_secondary_dynamic" />
-                <TextView android:gravity="end" android:text="@string/_17_0_18_4" android:textColor="@color/text_secondary_dynamic" />
+            <TableRow
+                android:id="@+id/tvChartUnderweight"
+                android:paddingVertical="2dp">
+                <TextView
+                    android:fontFamily="@font/noto_sans_bengali_thin"
+                    android:text="@string/underweight"
+                    android:textColor="@color/text_secondary_dynamic" />
+                <TextView
+                    android:layout_gravity="end"
+                    android:fontFamily="@font/noto_sans_bengali_thin"
+                    android:gravity="end"
+                    android:text="@string/_17_0_18_4"
+                    android:textColor="@color/text_secondary_dynamic" />
             </TableRow>
 
-            <TableRow android:id="@+id/tvChartHealthy" android:paddingVertical="2dp">
-                <TextView android:text="@string/healthy_weight" android:textColor="@color/text_secondary_dynamic" />
-                <TextView android:gravity="end" android:text="@string/_18_5_24_9" android:textColor="@color/text_secondary_dynamic" />
+            <TableRow
+                android:id="@+id/tvChartHealthy"
+                android:paddingVertical="2dp">
+                <TextView
+                    android:fontFamily="@font/noto_sans_bengali_thin"
+                    android:text="@string/healthy_weight"
+                    android:textColor="@color/text_secondary_dynamic" />
+                <TextView
+                    android:layout_gravity="end"
+                    android:fontFamily="@font/noto_sans_bengali_thin"
+                    android:gravity="end"
+                    android:text="@string/_18_5_24_9"
+                    android:textColor="@color/text_secondary_dynamic" />
             </TableRow>
 
-            <TableRow android:id="@+id/tvChartOverweight" android:paddingVertical="2dp">
-                <TextView android:text="@string/overweight" android:textColor="@color/text_secondary_dynamic" />
-                <TextView android:gravity="end" android:text="@string/_25_0_29_9" android:textColor="@color/text_secondary_dynamic" />
+            <TableRow
+                android:id="@+id/tvChartOverweight"
+                android:paddingVertical="2dp">
+                <TextView
+                    android:fontFamily="@font/noto_sans_bengali_thin"
+                    android:text="@string/overweight"
+                    android:textColor="@color/text_secondary_dynamic" />
+                <TextView
+                    android:layout_gravity="end"
+                    android:fontFamily="@font/noto_sans_bengali_thin"
+                    android:gravity="end"
+                    android:text="@string/_25_0_29_9"
+                    android:textColor="@color/text_secondary_dynamic" />
             </TableRow>
 
-            <TableRow android:id="@+id/tvChartObeseClassI" android:paddingVertical="2dp">
-                <TextView android:text="@string/obese_class_i" android:textColor="@color/text_secondary_dynamic" />
-                <TextView android:gravity="end" android:text="@string/_30_0_34_9" android:textColor="@color/text_secondary_dynamic" />
+            <TableRow
+                android:id="@+id/tvChartObeseClassI"
+                android:paddingVertical="2dp">
+                <TextView
+                    android:fontFamily="@font/noto_sans_bengali_thin"
+                    android:text="@string/obese_class_i"
+                    android:textColor="@color/text_secondary_dynamic" />
+                <TextView
+                    android:layout_gravity="end"
+                    android:fontFamily="@font/noto_sans_bengali_thin"
+                    android:gravity="end"
+                    android:text="@string/_30_0_34_9"
+                    android:textColor="@color/text_secondary_dynamic" />
             </TableRow>
 
-            <TableRow android:id="@+id/tvChartObeseClassII" android:paddingVertical="2dp">
-                <TextView android:text="@string/obese_class_ii" android:textColor="@color/text_secondary_dynamic" />
-                <TextView android:gravity="end" android:text="@string/_35_0_39_9" android:textColor="@color/text_secondary_dynamic" />
+            <TableRow
+                android:id="@+id/tvChartObeseClassII"
+                android:paddingVertical="2dp">
+                <TextView
+                    android:fontFamily="@font/noto_sans_bengali_thin"
+                    android:text="@string/obese_class_ii"
+                    android:textColor="@color/text_secondary_dynamic" />
+                <TextView
+                    android:layout_gravity="end"
+                    android:fontFamily="@font/noto_sans_bengali_thin"
+                    android:gravity="end"
+                    android:text="@string/_35_0_39_9"
+                    android:textColor="@color/text_secondary_dynamic" />
             </TableRow>
 
-            <TableRow android:id="@+id/tvChartObeseClassIII" android:paddingVertical="2dp">
-                <TextView android:text="@string/obese_class_iii" android:textColor="@color/text_secondary_dynamic" />
-                <TextView android:gravity="end" android:text="@string/gt_40" android:textColor="@color/text_secondary_dynamic" />
+            <TableRow
+                android:id="@+id/tvChartObeseClassIII"
+                android:paddingVertical="2dp">
+                <TextView
+                    android:fontFamily="@font/noto_sans_bengali_thin"
+                    android:text="@string/obese_class_iii"
+                    android:textColor="@color/text_secondary_dynamic" />
+                <TextView
+                    android:layout_gravity="end"
+                    android:fontFamily="@font/noto_sans_bengali_thin"
+                    android:gravity="end"
+                    android:text="@string/gt_40"
+                    android:textColor="@color/text_secondary_dynamic" />
             </TableRow>
         </TableLayout>
-
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>
