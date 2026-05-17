@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="text_main">#FFFFFF</color>
+    <color name="text_dynamic">#FFFFFF</color> <!-- ডার্ক মোডে সাদা -->
+    <color name="icon_tint">#FFFFFF</color> <!-- ডার্ক মোডে সাদা আইকন -->
+    <color name="text_secondary_dynamic">#E0E0E0</color>
+    <color name="spinner_text_soft">#CFD8DC</color>
+    <color name="spinner_popup_background">#2D2D2D</color>
+    <color name="spinner_ripple_soft">#28FFFFFF</color>
+</resources>

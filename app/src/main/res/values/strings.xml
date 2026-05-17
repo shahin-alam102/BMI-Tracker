@@ -1,0 +1,94 @@
+<resources>
+    <string name="app_name">BMI Tracker</string>
+    <string name="bmi_calculator">BMI Calculator</string>
+    <string name="reset">Reset</string>
+    <string name="age">Age</string>
+    <string name="enter_age">Enter age</string>
+    <string name="height">Height</string>
+    <string name="enter_height">Enter height</string>
+    <string name="gender">Gender</string>
+    <string name="enter_weight">Enter weight</string>
+    <string name="category">Category</string>
+    <string name="difference">Difference</string>
+    <string name="normal_weight">Normal Weight</string>
+    <string name="_00_00_00_00_kg">00.00 - 00.00 kg</string>
+    <string name="very_severely_underweight">Very severely underweight</string>
+    <string name="severely_underweight">Severely underweight</string>
+    <string name="_16_0_16_9">16.0 - 16.9</string>
+    <string name="underweight">Underweight</string>
+    <string name="_17_0_18_4">17.0 - 18.4</string>
+    <string name="healthy_weight">Healthy Weight</string>
+    <string name="_18_5_24_9">18.5 - 24.9</string>
+    <string name="overweight">Overweight</string>
+    <string name="_25_0_29_9">25.0 - 29.9</string>
+    <string name="obese_class_i">Obese Class I</string>
+    <string name="obese_class_ii">Obese Class II</string>
+    <string name="_30_0_34_9">30.0 - 34.9</string>
+    <string name="_35_0_39_9">35.0 - 39.9</string>
+    <string name="obese_class_iii">Obese Class III</string>
+    <string name="gt_40"><![CDATA[>= 40]]></string>
+    <string name="lt_15_9"><![CDATA[<= 15.9]]></string>
+    <string name="weight">Weight</string>
+    <string name="enterheight">Height</string>
+    <string name="weight_">Weight</string>
+    <string name="ageYour">Age</string>
+    <string name="unit">Unit</string>
+    <string name="clear_history">Clear History</string>
+    <string name="history_empty">No history found</string>
+    <string name="bmi_label">BMI</string>
+    <string name="history_empty_message">No BMI history yet&#10;&#10;
+        Calculate your BMI to see history here!</string>
+    <string name="no_history_available">No history available to clear.</string>
+    <string name="menu">Menu</string>
+    <string name="ideal_weight">IDEAL WEIGHT</string>
+    <string name="a11y_gender_dropdown">Gender selection</string>
+    <string name="a11y_height_unit_dropdown">Height unit selection</string>
+    <string name="a11y_weight_unit_dropdown">Weight unit selection</string>
+    <string name="a11y_bmi_gauge">BMI gauge</string>
+    <string name="placeholder_dash">—</string>
+    <string name="preferences">Preferences</string>
+    <string name="language">Language</string>
+    <string name="history_age">Age: %1$s</string>
+    <string name="history_gender">Gender: %1$s</string>
+    <string name="gender_male">Male</string>
+    <string name="gender_female">Female</string>
+    <string name="unit_cm">cm</string>
+    <string name="unit_kg">kg</string>
+
+    <string name="status_healthy">Healthy Weight</string>
+    <string name="status_overweight">Overweight</string>
+    <string name="status_underweight">Underweight</string>
+    <string name="lose_weight">Lose - %1$s kg</string>
+    <string name="gain_weight">Gain + %1$s kg</string>
+    <string name="weight_perfect">Your weight is perfect!</string>
+    <string name="status_very_severely_underweight">Very severely underweight</string>
+    <string name="status_severely_underweight">Severely underweight</string>
+    <string name="status_obese_class_i">Obese Class I</string>
+    <string name="status_obese_class_ii">Obese Class II</string>
+    <string name="status_obese_class_iii">Obese Class III</string>
+
+
+
+    <string name="default_height_unit">Default Height Unit</string>
+    <string name="english_bangla">English</string>
+    <string name="choose_language">Choose Language</string>
+    <string name="system_default">System Default(English)</string>
+    <string name="language_changed">Language changed successfully</string>
+
+
+
+    <string-array name="height_units">
+        <item>cm</item>
+        <item>ft/in</item>
+    </string-array>
+
+    <string-array name="weight_units">
+        <item>kg</item>
+        <item>lb</item>
+    </string-array>
+    <string-array name="gender_options">
+        <item>Male</item>
+        <item>Female</item>
+        <item>Other</item>
+    </string-array>
+</resources>
