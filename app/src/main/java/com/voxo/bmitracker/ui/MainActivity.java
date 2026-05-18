@@ -391,6 +391,20 @@ public class MainActivity extends BaseActivity {
     private void showMenu(View view) {
         PopupMenu popupMenu = new PopupMenu(this, view);
         popupMenu.getMenuInflater().inflate(R.menu.menu_main, popupMenu.getMenu());
+        try {
+            java.lang.reflect.Field field = popupMenu.getClass()
+                    .getDeclaredField("mPopup");
+            field.setAccessible(true);
+            Object menuPopupHelper = field.get(popupMenu);
+            Class<?> classPopupHelper = Class.forName(
+                    menuPopupHelper.getClass().getName());
+            java.lang.reflect.Method setForceIcons = classPopupHelper
+                    .getMethod("setForceShowIcon", boolean.class);
+            setForceIcons.invoke(menuPopupHelper, true);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
         popupMenu.setOnMenuItemClickListener(item -> {
             handleMenuItemClick(item);
             popupMenu.dismiss();  // Explicitly dismiss the menu
