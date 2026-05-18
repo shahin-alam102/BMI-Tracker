@@ -22,10 +22,7 @@
         android:title="@string/menu_item_feedback"
         app:showAsAction="never" />
 
-    <item
-        android:id="@+id/menu_exit"
-        android:title="Exit"
-        app:showAsAction="never" />
+
 
 </menu>
 

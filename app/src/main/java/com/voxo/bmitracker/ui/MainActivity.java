@@ -410,8 +410,6 @@ public class MainActivity extends BaseActivity {
             showToast("BMI Tracker v1.0\nCalculate your Body Mass Index instantly!");
         } else if (itemId == R.id.menu_feedback) {
             showToast("Thank you for your feedback!");
-        } else if (itemId == R.id.menu_exit) {
-            showExitConfirmation();
         }
     }
 
@@ -444,18 +442,6 @@ public class MainActivity extends BaseActivity {
         binding.dropdownWeightUnit.setIconResource(R.drawable.outline_monitor_weight_24);
     }
 
-    private void showExitConfirmation() {
-        new AlertDialog.Builder(this)
-                .setTitle("Exit App")
-                .setMessage("Are you sure you want to exit BMI Tracker?")
-                .setPositiveButton("Yes", (dialog, which) -> {
-                    dialog.dismiss();
-                    finish();
-                })
-                .setNegativeButton("No", (dialog, which) -> dialog.dismiss())
-                .setCancelable(true)
-                .show();
-    }
 
     private String convertToBanglaNumber(String englishNumber) {
         if (englishNumber == null || englishNumber.isEmpty()) return "";
