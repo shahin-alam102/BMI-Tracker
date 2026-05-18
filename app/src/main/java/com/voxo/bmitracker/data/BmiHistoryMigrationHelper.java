@@ -22,7 +22,8 @@ public final class BmiHistoryMigrationHelper {
     private static final String MIGRATION_FLAG = "room_migration_done";
     private static final Object LOCK = new Object();
 
-    private BmiHistoryMigrationHelper() {}
+    private BmiHistoryMigrationHelper() {
+    }
 
     public static void migrateOnce(Context appContext, BmiHistoryDao dao, Gson gson) {
         SharedPreferences prefs = appContext.getSharedPreferences(PREF_NAME, Context.MODE_PRIVATE);
@@ -36,7 +37,8 @@ public final class BmiHistoryMigrationHelper {
             String json = prefs.getString(HISTORY_KEY, null);
             if (json != null && !json.isEmpty() && !"[]".equals(json)) {
                 try {
-                    Type type = new TypeToken<ArrayList<BmiHistory>>() {}.getType();
+                    Type type = new TypeToken<ArrayList<BmiHistory>>() {
+                    }.getType();
                     List<BmiHistory> list = gson.fromJson(json, type);
                     if (list != null) {
                         for (BmiHistory h : list) {

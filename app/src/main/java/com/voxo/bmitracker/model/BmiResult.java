@@ -17,10 +17,27 @@ public class BmiResult {
         this.diffColor = diffColor;
     }
 
-    public float getBmi() { return bmi; }
-    public String getCategory() { return category; }
-    public int getColor() { return color; }
-    public String getNormalRange() { return normalRange; }
-    public String getWeightDiffText() { return weightDiffText; }
-    public int getDiffColor() { return diffColor; }
+    public float getBmi() {
+        return bmi;
+    }
+
+    public String getCategory() {
+        return category;
+    }
+
+    public int getColor() {
+        return color;
+    }
+
+    public String getNormalRange() {
+        return normalRange;
+    }
+
+    public String getWeightDiffText() {
+        return weightDiffText;
+    }
+
+    public int getDiffColor() {
+        return diffColor;
+    }
 }

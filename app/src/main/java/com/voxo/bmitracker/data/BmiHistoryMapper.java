@@ -5,7 +5,8 @@ import com.voxo.bmitracker.model.BmiHistory;
 
 public final class BmiHistoryMapper {
 
-    private BmiHistoryMapper() {}
+    private BmiHistoryMapper() {
+    }
 
     public static BmiHistoryEntity toEntity(BmiHistory model) {
         BmiHistoryEntity e = new BmiHistoryEntity();

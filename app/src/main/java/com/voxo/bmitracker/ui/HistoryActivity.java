@@ -12,6 +12,7 @@ import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.recyclerview.widget.ItemTouchHelper;
+
 import com.voxo.bmitracker.R;
 import com.voxo.bmitracker.databinding.ActivityHistoryBinding;
 import com.voxo.bmitracker.model.BmiHistory;

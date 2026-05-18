@@ -256,8 +256,8 @@
                         style="@style/Widget.MaterialComponents.Button.TextButton"
                         android:layout_width="57dp"
                         android:layout_height="57dp"
-                        android:layout_marginStart="12dp"
                         android:layout_gravity="center_vertical"
+                        android:layout_marginStart="12dp"
                         android:background="@drawable/circle_button"
                         android:contentDescription="@string/unit_kg"
                         android:insetLeft="0dp"
@@ -366,10 +366,12 @@
             <TableRow
                 android:id="@+id/tvChartVerySeverelyUnderweight"
                 android:paddingVertical="2dp">
+
                 <TextView
                     android:fontFamily="@font/noto_sans_bengali_thin"
                     android:text="@string/very_severely_underweight"
                     android:textColor="@color/text_secondary_dynamic" />
+
                 <TextView
                     android:layout_gravity="end"
                     android:fontFamily="@font/noto_sans_bengali_thin"
@@ -381,10 +383,12 @@
             <TableRow
                 android:id="@+id/tvChartSeverelyUnderweight"
                 android:paddingVertical="2dp">
+
                 <TextView
                     android:fontFamily="@font/noto_sans_bengali_thin"
                     android:text="@string/severely_underweight"
                     android:textColor="@color/text_secondary_dynamic" />
+
                 <TextView
                     android:layout_gravity="end"
                     android:fontFamily="@font/noto_sans_bengali_thin"
@@ -396,10 +400,12 @@
             <TableRow
                 android:id="@+id/tvChartUnderweight"
                 android:paddingVertical="2dp">
+
                 <TextView
                     android:fontFamily="@font/noto_sans_bengali_thin"
                     android:text="@string/underweight"
                     android:textColor="@color/text_secondary_dynamic" />
+
                 <TextView
                     android:layout_gravity="end"
                     android:fontFamily="@font/noto_sans_bengali_thin"
@@ -411,10 +417,12 @@
             <TableRow
                 android:id="@+id/tvChartHealthy"
                 android:paddingVertical="2dp">
+
                 <TextView
                     android:fontFamily="@font/noto_sans_bengali_thin"
                     android:text="@string/healthy_weight"
                     android:textColor="@color/text_secondary_dynamic" />
+
                 <TextView
                     android:layout_gravity="end"
                     android:fontFamily="@font/noto_sans_bengali_thin"
@@ -426,10 +434,12 @@
             <TableRow
                 android:id="@+id/tvChartOverweight"
                 android:paddingVertical="2dp">
+
                 <TextView
                     android:fontFamily="@font/noto_sans_bengali_thin"
                     android:text="@string/overweight"
                     android:textColor="@color/text_secondary_dynamic" />
+
                 <TextView
                     android:layout_gravity="end"
                     android:fontFamily="@font/noto_sans_bengali_thin"
@@ -441,10 +451,12 @@
             <TableRow
                 android:id="@+id/tvChartObeseClassI"
                 android:paddingVertical="2dp">
+
                 <TextView
                     android:fontFamily="@font/noto_sans_bengali_thin"
                     android:text="@string/obese_class_i"
                     android:textColor="@color/text_secondary_dynamic" />
+
                 <TextView
                     android:layout_gravity="end"
                     android:fontFamily="@font/noto_sans_bengali_thin"
@@ -456,10 +468,12 @@
             <TableRow
                 android:id="@+id/tvChartObeseClassII"
                 android:paddingVertical="2dp">
+
                 <TextView
                     android:fontFamily="@font/noto_sans_bengali_thin"
                     android:text="@string/obese_class_ii"
                     android:textColor="@color/text_secondary_dynamic" />
+
                 <TextView
                     android:layout_gravity="end"
                     android:fontFamily="@font/noto_sans_bengali_thin"
@@ -471,10 +485,12 @@
             <TableRow
                 android:id="@+id/tvChartObeseClassIII"
                 android:paddingVertical="2dp">
+
                 <TextView
                     android:fontFamily="@font/noto_sans_bengali_thin"
                     android:text="@string/obese_class_iii"
                     android:textColor="@color/text_secondary_dynamic" />
+
                 <TextView
                     android:layout_gravity="end"
                     android:fontFamily="@font/noto_sans_bengali_thin"

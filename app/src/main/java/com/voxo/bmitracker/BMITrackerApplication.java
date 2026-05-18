@@ -1,4 +1,5 @@
 package com.voxo.bmitracker;
+
 import com.voxo.bmitracker.ui.BaseActivity;
 
 import android.app.Application;

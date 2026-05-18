@@ -8,15 +8,17 @@ import android.os.Bundle;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
+
 import androidx.annotation.NonNull;
+
 import com.voxo.bmitracker.R;
+
 import java.util.Locale;
 
 public class SettingsActivity extends BaseActivity {
 
     private static final String PREFS_NAME = "settings";
     private static final String KEY_LANGUAGE = "pref_language";
-
     private TextView tvCurrentLanguage;
     private LinearLayout layoutLanguage;
 
@@ -26,7 +28,8 @@ public class SettingsActivity extends BaseActivity {
 
         try {
             androidx.activity.EdgeToEdge.enable(this);
-        } catch (Throwable ignored) {}
+        } catch (Throwable ignored) {
+        }
 
         setContentView(R.layout.activity_settings);
 

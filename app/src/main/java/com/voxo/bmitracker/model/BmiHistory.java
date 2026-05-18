@@ -49,16 +49,45 @@ public class BmiHistory implements Serializable {
         this.timestamp = System.currentTimeMillis();
     }
 
-    public double getBmi() { return bmi; }
-    public String getCategory() { return category; }
-    public int getColor() { return color; }
-    public String getHeight() { return height; }
-    public String getWeight() { return weight; }
-    public String getHeightUnit() { return heightUnit; }
-    public String getWeightUnit() { return weightUnit; }
-    public String getAge() { return age; }
-    public String getGender() { return gender; }
-    public long getTimestamp() { return timestamp; }
+    public double getBmi() {
+        return bmi;
+    }
+
+    public String getCategory() {
+        return category;
+    }
+
+    public int getColor() {
+        return color;
+    }
+
+    public String getHeight() {
+        return height;
+    }
+
+    public String getWeight() {
+        return weight;
+    }
+
+    public String getHeightUnit() {
+        return heightUnit;
+    }
+
+    public String getWeightUnit() {
+        return weightUnit;
+    }
+
+    public String getAge() {
+        return age;
+    }
+
+    public String getGender() {
+        return gender;
+    }
+
+    public long getTimestamp() {
+        return timestamp;
+    }
 
     public long getDatabaseId() {
         return databaseId;
@@ -78,16 +107,45 @@ public class BmiHistory implements Serializable {
         return sdf.format(new Date(timestamp));
     }
 
-    public void setBmi(double bmi) { this.bmi = bmi; }
-    public void setCategory(String category) { this.category = category; }
-    public void setColor(int color) { this.color = color; }
-    public void setHeight(String height) { this.height = height; }
-    public void setWeight(String weight) { this.weight = weight; }
-    public void setHeightUnit(String heightUnit) { this.heightUnit = heightUnit; }
-    public void setWeightUnit(String weightUnit) { this.weightUnit = weightUnit; }
-    public void setAge(String age) { this.age = age; }
-    public void setGender(String gender) { this.gender = gender; }
-    public void setTimestamp(long timestamp) { this.timestamp = timestamp; }
+    public void setBmi(double bmi) {
+        this.bmi = bmi;
+    }
+
+    public void setCategory(String category) {
+        this.category = category;
+    }
+
+    public void setColor(int color) {
+        this.color = color;
+    }
+
+    public void setHeight(String height) {
+        this.height = height;
+    }
+
+    public void setWeight(String weight) {
+        this.weight = weight;
+    }
+
+    public void setHeightUnit(String heightUnit) {
+        this.heightUnit = heightUnit;
+    }
+
+    public void setWeightUnit(String weightUnit) {
+        this.weightUnit = weightUnit;
+    }
+
+    public void setAge(String age) {
+        this.age = age;
+    }
+
+    public void setGender(String gender) {
+        this.gender = gender;
+    }
+
+    public void setTimestamp(long timestamp) {
+        this.timestamp = timestamp;
+    }
 
     public String getFormattedDate() {
         SimpleDateFormat sdf = new SimpleDateFormat("MMM dd, yyyy HH:mm", Locale.getDefault());

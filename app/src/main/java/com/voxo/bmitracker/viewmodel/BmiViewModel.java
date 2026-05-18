@@ -1,10 +1,13 @@
 package com.voxo.bmitracker.viewmodel;
 
 import android.graphics.Color;
+
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
+
 import com.voxo.bmitracker.model.BmiResult;
+
 import java.util.Locale;
 
 public class BmiViewModel extends ViewModel {

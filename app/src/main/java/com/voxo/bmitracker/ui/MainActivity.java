@@ -10,7 +10,6 @@ import android.view.View;
 import android.view.MenuItem;
 import android.widget.PopupMenu;
 import com.voxo.bmitracker.R;
-
 import android.widget.TextView;
 import android.widget.TableRow;
 import android.widget.Toast;
@@ -22,11 +21,9 @@ import com.voxo.bmitracker.databinding.ActivityMainBinding;
 import com.voxo.bmitracker.model.BmiHistory;
 import com.voxo.bmitracker.viewmodel.BmiViewModel;
 import com.voxo.bmitracker.viewmodel.HistoryViewModel;
-
 import java.util.Locale;
 
 public class MainActivity extends BaseActivity {
-
     private ActivityMainBinding binding;
     private BmiViewModel viewModel;
     private HistoryViewModel historyViewModel;
@@ -60,7 +57,9 @@ public class MainActivity extends BaseActivity {
         setupMaterialInputs();
     }
 
-    /** Safe to call from {@link #onConfigurationChanged(Configuration)} — does not re-bind listeners. */
+    /**
+     * Safe to call from {@link #onConfigurationChanged(Configuration)} — does not re-bind listeners.
+     */
     private void applySpeedViewThemeAndSections() {
         int nightMode = getResources().getConfiguration().uiMode & android.content.res.Configuration.UI_MODE_NIGHT_MASK;
         int color = (nightMode == android.content.res.Configuration.UI_MODE_NIGHT_YES) ? Color.WHITE : Color.BLACK;
@@ -170,12 +169,14 @@ public class MainActivity extends BaseActivity {
             }
         });
     }
+
     private void highlightRow(String category, int color) {
         resetTable();
         TableRow targetRow = null;
 
         if (category.contains("Very Severely")) targetRow = binding.tvChartVerySeverelyUnderweight;
-        else if (category.contains("Severely Underweight")) targetRow = binding.tvChartSeverelyUnderweight;
+        else if (category.contains("Severely Underweight"))
+            targetRow = binding.tvChartSeverelyUnderweight;
         else if (category.equalsIgnoreCase("Underweight")) targetRow = binding.tvChartUnderweight;
         else if (category.equalsIgnoreCase("Healthy Weight")) targetRow = binding.tvChartHealthy;
         else if (category.equalsIgnoreCase("Overweight")) targetRow = binding.tvChartOverweight;
@@ -198,11 +199,17 @@ public class MainActivity extends BaseActivity {
     private void setupListeners() {
         TextWatcher watcher = new TextWatcher() {
             @Override
-            public void onTextChanged(CharSequence s, int start, int before, int count) { triggerCalc(); }
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                triggerCalc();
+            }
+
             @Override
-            public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+            }
+
             @Override
-            public void afterTextChanged(Editable s) {}
+            public void afterTextChanged(Editable s) {
+            }
         };
         binding.etHeight.addTextChangedListener(watcher);
         binding.etWeight.addTextChangedListener(watcher);
@@ -242,11 +249,11 @@ public class MainActivity extends BaseActivity {
 
             if (currentUnit.equalsIgnoreCase("KG")) {
                 binding.dropdownWeightUnit.setText("LB");
-                 binding.dropdownWeightUnit.setIconResource(R.drawable.outline_monitor_weight_24);
+                binding.dropdownWeightUnit.setIconResource(R.drawable.outline_monitor_weight_24);
             } else {
 
                 binding.dropdownWeightUnit.setText("KG");
-                 binding.dropdownWeightUnit.setIconResource(R.drawable.outline_monitor_weight_24);
+                binding.dropdownWeightUnit.setIconResource(R.drawable.outline_monitor_weight_24);
             }
 
             binding.etWeight.setText("");
@@ -449,6 +456,7 @@ public class MainActivity extends BaseActivity {
                 .setCancelable(true)
                 .show();
     }
+
     private String convertToBanglaNumber(String englishNumber) {
         if (englishNumber == null || englishNumber.isEmpty()) return "";
 
