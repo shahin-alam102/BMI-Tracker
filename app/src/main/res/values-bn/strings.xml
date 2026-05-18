@@ -13,7 +13,7 @@
     <string name="category">ক্যাটাগরি</string>
     <string name="difference">পার্থক্য</string>
     <string name="normal_weight">স্বাভাবিক ওজন</string>
-    <string name="_00_00_00_00_kg">00.00 – 00.00 কেজি</string>
+    <string name="normal_weight_range">00.00 – 00.00 কেজি</string>
     <string name="very_severely_underweight">অত্যন্ত কম ওজন</string>
     <string name="severely_underweight">গুরুতর কম ওজন</string>
     <string name="_16_0_16_9">16.0 - 16.9</string>
@@ -69,7 +69,7 @@
     <string name="a11y_height_unit_dropdown">উচ্চতার একক নির্বাচন</string>
     <string name="a11y_weight_unit_dropdown">ওজনের একক নির্বাচন</string>
     <string name="a11y_bmi_gauge">বিএমআই নির্দেশক</string>
-    <string name="placeholder_dash">—</string>
+    <string name="placeholder_dash">— </string>
     <string name="preferences">পছন্দসমূহ</string>
     <string name="language">ভাষা</string>
     <string name="menu">মেনু</string>

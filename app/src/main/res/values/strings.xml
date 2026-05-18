@@ -11,7 +11,7 @@
     <string name="category">Category</string>
     <string name="difference">Difference</string>
     <string name="normal_weight">Normal Weight</string>
-    <string name="_00_00_00_00_kg">00.00 - 00.00 kg</string>
+    <string name="normal_weight_range">00.00 - 00.00 kg</string>
     <string name="very_severely_underweight">Very severely underweight</string>
     <string name="severely_underweight">Severely underweight</string>
     <string name="_16_0_16_9">16.0 - 16.9</string>
@@ -41,12 +41,12 @@
     <string name="no_history_available">No history available to clear.</string>
     <string name="menu">Menu</string>
     <string name="default_height_unit">Default Height Unit</string>
-    <string name="ideal_weight">IDEAL WEIGHT</string>
+    <string name="ideal_weight">Ideal Weight</string>
     <string name="a11y_gender_dropdown">Gender selection</string>
     <string name="a11y_height_unit_dropdown">Height unit selection</string>
     <string name="a11y_weight_unit_dropdown">Weight unit selection</string>
     <string name="a11y_bmi_gauge">BMI gauge</string>
-    <string name="placeholder_dash">—</string>
+    <string name="placeholder_dash">— </string>
     <string name="preferences">Preferences</string>
     <string name="language">Language</string>
     <string name="history_age">Age: %1$s</string>

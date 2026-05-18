@@ -48,14 +48,14 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="12dp"
-            android:textSize="18sp"
+            android:textSize="16sp"
             android:textStyle="bold"
             android:gravity="center"
             android:textColor="?attr/colorPrimary"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@id/tvBMILabel"
             app:layout_constraintTop_toTopOf="@id/tvBMILabel"
-            tools:text="Healthy Weight"
+            tools:text="Very Severely Underweight"
             tools:textColor="#27AE60" />
 
         <!-- Date and Time -->

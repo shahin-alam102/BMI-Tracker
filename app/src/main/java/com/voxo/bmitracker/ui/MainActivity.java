@@ -403,9 +403,10 @@ public class MainActivity extends BaseActivity {
 
     private void clearResults() {
         binding.tvCategory.setText("");
-        binding.tvNormalWeightRange.setText("00.00 - 00.00 kg");
+        binding.tvNormalWeightRange.setText(R.string.normal_weight_range);
         binding.tvWeightDifference.setText("");
-        binding.speedView.speedTo(0);
+        binding.speedView.speedTo(0, 0); // duration 0 = instant, no animation
+        binding.speedView.getIndicator().setColor(Color.GRAY); // neutral color
         resetTable();
     }
 
@@ -477,9 +478,9 @@ public class MainActivity extends BaseActivity {
     }
 
     private void applyDropdownDefaults() {
-        binding.dropdownHeightUnit.setText("CM");
-        binding.dropdownWeightUnit.setText("KG");
-        binding.dropdownGender.setText("Male");
+        binding.dropdownHeightUnit.setText(R.string.unit_cm);
+        binding.dropdownWeightUnit.setText(R.string.unit_kg);
+        binding.dropdownGender.setText(R.string.gender_male);
         binding.dropdownGender.setIconResource(R.drawable.outline_man_24);
         binding.dropdownHeightUnit.setIconResource(R.drawable.outline_height_24);
         binding.dropdownWeightUnit.setIconResource(R.drawable.outline_monitor_weight_24);
