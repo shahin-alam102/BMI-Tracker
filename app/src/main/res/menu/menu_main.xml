@@ -21,6 +21,10 @@
         android:id="@+id/menu_feedback"
         android:title="@string/menu_item_feedback"
         app:showAsAction="never" />
+    <item
+        android:id="@+id/menu_share"
+        android:title="@string/menu_item_share"
+        app:showAsAction="never" />
 
 
 

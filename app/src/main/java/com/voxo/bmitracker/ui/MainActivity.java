@@ -411,6 +411,9 @@ public class MainActivity extends BaseActivity {
         } else if (itemId == R.id.menu_feedback) {
             showToast("Thank you for your feedback!");
         }
+        else if (itemId == R.id.menu_share) {
+            showToast("Thank you for sharing!");
+        }
     }
 
     private void showToast(String message) {
