@@ -9,18 +9,23 @@ import android.text.TextWatcher;
 import android.view.View;
 import android.view.MenuItem;
 import android.widget.PopupMenu;
+
 import com.voxo.bmitracker.R;
+
 import android.widget.TextView;
 import android.widget.TableRow;
 import android.widget.Toast;
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.lifecycle.ViewModelProvider;
+
 import com.github.anastr.speedviewlib.components.Section;
 import com.voxo.bmitracker.databinding.ActivityMainBinding;
 import com.voxo.bmitracker.model.BmiHistory;
 import com.voxo.bmitracker.viewmodel.BmiViewModel;
 import com.voxo.bmitracker.viewmodel.HistoryViewModel;
+
 import java.util.Locale;
 
 public class MainActivity extends BaseActivity {
@@ -214,45 +219,55 @@ public class MainActivity extends BaseActivity {
         binding.etHeight.addTextChangedListener(watcher);
         binding.etWeight.addTextChangedListener(watcher);
 
+        binding.dropdownGender.setText(R.string.gender_male);
+        binding.dropdownHeightUnit.setText(R.string.unit_cm);
+        binding.dropdownWeightUnit.setText(R.string.unit_kg);
+
         binding.btnReset.setOnClickListener(v -> clearAll());
         binding.btnMenu.setOnClickListener(this::showMenu);
 
+        // --- GENDER TOGGLE ---
         binding.dropdownGender.setOnClickListener(v -> {
             String current = binding.dropdownGender.getText().toString();
+            String maleStr = getString(R.string.gender_male);
 
-            if (current.equalsIgnoreCase("Male")) {
-                binding.dropdownGender.setText("Female");
+            if (current.equalsIgnoreCase(maleStr)) {
+                binding.dropdownGender.setText(R.string.gender_female);
                 binding.dropdownGender.setIconResource(R.drawable.outline_woman_24); // Female icon
             } else {
-                binding.dropdownGender.setText("Male");
+                binding.dropdownGender.setText(R.string.gender_male);
                 binding.dropdownGender.setIconResource(R.drawable.outline_man_24); // Male icon
             }
 
             triggerCalc();
         });
-        // Height Toggle
+
+        // --- HEIGHT UNIT TOGGLE (CM <-> Fit/Inc) ---
         binding.dropdownHeightUnit.setOnClickListener(v -> {
-            if (binding.dropdownHeightUnit.getText().toString().equals("CM")) {
-                binding.dropdownHeightUnit.setText("FT/IN");
+            String currentUnit = binding.dropdownHeightUnit.getText().toString();
+            String cmStr = getString(R.string.unit_cm);
+
+            if (currentUnit.equalsIgnoreCase(cmStr)) {
+                binding.dropdownHeightUnit.setText(R.string.unit_inch);
                 binding.dropdownHeightUnit.setIconResource(R.drawable.outline_height_24);
             } else {
-                binding.dropdownHeightUnit.setText("CM");
+                binding.dropdownHeightUnit.setText(R.string.unit_cm);
                 binding.dropdownHeightUnit.setIconResource(R.drawable.outline_height_24);
             }
             binding.etHeight.setText("");
             triggerCalc();
         });
+
         // --- WEIGHT UNIT TOGGLE (KG <-> LB) ---
         binding.dropdownWeightUnit.setOnClickListener(v -> {
-
             String currentUnit = binding.dropdownWeightUnit.getText().toString();
+            String kgStr = getString(R.string.unit_kg);
 
-            if (currentUnit.equalsIgnoreCase("KG")) {
-                binding.dropdownWeightUnit.setText("LB");
+            if (currentUnit.equalsIgnoreCase(kgStr)) {
+                binding.dropdownWeightUnit.setText(R.string.unit_lbs);
                 binding.dropdownWeightUnit.setIconResource(R.drawable.outline_monitor_weight_24);
             } else {
-
-                binding.dropdownWeightUnit.setText("KG");
+                binding.dropdownWeightUnit.setText(R.string.unit_kg);
                 binding.dropdownWeightUnit.setIconResource(R.drawable.outline_monitor_weight_24);
             }
 
@@ -314,13 +329,25 @@ public class MainActivity extends BaseActivity {
     }
 
     private String getHeightUnit() {
-        // binding.dropdownHeightUnit MaterialButton
-        return binding.dropdownHeightUnit.getText().toString().trim().toLowerCase();
+        String currentUnit = binding.dropdownHeightUnit.getText().toString().trim();
+        String cmStr = getString(R.string.unit_cm);
+
+        if (currentUnit.equalsIgnoreCase(cmStr)) {
+            return "cm";
+        } else {
+            return "ft";
+        }
     }
 
     private String getWeightUnit() {
-        // binding.dropdownWeightUnit MaterialButton
-        return binding.dropdownWeightUnit.getText().toString().trim().toLowerCase();
+        String currentUnit = binding.dropdownWeightUnit.getText().toString().trim();
+        String kgStr = getString(R.string.unit_kg);
+
+        if (currentUnit.equalsIgnoreCase(kgStr)) {
+            return "kg";
+        } else {
+            return "lb";
+        }
     }
 
     private String getGenderSelection() {
@@ -424,8 +451,7 @@ public class MainActivity extends BaseActivity {
             showToast("BMI Tracker v1.0\nCalculate your Body Mass Index instantly!");
         } else if (itemId == R.id.menu_feedback) {
             showToast("Thank you for your feedback!");
-        }
-        else if (itemId == R.id.menu_share) {
+        } else if (itemId == R.id.menu_share) {
             showToast("Thank you for sharing!");
         }
     }

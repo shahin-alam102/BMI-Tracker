@@ -1,119 +1,100 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-        <string name="app_name">বিএমআই ট্র্যাকার</string>
-        <string name="bmi_calculator">বিএমআই ক্যালকুলেটর</string>
-        <string name="reset">রিসেট</string>
+    <string name="app_name">বিএমআই ট্র্যাকার</string>
+    <string name="bmi_calculator">বিএমআই ক্যালকুলেটর</string>
+    <string name="reset">রিসেট</string>
+    <string name="age">বয়স</string>
+    <string name="enter_age">বয়স লিখুন</string>
+    <string name="height">উচ্চতা</string>
+    <string name="enter_height">উচ্চতা লিখুন</string>
+    <string name="gender">লিঙ্গ</string>
+    <string name="enter_weight">ওজন লিখুন</string>
+    <string name="category">ক্যাটাগরি</string>
+    <string name="difference">পার্থক্য</string>
+    <string name="normal_weight">স্বাভাবিক ওজন</string>
+    <string name="_00_00_00_00_kg">00.00 – 00.00 কেজি</string>
+    <string name="very_severely_underweight">অত্যন্ত কম ওজন</string>
+    <string name="severely_underweight">গুরুতর কম ওজন</string>
+    <string name="_16_0_16_9">16.0 - 16.9</string>
+    <string name="underweight">কম ওজন</string>
+    <string name="_17_0_18_4">17.0 - 18.4</string>
+    <string name="healthy_weight">স্বাস্থ্যকর ওজন</string>
+    <string name="_18_5_24_9">18.5 - 24.9</string>
+    <string name="overweight">অতিরিক্ত ওজন</string>
+    <string name="_25_0_29_9">25.0 - 29.9</string>
+    <string name="obese_class_i">স্থূলতা শ্রেণি I</string>
+    <string name="obese_class_ii">স্থূলতা শ্রেণি II</string>
+    <string name="_30_0_34_9">30.0 - 34.9</string>
+    <string name="_35_0_39_9">35.0 - 39.9</string>
+    <string name="obese_class_iii">স্থূলতা শ্রেণি III</string>
+    <string name="gt_40"><![CDATA[>= 40]]></string>
+    <string name="lt_15_9"><![CDATA[<= 15.9]]></string>
+    <string name="weight">ওজন</string>
+    <string name="enterheight">উচ্চতা</string>
+    <string name="weight_">ওজন</string>
+    <string name="ageYour">বয়স</string>
+    <string name="unit">ইউনিট</string>
+    <string name="clear_history">ইতিহাস মুছুন</string>
+    <string name="history_empty">কোনো ইতিহাস পাওয়া যায়নি</string>
+    <string name="bmi_label">বিএমআই</string>
+    <string name="ideal_weight">আদর্শ ওজন</string>
+    <string name="history_empty_message">কোনো বিএমআই ইতিহাস নেই&#10;&#10;ইতিহাস দেখতে আগে বিএমআই ক্যালকুলেট করুন!</string>
+    <string name="no_history_available">মুছার মতো কোনো ইতিহাস নেই।</string>
+    <string name="english_bangla">বাংলা</string>
+    <string name="choose_language">ভাষা পরিবর্তন করুন</string>
+    <string name="system_default">System Default(বাংলা)</string>
+    <string name="language_changed">ভাষা সফলভাবে পরিবর্তন করা হয়েছে</string>
+    <string name="history_age">বয়স: %1$s</string>
+    <string name="history_gender">লিঙ্গ: %1$s</string>
+    <string name="gender_male">পুরুষ</string>
+    <string name="gender_female">নারী</string>
+    <string name="unit_cm">সেমি</string>
+    <string name="unit_inch">ফুট</string>
+    <string name="unit_kg">কেজি</string>
+    <string name="unit_lbs">পাউন্ড</string>
+    <string name="status_healthy">স্বাস্থ্যকর ওজন</string>
+    <string name="status_overweight">অতিরিক্ত ওজন</string>
+    <string name="status_underweight">কম ওজন</string>
+    <string name="lose_weight">কমাইতে হবে - %1$s কেজি</string>
+    <string name="gain_weight">বাড়াইতে হবে + %1$s কেজি</string>
+    <string name="weight_perfect">আপনার ওজন একদম নিখুঁত!</string>
+    <string name="status_very_severely_underweight">অত্যন্ত মারাত্মক কম ওজন</string>
+    <string name="status_severely_underweight">গুরুতর কম ওজন</string>
+    <string name="status_obese_class_i">স্থূলতা শ্রেণী I</string>
+    <string name="status_obese_class_ii">স্থূলতা শ্রেণী II</string>
+    <string name="status_obese_class_iii">স্থূলতা শ্রেণী III</string>
 
-        <string name="age">বয়স</string>
-        <string name="enter_age">বয়স লিখুন</string>
+    <string name="a11y_gender_dropdown">লিঙ্গ নির্বাচন</string>
+    <string name="a11y_height_unit_dropdown">উচ্চতার একক নির্বাচন</string>
+    <string name="a11y_weight_unit_dropdown">ওজনের একক নির্বাচন</string>
+    <string name="a11y_bmi_gauge">বিএমআই নির্দেশক</string>
+    <string name="placeholder_dash">—</string>
+    <string name="preferences">পছন্দসমূহ</string>
+    <string name="language">ভাষা</string>
+    <string name="menu">মেনু</string>
+    <string name="default_height_unit">ডিফল্ট উচ্চতার একক</string>
 
-        <string name="height">উচ্চতা</string>
-        <string name="enter_height">উচ্চতা লিখুন</string>
+    <string name="menu_item_history">ইতিহাস</string>
+    <string name="menu_item_settings">সেটিংস</string>
+    <string name="menu_item_about">সম্পর্কে</string>
+    <string name="menu_item_feedback">মতামত</string>
+    <string name="menu_item_share">শেয়ার</string>
 
-        <string name="gender">লিঙ্গ</string>
+    <string-array name="height_units">
+        <item>সেমি</item>
+        <item>ফুট/ইঞ্চি</item>
+    </string-array>
 
-        <string name="enter_weight">ওজন লিখুন</string>
+    <string-array name="weight_units">
+        <item>কেজি</item>
+        <item>পাউন্ড</item>
+    </string-array>
 
-        <string name="category">ক্যাটাগরি</string>
-        <string name="difference">পার্থক্য</string>
-
-        <string name="normal_weight">স্বাভাবিক ওজন</string>
-        <string name="_00_00_00_00_kg">00.00 – 00.00 কেজি</string>
-
-        <string name="very_severely_underweight">অত্যন্ত কম ওজন</string>
-        <string name="severely_underweight">গুরুতর কম ওজন</string>
-
-        <string name="_16_0_16_9">16.0 - 16.9</string>
-        <string name="underweight">কম ওজন</string>
-        <string name="_17_0_18_4">17.0 - 18.4</string>
-
-        <string name="healthy_weight">স্বাস্থ্যকর ওজন</string>
-        <string name="_18_5_24_9">18.5 - 24.9</string>
-
-        <string name="overweight">অতিরিক্ত ওজন</string>
-        <string name="_25_0_29_9">25.0 - 29.9</string>
-
-        <string name="obese_class_i">স্থূলতা শ্রেণি I</string>
-        <string name="obese_class_ii">স্থূলতা শ্রেণি II</string>
-
-        <string name="_30_0_34_9">30.0 - 34.9</string>
-        <string name="_35_0_39_9">35.0 - 39.9</string>
-
-        <string name="obese_class_iii">স্থূলতা শ্রেণি III</string>
-
-        <string name="gt_40"><![CDATA[>= 40]]></string>
-        <string name="lt_15_9"><![CDATA[<= 15.9]]></string>
-
-        <string name="weight">ওজন</string>
-        <string name="enterheight">উচ্চতা</string>
-        <string name="weight_">ওজন</string>
-
-        <string name="ageYour">বয়স</string>
-        <string name="unit">ইউনিট</string>
-
-        <string name="clear_history">ইতিহাস মুছুন</string>
-        <string name="history_empty">কোনো ইতিহাস পাওয়া যায়নি</string>
-
-        <string name="bmi_label">বিএমআই</string>
-        <string name="ideal_weight">আদর্শ ওজন</string>
-        <string name="history_empty_message">
-        কোনো বিএমআই ইতিহাস নেই&#10;&#10;
-        ইতিহাস দেখতে আগে বিএমআই ক্যালকুলেট করুন!</string>
-        <string name="no_history_available">মুছার মতো কোনো ইতিহাস নেই।</string>
-        <string name="english_bangla">বাংলা</string>
-        <string name="choose_language">ভাষা পরিবর্তন করুন</string>
-        <string name="system_default">System Default(বাংলা)</string>
-        <string name="language_changed">ভাষা সফলভাবে পরিবর্তন করা হয়েছে</string>
-        <string name="history_age">বয়স: %1$s</string>
-        <string name="history_gender">লিঙ্গ: %1$s</string>
-        <string name="gender_male">পুরুষ</string>
-        <string name="gender_female">নারী</string>
-        <string name="unit_cm">সেমি</string>
-        <string name="unit_kg">কেজি</string>
-
-        <string name="status_healthy">স্বাস্থ্যকর ওজন</string>
-        <string name="status_overweight">অতিরিক্ত ওজন</string>
-        <string name="status_underweight">কম ওজন</string>
-        <string name="lose_weight">কমাইতে হবে - %1$s কেজি</string>
-        <string name="gain_weight">বাড়াইতে হবে + %1$s কেজি</string>
-        <string name="weight_perfect">আপনার ওজন একদম নিখুঁত!</string>
-        <string name="status_very_severely_underweight">অত্যন্ত মারাত্মক কম ওজন</string>
-        <string name="status_severely_underweight">গুরুতর কম ওজন</string>
-        <string name="status_obese_class_i">স্থূলতা শ্রেণী I</string>
-        <string name="status_obese_class_ii">স্থূলতা শ্রেণী II</string>
-        <string name="status_obese_class_iii">স্থূলতা শ্রেণী III</string>
-
-        <string name="a11y_gender_dropdown">লিঙ্গ নির্বাচন</string>
-        <string name="a11y_height_unit_dropdown">উচ্চতার একক নির্বাচন</string>
-        <string name="a11y_weight_unit_dropdown">ওজনের একক নির্বাচন</string>
-        <string name="a11y_bmi_gauge">বিএমআই নির্দেশক</string>
-        <string name="placeholder_dash">—</string>
-        <string name="preferences">পছন্দসমূহ</string>
-        <string name="language">ভাষা</string>
-        <string name="menu">মেনু</string>
-        <string name="default_height_unit">ডিফল্ট উচ্চতার একক</string>
-
-        <string name="menu_item_history">ইতিহাস</string>
-        <string name="menu_item_settings">সেটিংস</string>
-        <string name="menu_item_about">সম্পর্কে</string>
-        <string name="menu_item_feedback">মতামত</string>
-        <string name="menu_item_share">শেয়ার</string>
-
-        <string-array name="height_units">
-            <item>সেমি</item>
-            <item>ফুট/ইঞ্চি</item>
-        </string-array>
-
-        <string-array name="weight_units">
-            <item>কেজি</item>
-            <item>পাউন্ড</item>
-        </string-array>
-
-        <string-array name="gender_options">
-            <item>পুরুষ</item>
-            <item>মহিলা</item>
-            <item>অন্যান্য</item>
-        </string-array>
+    <string-array name="gender_options">
+        <item>পুরুষ</item>
+        <item>মহিলা</item>
+        <item>অন্যান্য</item>
+    </string-array>
 
 </resources>

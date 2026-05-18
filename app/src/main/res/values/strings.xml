@@ -54,7 +54,9 @@
     <string name="gender_male">Male</string>
     <string name="gender_female">Female</string>
     <string name="unit_cm">cm</string>
+    <string name="unit_inch">Fit</string>
     <string name="unit_kg">kg</string>
+    <string name="unit_lbs">Lbs</string>
 
     <string name="status_healthy">Healthy Weight</string>
     <string name="status_overweight">Overweight</string>
@@ -78,6 +80,8 @@
     <string name="menu_item_about">About</string>
     <string name="menu_item_feedback">Feedback</string>
     <string name="menu_item_share">Share</string>
+
+
 
 
 

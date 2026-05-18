@@ -200,7 +200,7 @@
                         android:insetRight="0dp"
                         android:insetBottom="0dp"
                         android:text="@string/unit_cm"
-                        android:textAllCaps="true"
+                        android:textAllCaps="false"
                         android:textColor="#FFFFFF"
                         android:textSize="12sp"
                         android:textStyle="bold"
