@@ -84,6 +84,21 @@
         <string name="status_obese_class_ii">স্থূলতা শ্রেণী II</string>
         <string name="status_obese_class_iii">স্থূলতা শ্রেণী III</string>
 
+        <string name="a11y_gender_dropdown">লিঙ্গ নির্বাচন</string>
+        <string name="a11y_height_unit_dropdown">উচ্চতার একক নির্বাচন</string>
+        <string name="a11y_weight_unit_dropdown">ওজনের একক নির্বাচন</string>
+        <string name="a11y_bmi_gauge">বিএমআই নির্দেশক</string>
+        <string name="placeholder_dash">—</string>
+        <string name="preferences">পছন্দসমূহ</string>
+        <string name="language">ভাষা</string>
+        <string name="menu">মেনু</string>
+        <string name="default_height_unit">ডিফল্ট উচ্চতার একক</string>
+
+        <string name="menu_item_history">ইতিহাস</string>
+        <string name="menu_item_settings">সেটিংস</string>
+        <string name="menu_item_about">সম্পর্কে</string>
+        <string name="menu_item_feedback">মতামত</string>
+
         <string-array name="height_units">
             <item>সেমি</item>
             <item>ফুট/ইঞ্চি</item>
