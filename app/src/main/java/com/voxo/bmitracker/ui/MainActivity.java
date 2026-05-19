@@ -358,9 +358,14 @@ public class MainActivity extends BaseActivity {
     private void triggerCalc() {
         String heightText = binding.etHeight.getText() != null ? binding.etHeight.getText().toString().trim() : "";
         String weightText = binding.etWeight.getText() != null ? binding.etWeight.getText().toString().trim() : "";
-
+        boolean isBangla = Locale.getDefault().getLanguage().equals("bn");
         // Only calculate if both height and weight have at least 2 digits
-        if (heightText.length() >= 1 && weightText.length() >= 2) {
+        if (heightText.length() >= 2 && weightText.length() >= 2) {
+
+            if (!validateInputs(heightText, weightText)) {
+                clearResults();
+                return;
+            }
             viewModel.calculateBMI(
                     heightText,
                     weightText,
@@ -368,10 +373,100 @@ public class MainActivity extends BaseActivity {
                     getWeightUnit()
             );
         } else {
+            if (heightText.length() == 1) {
+                binding.tilHeight.setHelperText(
+                        isBangla ? "সেমি: ৮০-২৮০ | ফুট: ২.০-৮.১১"
+                                : "cm: 80-280 | ft: 2.0-8.11"
+                );
+            } else {
+                binding.tilHeight.setHelperText(null);
+            }
+
+            if (weightText.length() == 1) {
+                binding.tilWeight.setHelperText(
+                        isBangla ? "কেজি: ১০-৫০০ | পাউন্ড: ২২-১১০০"
+                                : "kg: 10-500 | lb: 22-1100"
+                );
+            } else {
+                binding.tilWeight.setHelperText(null);
+            }
+
+            // Error clear করো
+            binding.tilHeight.setError(null);
+            binding.tilHeight.setErrorEnabled(false);
+            binding.tilWeight.setError(null);
+            binding.tilWeight.setErrorEnabled(false);
             clearResults();
+
         }
     }
 
+    private boolean validateInputs(String heightText, String weightText) {
+        boolean isValid = true;
+        String hUnit = getHeightUnit();
+        String wUnit = getWeightUnit();
+        boolean isBangla = Locale.getDefault().getLanguage().equals("bn");
+
+        try {
+            float h = Float.parseFloat(heightText);
+
+            if ("cm".equals(hUnit) && (h < 80f || h > 280f)) {
+                binding.tilHeight.setErrorEnabled(true);
+                binding.tilHeight.setError(
+                        isBangla ? "উচ্চতা ৮০-২৮০ সেমি হতে হবে"
+                                : "Height must be 80-280 cm"
+                );
+                isValid = false;
+            } else if ("ft".equals(hUnit) && (h < 2.0f || h > 8.11f)) {
+                binding.tilHeight.setErrorEnabled(true);
+                binding.tilHeight.setError(
+                        isBangla ? "উচ্চতা ২.০-৮.১১ ফুট হতে হবে"
+                                : "Height must be 2.0 - 8.11 ft"
+                );
+                isValid = false;
+            } else {
+                binding.tilHeight.setError(null);
+                binding.tilHeight.setErrorEnabled(false);
+            }
+        } catch (NumberFormatException e) {
+            binding.tilHeight.setErrorEnabled(true);
+            binding.tilHeight.setError(
+                    isBangla ? "সঠিক উচ্চতা লিখুন" : "Enter valid height"
+            );
+            isValid = false;
+        }
+
+        try {
+            float w = Float.parseFloat(weightText);
+
+            if ("kg".equals(wUnit) && (w < 10f || w > 500f)) {
+                binding.tilWeight.setErrorEnabled(true);
+                binding.tilWeight.setError(
+                        isBangla ? "ওজন ১০-৫০০ কেজি হতে হবে"
+                                : "Weight must be 10-500 kg"
+                );
+                isValid = false;
+            } else if ("lb".equals(wUnit) && (w < 22f || w > 1100f)) {
+                binding.tilWeight.setErrorEnabled(true);
+                binding.tilWeight.setError(
+                        isBangla ? "ওজন ২২-১১০০ পাউন্ড হতে হবে"
+                                : "Weight must be 22-1100 lb"
+                );
+                isValid = false;
+            } else {
+                binding.tilWeight.setError(null);
+                binding.tilWeight.setErrorEnabled(false);
+            }
+        } catch (NumberFormatException e) {
+            binding.tilWeight.setErrorEnabled(true);
+            binding.tilWeight.setError(
+                    isBangla ? "সঠিক ওজন লিখুন" : "Enter valid weight"
+            );
+            isValid = false;
+        }
+
+        return isValid;
+    }
 
     private void resetTable() {
         int defColor = androidx.core.content.ContextCompat.getColor(this, R.color.text_secondary_dynamic);
