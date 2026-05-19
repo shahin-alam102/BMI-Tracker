@@ -3,7 +3,6 @@ package com.voxo.bmitracker.ui;
 import android.content.SharedPreferences;
 import android.content.res.Configuration;
 import android.content.res.Resources;
-import android.os.Build;
 import android.os.Bundle;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -14,13 +13,13 @@ import androidx.annotation.NonNull;
 import com.voxo.bmitracker.R;
 
 import java.util.Locale;
+import java.util.Objects;
 
 public class SettingsActivity extends BaseActivity {
 
     private static final String PREFS_NAME = "settings";
     private static final String KEY_LANGUAGE = "pref_language";
     private TextView tvCurrentLanguage;
-    private LinearLayout layoutLanguage;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,7 +40,7 @@ public class SettingsActivity extends BaseActivity {
         toolbar.setNavigationOnClickListener(v -> finish());
 
         tvCurrentLanguage = findViewById(R.id.tvCurrentLanguage);
-        layoutLanguage = findViewById(R.id.layoutLanguage);
+        LinearLayout layoutLanguage = findViewById(R.id.layoutLanguage);
 
         String current = getSavedLanguage();
         updateLanguageLabel(current);
@@ -61,22 +60,18 @@ public class SettingsActivity extends BaseActivity {
 
     private void updateLanguageLabel(String lang) {
         if ("system".equals(lang)) {
-            String systemLang;
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
-                systemLang = Resources.getSystem().getConfiguration().getLocales().get(0).getLanguage();
-            } else {
-                systemLang = Locale.getDefault().getLanguage();
-            }
+            androidx.core.os.LocaleListCompat locales = androidx.core.os.ConfigurationCompat.getLocales(Resources.getSystem().getConfiguration());
+            String systemLang = !locales.isEmpty() ? Objects.requireNonNull(locales.get(0)).getLanguage() : Locale.getDefault().getLanguage();
 
             if ("bn".equals(systemLang)) {
-                tvCurrentLanguage.setText("System Default (বাংলা)");
+                tvCurrentLanguage.setText(R.string.system_default_bangla);
             } else {
-                tvCurrentLanguage.setText("System Default (English)");
+                tvCurrentLanguage.setText(R.string.system_default_english1);
             }
         } else if ("bn".equals(lang)) {
             tvCurrentLanguage.setText("বাংলা");
         } else {
-            tvCurrentLanguage.setText("English");
+            tvCurrentLanguage.setText(R.string.english);
         }
     }
 
@@ -125,14 +120,10 @@ public class SettingsActivity extends BaseActivity {
         Locale locale = new Locale(lang);
         Locale.setDefault(locale);
         Resources res = getResources();
-        Configuration config = res.getConfiguration();
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
-            config.setLocale(locale);
-            createConfigurationContext(config);
-        } else {
-            config.locale = locale;
-            res.updateConfiguration(config, res.getDisplayMetrics());
-        }
+        Configuration config = new Configuration(res.getConfiguration());
+        config.setLocale(locale);
+        createConfigurationContext(config);
+        res.updateConfiguration(config, res.getDisplayMetrics());
         recreate();
     }
 }

@@ -4,7 +4,6 @@ import android.content.Context;
 import android.content.SharedPreferences;
 import android.content.res.Configuration;
 import android.content.res.Resources;
-import android.os.Build;
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -32,23 +31,20 @@ public class BaseActivity extends AppCompatActivity {
 
         Locale locale;
         if ("system".equals(language)) {
-            locale = Resources.getSystem().getConfiguration().locale;
+            locale = androidx.core.os.ConfigurationCompat.getLocales(Resources.getSystem().getConfiguration()).get(0);
         } else {
             locale = new Locale(language);
         }
 
+        if (locale == null) {
+            locale = Locale.getDefault();
+        }
+
         Locale.setDefault(locale);
         Configuration config = new Configuration(newBase.getResources().getConfiguration());
-
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
-            config.setLocale(locale);
-            Context context = newBase.createConfigurationContext(config);
-            super.attachBaseContext(context);
-        } else {
-            config.locale = locale;
-            newBase.getResources().updateConfiguration(config, newBase.getResources().getDisplayMetrics());
-            super.attachBaseContext(newBase);
-        }
+        config.setLocale(locale);
+        Context context = newBase.createConfigurationContext(config);
+        super.attachBaseContext(context);
     }
 
     public static void applyLanguagePreference(Context context) {
@@ -57,20 +53,18 @@ public class BaseActivity extends AppCompatActivity {
 
         Locale locale;
         if ("system".equals(language)) {
-            locale = Resources.getSystem().getConfiguration().locale;
+            locale = androidx.core.os.ConfigurationCompat.getLocales(Resources.getSystem().getConfiguration()).get(0);
         } else {
             locale = new Locale(language);
         }
+        if (locale == null) return;
 
         Locale.setDefault(locale);
         Resources res = context.getResources();
-        Configuration config = res.getConfiguration();
+        Configuration config = new Configuration(res.getConfiguration());
 
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
-            config.setLocale(locale);
-        } else {
-            config.locale = locale;
-        }
+        config.setLocale(locale);
+        context.createConfigurationContext(config);
         res.updateConfiguration(config, res.getDisplayMetrics());
     }
 

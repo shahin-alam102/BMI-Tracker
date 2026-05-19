@@ -36,18 +36,6 @@ public class BmiHistory implements Serializable {
         this.timestamp = System.currentTimeMillis();
     }
 
-    public BmiHistory(String date, String time, float height, float weight, float bmi, String category, String heightUnit, String weightUnit) {
-        this.bmi = bmi;
-        this.category = category;
-        this.height = String.valueOf(height);
-        this.weight = String.valueOf(weight);
-        this.heightUnit = heightUnit;
-        this.weightUnit = weightUnit;
-        this.age = "";
-        this.gender = "";
-        this.color = 0;
-        this.timestamp = System.currentTimeMillis();
-    }
 
     public double getBmi() {
         return bmi;
@@ -97,15 +85,6 @@ public class BmiHistory implements Serializable {
         this.databaseId = databaseId;
     }
 
-    public String getDate() {
-        SimpleDateFormat sdf = new SimpleDateFormat("MMM dd, yyyy", Locale.getDefault());
-        return sdf.format(new Date(timestamp));
-    }
-
-    public String getTime() {
-        SimpleDateFormat sdf = new SimpleDateFormat("HH:mm", Locale.getDefault());
-        return sdf.format(new Date(timestamp));
-    }
 
     public void setBmi(double bmi) {
         this.bmi = bmi;
@@ -161,10 +140,10 @@ public class BmiHistory implements Serializable {
     }
 
     @Override
+    @androidx.annotation.NonNull
     public String toString() {
-        return String.format("%s | BMI: %.1f | %s | %s", getFormattedDate(), bmi, category, getHeightWeightDisplay());
+        return String.format(Locale.US, "%s | BMI: %.1f | %s | %s", getFormattedDate(), bmi, category, getHeightWeightDisplay());
     }
-
     public boolean matchesSnapshot(BmiHistory o) {
         if (o == null) return false;
         return Math.abs(bmi - o.bmi) < 0.05

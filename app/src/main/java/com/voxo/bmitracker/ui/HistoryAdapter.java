@@ -50,20 +50,13 @@ public class HistoryAdapter extends RecyclerView.Adapter<HistoryAdapter.HistoryV
         return historyList.size();
     }
 
+    // 1 usage
     public void setHistoryList(List<BmiHistory> historyList) {
         this.historyList = historyList;
         notifyDataSetChanged();
     }
 
-    public void removeItem(int position) {
-        if (position >= 0 && position < historyList.size()) {
-            historyList.remove(position);
-            notifyItemRemoved(position);
-            notifyItemRangeChanged(position, historyList.size());
-        }
-    }
-
-    class HistoryViewHolder extends RecyclerView.ViewHolder {
+    public class HistoryViewHolder extends RecyclerView.ViewHolder {
         private final TextView tvBmiValue;
         private final TextView tvCategory;
         private final TextView tvDateTime;

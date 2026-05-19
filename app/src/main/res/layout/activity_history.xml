@@ -19,8 +19,8 @@
             android:background="?attr/colorPrimary"
             android:elevation="4dp"
             app:navigationIconTint="@android:color/white"
-            app:titleTextAppearance="@style/TextAppearance.Material3.TitleLarge"
-            app:popupTheme="@style/ThemeOverlay.Material3.Light" />
+            app:popupTheme="@style/ThemeOverlay.Material3.Light"
+            app:titleTextAppearance="@style/TextAppearance.Material3.TitleLarge" />
 
     </com.google.android.material.appbar.AppBarLayout>
 
@@ -31,38 +31,28 @@
         android:layout_height="match_parent"
         android:clipToPadding="false"
         android:paddingStart="12dp"
-        android:paddingEnd="12dp"
         android:paddingTop="8dp"
+        android:paddingEnd="12dp"
         android:paddingBottom="16dp"
         app:layout_behavior="@string/appbar_scrolling_view_behavior"
         tools:listitem="@layout/item_history" />
 
     <!-- Empty State Overlay -->
-    <LinearLayout
+    <TextView
         android:id="@+id/emptyStateContainer"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:drawablePadding="12dp"
         android:gravity="center"
+        android:text="@string/history_empty_message"
+        android:textAlignment="center"
+        android:textColor="?android:attr/textColorSecondary"
+        android:textSize="20sp"
         android:visibility="gone"
+        app:drawableTopCompat="@drawable/outline_work_history_24"
         app:layout_behavior="@string/appbar_scrolling_view_behavior"
-        tools:visibility="gone">
-        <ImageView
-            android:layout_width="72dp"
-            android:layout_height="72dp"
-            android:src="@drawable/outline_work_history_24"
-            android:contentDescription="@string/history_empty" />
-        <TextView
-            android:id="@+id/tvEmptyHistory"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:layout_marginTop="12dp"
-            android:text="@string/history_empty_message"
-            android:textAlignment="center"
-            android:textColor="?android:attr/textColorSecondary"
-            android:textSize="20sp" />
-    </LinearLayout>
+        tools:visibility="visible" />
 
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

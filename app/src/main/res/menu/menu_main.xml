@@ -5,30 +5,25 @@
     <item
         android:id="@+id/menu_history"
         android:title="@string/menu_item_history"
-        android:icon="@drawable/outline_history_24"
         app:showAsAction="never" />
 
     <item
         android:id="@+id/menu_settings"
         android:title="@string/menu_item_settings"
-        android:icon="@drawable/baseline_settings_24"
         app:showAsAction="never" />
 
     <item
         android:id="@+id/menu_about"
         android:title="@string/menu_item_about"
-        android:icon="@drawable/outline_info_24"
         app:showAsAction="never" />
 
     <item
         android:id="@+id/menu_feedback"
         android:title="@string/menu_item_feedback"
-        android:icon="@drawable/outline_feedback_24"
         app:showAsAction="never" />
     <item
         android:id="@+id/menu_share"
         android:title="@string/menu_item_share"
-        android:icon="@drawable/outline_share_24"
         app:showAsAction="never" />
 
 

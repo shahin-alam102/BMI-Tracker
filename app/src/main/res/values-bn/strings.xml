@@ -80,6 +80,7 @@
     <string name="menu_item_about">সম্পর্কে</string>
     <string name="menu_item_feedback">মতামত</string>
     <string name="menu_item_share">শেয়ার</string>
+    <string name="more_apps">আরও অ্যাপস</string>
 
     <string-array name="height_units">
         <item>সেমি</item>
