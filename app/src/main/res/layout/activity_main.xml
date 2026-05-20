@@ -78,7 +78,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:padding="10dp">
+               android:padding="10dp">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -115,6 +115,7 @@
                             android:imeOptions="actionNext"
                             android:inputType="numberDecimal"
                             android:maxLength="3"
+                            android:layout_marginTop="0dp"
                             android:paddingTop="0dp"
                             android:paddingBottom="0dp"
                             android:textColor="?attr/colorOnSurface"
@@ -125,8 +126,8 @@
                     <com.google.android.material.button.MaterialButton
                         android:id="@+id/dropdownGender"
                         style="@style/Widget.MaterialComponents.Button.TextButton"
-                        android:layout_width="60dp"
-                        android:layout_height="60dp"
+                        android:layout_width="62dp"
+                        android:layout_height="62dp"
                         android:layout_marginStart="12dp"
                         android:background="@drawable/circle_button"
                         android:contentDescription="@string/gender"
@@ -190,8 +191,8 @@
                     <com.google.android.material.button.MaterialButton
                         android:id="@+id/dropdownHeightUnit"
                         style="@style/Widget.MaterialComponents.Button.TextButton"
-                        android:layout_width="60dp"
-                        android:layout_height="60dp"
+                        android:layout_width="62dp"
+                        android:layout_height="62dp"
                         android:layout_marginStart="12dp"
                         android:background="@drawable/circle_button"
                         android:contentDescription="@string/unit_cm"
@@ -254,8 +255,8 @@
                     <com.google.android.material.button.MaterialButton
                         android:id="@+id/dropdownWeightUnit"
                         style="@style/Widget.MaterialComponents.Button.TextButton"
-                        android:layout_width="60dp"
-                        android:layout_height="60dp"
+                        android:layout_width="62dp"
+                        android:layout_height="62dp"
                         android:layout_gravity="center_vertical"
                         android:layout_marginStart="12dp"
                         android:background="@drawable/circle_button"
@@ -295,7 +296,7 @@
             android:id="@+id/tvLabelCategory"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="0dp"
             android:fontFamily="@font/noto_sans_bengali_thin"
             android:text="@string/category"
             android:textStyle="bold"
