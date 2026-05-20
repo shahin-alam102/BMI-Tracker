@@ -7,6 +7,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.DiffUtil;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.voxo.bmitracker.R;
@@ -15,6 +16,7 @@ import com.voxo.bmitracker.model.BmiHistory;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
+import java.util.Objects;
 
 public class HistoryAdapter extends RecyclerView.Adapter<HistoryAdapter.HistoryViewHolder> {
 
@@ -51,9 +53,12 @@ public class HistoryAdapter extends RecyclerView.Adapter<HistoryAdapter.HistoryV
     }
 
     // 1 usage
-    public void setHistoryList(List<BmiHistory> historyList) {
-        this.historyList = historyList;
-        notifyDataSetChanged();
+    public void setHistoryList(List<BmiHistory> newHistoryList) {
+        if (newHistoryList == null) newHistoryList = new ArrayList<>();
+        BmiHistoryDiffCallback diffCallback = new BmiHistoryDiffCallback(this.historyList, newHistoryList);
+        DiffUtil.DiffResult diffResult = DiffUtil.calculateDiff(diffCallback);
+        this.historyList = newHistoryList;
+        diffResult.dispatchUpdatesTo(this);
     }
 
     public class HistoryViewHolder extends RecyclerView.ViewHolder {
@@ -72,14 +77,14 @@ public class HistoryAdapter extends RecyclerView.Adapter<HistoryAdapter.HistoryV
             tvAgeGender = itemView.findViewById(R.id.tvAgeGender);
 
             itemView.setOnClickListener(v -> {
-                int position = getAdapterPosition();
+                int position = getBindingAdapterPosition();
                 if (position != RecyclerView.NO_POSITION && listener != null) {
                     listener.onHistoryItemClick(historyList.get(position));
                 }
             });
 
             itemView.setOnLongClickListener(v -> {
-                int position = getAdapterPosition();
+                int position = getBindingAdapterPosition();
                 if (position != RecyclerView.NO_POSITION && listener != null) {
                     listener.onHistoryItemLongClick(position);
                     return true;
@@ -132,7 +137,7 @@ public class HistoryAdapter extends RecyclerView.Adapter<HistoryAdapter.HistoryV
             String finalHeight = isBangla ? convertToBanglaNumber(rawHeight) : rawHeight;
             String finalWeight = isBangla ? convertToBanglaNumber(rawWeight) : rawWeight;
 
-            tvHeightWeight.setText(finalHeight + " " + context.getString(R.string.unit_cm) + " / " + finalWeight + " " + context.getString(R.string.unit_kg));
+            tvHeightWeight.setText(String.format("%s %s / %s %s", finalHeight, context.getString(R.string.unit_cm), finalWeight, context.getString(R.string.unit_kg)));
 
             StringBuilder ageGenderBuilder = new StringBuilder();
 
@@ -172,4 +177,47 @@ public class HistoryAdapter extends RecyclerView.Adapter<HistoryAdapter.HistoryV
                     .replace("9", "৯");
         }
     }
+
+    private static class BmiHistoryDiffCallback extends DiffUtil.Callback {
+        private final List<BmiHistory> oldList;
+        private final List<BmiHistory> newList;
+
+        public BmiHistoryDiffCallback(List<BmiHistory> oldList, List<BmiHistory> newList) {
+            this.oldList = oldList;
+            this.newList = newList;
+        }
+
+        @Override
+        public int getOldListSize() {
+            return oldList.size();
+        }
+
+        @Override
+        public int getNewListSize() {
+            return newList.size();
+        }
+
+        @Override
+        public boolean areItemsTheSame(int oldPos, int newPos) {
+            BmiHistory oldItem = oldList.get(oldPos);
+            BmiHistory newItem = newList.get(newPos);
+            if (oldItem.getDatabaseId() != -1 && newItem.getDatabaseId() != -1) {
+                return oldItem.getDatabaseId() == newItem.getDatabaseId();
+            }
+            return oldItem.getTimestamp() == newItem.getTimestamp();
+        }
+
+        @Override
+        public boolean areContentsTheSame(int oldPos, int newPos) {
+            BmiHistory oldItem = oldList.get(oldPos);
+            BmiHistory newItem = newList.get(newPos);
+            return oldItem.getBmi() == newItem.getBmi()
+                    && Objects.equals(oldItem.getCategory(), newItem.getCategory())
+                    && Objects.equals(oldItem.getHeight(), newItem.getHeight())
+                    && Objects.equals(oldItem.getWeight(), newItem.getWeight())
+                    && Objects.equals(oldItem.getAge(), newItem.getAge())
+                    && Objects.equals(oldItem.getGender(), newItem.getGender());
+        }
+    }
+
 }
