@@ -1,504 +1,523 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/main"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="?android:attr/windowBackground"
-    android:fillViewport="true">
+    android:layout_height="match_parent">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+
+    <ScrollView
+        android:id="@+id/main"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="20dp">
+        android:layout_height="match_parent"
+        android:layout_above="@id/adView"
+        android:background="?android:attr/windowBackground"
+        android:fillViewport="true">
 
-        <TextView
-            android:id="@+id/tvTitle"
-            android:layout_width="0dp"
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/noto_sans_bengali_thin"
-            android:text="@string/bmi_calculator"
-            android:textColor="?android:attr/textColorPrimary"
-            android:textSize="24sp"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="@id/btnReset"
-            app:layout_constraintEnd_toStartOf="@id/btnReset"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.40" />
+            android:padding="20dp">
 
-        <ImageButton
-            android:id="@+id/btnMenu"
-            android:layout_width="48dp"
-            android:layout_height="48dp"
-            android:background="?attr/selectableItemBackgroundBorderless"
-            android:contentDescription="@string/menu"
-            android:src="@drawable/ic_menu_24"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:tint="?attr/colorOnSurface" />
+            <TextView
+                android:id="@+id/tvTitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/noto_sans_bengali_thin"
+                android:text="@string/bmi_calculator"
+                android:textColor="?android:attr/textColorPrimary"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@id/btnReset"
+                app:layout_constraintEnd_toStartOf="@id/btnReset"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.40" />
 
-        <ImageButton
-            android:id="@+id/btnReset"
-            android:layout_width="48dp"
-            android:layout_height="48dp"
-            android:layout_marginEnd="8dp"
-            android:background="?attr/selectableItemBackgroundBorderless"
-            android:contentDescription="@string/reset"
-            android:src="@drawable/outline_settings_backup_restore_24"
-            app:layout_constraintEnd_toStartOf="@id/btnMenu"
-            app:layout_constraintTop_toTopOf="parent"
-            app:tint="?attr/colorOnSurface" />
+            <ImageButton
+                android:id="@+id/btnMenu"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="@string/menu"
+                android:src="@drawable/ic_menu_24"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:tint="?attr/colorOnSurface" />
 
-        <TextView
-            android:id="@+id/lblNormal"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:fontFamily="@font/noto_sans_bengali_thin"
-            android:text="@string/ideal_weight"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tvCategory" />
+            <ImageButton
+                android:id="@+id/btnReset"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginEnd="8dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="@string/reset"
+                android:src="@drawable/outline_settings_backup_restore_24"
+                app:layout_constraintEnd_toStartOf="@id/btnMenu"
+                app:layout_constraintTop_toTopOf="parent"
+                app:tint="?attr/colorOnSurface" />
 
-        <com.google.android.material.card.MaterialCardView
-            android:id="@+id/cardInputs"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            app:cardCornerRadius="16dp"
-            app:cardElevation="1dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/btnReset"
-            app:strokeColor="?attr/colorOutlineVariant"
-            app:strokeWidth="1dp">
+            <TextView
+                android:id="@+id/lblNormal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/noto_sans_bengali_thin"
+                android:text="@string/ideal_weight"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvCategory" />
 
-            <LinearLayout
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardInputs"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="1dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/btnReset"
+                app:strokeColor="?attr/colorOutlineVariant"
+                app:strokeWidth="1dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:baselineAligned="false"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/til_age"
+                            style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:hint="@string/age"
+                            app:boxBackgroundColor="#FFFFFF"
+                            app:boxBackgroundMode="outline"
+                            app:boxCornerRadiusBottomEnd="8dp"
+                            app:boxCornerRadiusBottomStart="8dp"
+                            app:boxCornerRadiusTopEnd="8dp"
+                            app:boxCornerRadiusTopStart="8dp"
+                            app:boxStrokeColor="#A0A0A0"
+                            app:boxStrokeWidth="1dp"
+                            app:boxStrokeWidthFocused="1.2dp"
+                            app:hintTextColor="?attr/colorOnSurfaceVariant">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/etAge"
+                                style="@style/Widget.BMITracker.TextInputEditText"
+                                android:layout_width="match_parent"
+                                android:layout_height="54dp"
+                                android:fontFamily="@font/noto_sans_bengali_thin"
+                                android:gravity="center_vertical"
+                                android:imeOptions="actionNext"
+                                android:inputType="numberDecimal"
+                                android:maxLength="3"
+                                android:layout_marginTop="0dp"
+                                android:paddingTop="0dp"
+                                android:paddingBottom="0dp"
+                                android:textColor="?attr/colorOnSurface"
+                                android:textColorHint="?attr/colorOnSurfaceVariant"
+                                android:textSize="16sp" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/dropdownGender"
+                            style="@style/Widget.MaterialComponents.Button.TextButton"
+                            android:layout_width="62dp"
+                            android:layout_height="62dp"
+                            android:layout_marginStart="12dp"
+                            android:background="@drawable/circle_button"
+                            android:contentDescription="@string/gender"
+                            android:insetLeft="0dp"
+                            android:insetTop="0dp"
+                            android:insetRight="0dp"
+                            android:insetBottom="0dp"
+                            android:text="@string/gender_male"
+                            android:textAllCaps="false"
+                            android:textColor="#FFFFFF"
+                            android:textSize="11sp"
+                            app:backgroundTint="@null"
+                            app:backgroundTintMode="add"
+                            app:icon="@drawable/outline_man_24"
+                            app:iconGravity="top"
+                            app:iconSize="30dp"
+                            app:iconTint="#FFFFFF"
+                            app:shapeAppearanceOverlay="@style/ShapeAppearance.MaterialComponents.SmallComponent" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:baselineAligned="false"
+                        android:orientation="horizontal">
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/til_height"
+                            style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:hint="@string/enter_height"
+                            app:boxBackgroundColor="#FFFFFF"
+                            app:boxBackgroundMode="outline"
+                            app:boxCornerRadiusBottomEnd="8dp"
+                            app:boxCornerRadiusBottomStart="8dp"
+                            app:boxCornerRadiusTopEnd="8dp"
+                            app:boxCornerRadiusTopStart="8dp"
+                            app:boxStrokeColor="#A0A0A0"
+                            app:boxStrokeWidth="1dp"
+                            app:boxStrokeWidthFocused="1.2dp"
+                            app:hintTextColor="?attr/colorOnSurfaceVariant">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/etHeight"
+                                style="@style/Widget.BMITracker.TextInputEditText"
+                                android:layout_width="match_parent"
+                                android:layout_height="54dp"
+                                android:fontFamily="@font/noto_sans_bengali_thin"
+                                android:imeOptions="actionNext"
+                                android:inputType="numberDecimal"
+                                android:paddingTop="0dp"
+                                android:paddingBottom="0dp"
+                                android:textColor="?attr/colorOnSurface"
+                                android:textColorHint="?attr/colorOnSurfaceVariant"
+                                android:textSize="16sp" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/dropdownHeightUnit"
+                            style="@style/Widget.MaterialComponents.Button.TextButton"
+                            android:layout_width="62dp"
+                            android:layout_height="62dp"
+                            android:layout_marginStart="12dp"
+                            android:background="@drawable/circle_button"
+                            android:contentDescription="@string/unit_cm"
+                            android:insetLeft="0dp"
+                            android:insetTop="0dp"
+                            android:insetRight="0dp"
+                            android:insetBottom="0dp"
+                            android:text="@string/unit_cm"
+                            android:textAllCaps="false"
+                            android:textColor="#FFFFFF"
+                            android:textSize="11sp"
+                            android:textStyle="bold"
+                            app:backgroundTint="@null"
+                            app:icon="@drawable/outline_height_24"
+                            app:iconGravity="top"
+                            app:iconSize="24dp"
+                            app:iconTint="#FFFFFF" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:baselineAligned="false"
+                        android:orientation="horizontal">
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/til_weight"
+                            style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:hint="@string/enter_weight"
+                            app:boxBackgroundColor="#FFFFFF"
+                            app:boxBackgroundMode="outline"
+                            app:boxCornerRadiusBottomEnd="8dp"
+                            app:boxCornerRadiusBottomStart="8dp"
+                            app:boxCornerRadiusTopEnd="8dp"
+                            app:boxCornerRadiusTopStart="8dp"
+                            app:boxStrokeColor="#A0A0A0"
+                            app:boxStrokeWidth="1dp"
+                            app:boxStrokeWidthFocused="1.2dp"
+                            app:hintTextColor="?attr/colorOnSurfaceVariant">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/etWeight"
+                                style="@style/Widget.BMITracker.TextInputEditText"
+                                android:layout_width="match_parent"
+                                android:layout_height="54dp"
+                                android:fontFamily="@font/noto_sans_bengali_thin"
+                                android:imeOptions="actionDone"
+                                android:inputType="numberDecimal"
+                                android:paddingTop="0dp"
+                                android:paddingBottom="0dp"
+                                android:textColor="?attr/colorOnSurface"
+                                android:textColorHint="?attr/colorOnSurfaceVariant"
+                                android:textSize="16sp" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/dropdownWeightUnit"
+                            style="@style/Widget.MaterialComponents.Button.TextButton"
+                            android:layout_width="62dp"
+                            android:layout_height="62dp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginStart="12dp"
+                            android:background="@drawable/circle_button"
+                            android:contentDescription="@string/unit_kg"
+                            android:insetLeft="0dp"
+                            android:insetTop="0dp"
+                            android:insetRight="0dp"
+                            android:insetBottom="0dp"
+                            android:text="@string/unit_kg"
+                            android:textAllCaps="false"
+                            android:textColor="#FFFFFF"
+                            android:textSize="11sp"
+                            android:textStyle="bold"
+                            app:backgroundTint="@null"
+                            app:icon="@drawable/outline_monitor_weight_24"
+                            app:iconGravity="top"
+                            app:iconSize="24dp"
+                            app:iconTint="#FFFFFF" />
+                    </LinearLayout>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.github.anastr.speedviewlib.SpeedView
+                android:id="@+id/speedView"
+                android:layout_width="160dp"
+                android:layout_height="160dp"
+                android:layout_marginTop="6dp"
+                android:contentDescription="@string/a11y_bmi_gauge"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/cardInputs"
+                app:sv_maxSpeed="50"
+                app:sv_minSpeed="0"
+                app:sv_unit="BMI" />
+
+            <TextView
+                android:id="@+id/tvLabelCategory"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
+                android:fontFamily="@font/noto_sans_bengali_thin"
+                android:text="@string/category"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/speedView" />
+
+            <TextView
+                android:id="@+id/lblDifference"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/noto_sans_bengali_thin"
+                android:text="@string/difference"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/tvLabelCategory" />
+
+            <TextView
+                android:id="@+id/tvWeightDifference"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:fontFamily="@font/noto_sans_bengali_thin"
+                android:text="@string/placeholder_dash"
+                android:textColor="?attr/colorPrimary"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/lblDifference" />
+
+            <TextView
+                android:id="@+id/tvCategory"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:fontFamily="@font/noto_sans_bengali_thin"
+                android:text="@string/placeholder_dash"
+                android:textColor="?attr/colorPrimary"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvLabelCategory" />
+
+            <TextView
+                android:id="@+id/tvNormalWeightRange"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/noto_sans_bengali_thin"
+                android:text="@string/normal_weight_range"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/lblNormal" />
+
+            <View
+                android:id="@+id/divider2"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="6dp"
+                android:background="#D1D1D1"
+                app:layout_constraintTop_toBottomOf="@id/lblNormal" />
+
+            <TableLayout
+                android:id="@+id/bmiChartTable"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-               android:padding="10dp">
+                android:layout_marginTop="2dp"
+                android:stretchColumns="0"
+                app:layout_constraintTop_toBottomOf="@id/divider2">
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:baselineAligned="false"
-                    android:gravity="center_vertical"
-                    android:orientation="horizontal">
+                <TableRow
+                    android:id="@+id/tvChartVerySeverelyUnderweight"
+                    android:paddingVertical="2dp">
 
-                    <com.google.android.material.textfield.TextInputLayout
-                        android:id="@+id/til_age"
-                        style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:hint="@string/age"
-                        app:boxBackgroundColor="#FFFFFF"
-                        app:boxBackgroundMode="outline"
-                        app:boxCornerRadiusBottomEnd="8dp"
-                        app:boxCornerRadiusBottomStart="8dp"
-                        app:boxCornerRadiusTopEnd="8dp"
-                        app:boxCornerRadiusTopStart="8dp"
-                        app:boxStrokeColor="#A0A0A0"
-                        app:boxStrokeWidth="1dp"
-                        app:boxStrokeWidthFocused="1.2dp"
-                        app:hintTextColor="?attr/colorOnSurfaceVariant">
+                    <TextView
+                        android:fontFamily="@font/noto_sans_bengali_thin"
+                        android:text="@string/very_severely_underweight"
+                        android:textColor="@color/text_secondary_dynamic" />
 
-                        <com.google.android.material.textfield.TextInputEditText
-                            android:id="@+id/etAge"
-                            style="@style/Widget.BMITracker.TextInputEditText"
-                            android:layout_width="match_parent"
-                            android:layout_height="54dp"
-                            android:fontFamily="@font/noto_sans_bengali_thin"
-                            android:gravity="center_vertical"
-                            android:imeOptions="actionNext"
-                            android:inputType="numberDecimal"
-                            android:maxLength="3"
-                            android:layout_marginTop="0dp"
-                            android:paddingTop="0dp"
-                            android:paddingBottom="0dp"
-                            android:textColor="?attr/colorOnSurface"
-                            android:textColorHint="?attr/colorOnSurfaceVariant"
-                            android:textSize="16sp" />
-                    </com.google.android.material.textfield.TextInputLayout>
+                    <TextView
+                        android:layout_gravity="end"
+                        android:fontFamily="@font/noto_sans_bengali_thin"
+                        android:gravity="end"
+                        android:text="@string/lt_15_9"
+                        android:textColor="@color/text_secondary_dynamic" />
+                </TableRow>
 
-                    <com.google.android.material.button.MaterialButton
-                        android:id="@+id/dropdownGender"
-                        style="@style/Widget.MaterialComponents.Button.TextButton"
-                        android:layout_width="62dp"
-                        android:layout_height="62dp"
-                        android:layout_marginStart="12dp"
-                        android:background="@drawable/circle_button"
-                        android:contentDescription="@string/gender"
-                        android:insetLeft="0dp"
-                        android:insetTop="0dp"
-                        android:insetRight="0dp"
-                        android:insetBottom="0dp"
-                        android:text="@string/gender_male"
-                        android:textAllCaps="false"
-                        android:textColor="#FFFFFF"
-                        android:textSize="11sp"
-                        app:backgroundTint="@null"
-                        app:backgroundTintMode="add"
-                        app:icon="@drawable/outline_man_24"
-                        app:iconGravity="top"
-                        app:iconSize="30dp"
-                        app:iconTint="#FFFFFF"
-                        app:shapeAppearanceOverlay="@style/ShapeAppearance.MaterialComponents.SmallComponent" />
-                </LinearLayout>
+                <TableRow
+                    android:id="@+id/tvChartSeverelyUnderweight"
+                    android:paddingVertical="2dp">
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:baselineAligned="false"
-                    android:orientation="horizontal">
+                    <TextView
+                        android:fontFamily="@font/noto_sans_bengali_thin"
+                        android:text="@string/severely_underweight"
+                        android:textColor="@color/text_secondary_dynamic" />
 
-                    <com.google.android.material.textfield.TextInputLayout
-                        android:id="@+id/til_height"
-                        style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:hint="@string/enter_height"
-                        app:boxBackgroundColor="#FFFFFF"
-                        app:boxBackgroundMode="outline"
-                        app:boxCornerRadiusBottomEnd="8dp"
-                        app:boxCornerRadiusBottomStart="8dp"
-                        app:boxCornerRadiusTopEnd="8dp"
-                        app:boxCornerRadiusTopStart="8dp"
-                        app:boxStrokeColor="#A0A0A0"
-                        app:boxStrokeWidth="1dp"
-                        app:boxStrokeWidthFocused="1.2dp"
-                        app:hintTextColor="?attr/colorOnSurfaceVariant">
+                    <TextView
+                        android:layout_gravity="end"
+                        android:fontFamily="@font/noto_sans_bengali_thin"
+                        android:gravity="end"
+                        android:text="@string/_16_0_16_9"
+                        android:textColor="@color/text_secondary_dynamic" />
+                </TableRow>
 
-                        <com.google.android.material.textfield.TextInputEditText
-                            android:id="@+id/etHeight"
-                            style="@style/Widget.BMITracker.TextInputEditText"
-                            android:layout_width="match_parent"
-                            android:layout_height="54dp"
-                            android:fontFamily="@font/noto_sans_bengali_thin"
-                            android:imeOptions="actionNext"
-                            android:inputType="numberDecimal"
-                            android:paddingTop="0dp"
-                            android:paddingBottom="0dp"
-                            android:textColor="?attr/colorOnSurface"
-                            android:textColorHint="?attr/colorOnSurfaceVariant"
-                            android:textSize="16sp" />
-                    </com.google.android.material.textfield.TextInputLayout>
+                <TableRow
+                    android:id="@+id/tvChartUnderweight"
+                    android:paddingVertical="2dp">
 
-                    <com.google.android.material.button.MaterialButton
-                        android:id="@+id/dropdownHeightUnit"
-                        style="@style/Widget.MaterialComponents.Button.TextButton"
-                        android:layout_width="62dp"
-                        android:layout_height="62dp"
-                        android:layout_marginStart="12dp"
-                        android:background="@drawable/circle_button"
-                        android:contentDescription="@string/unit_cm"
-                        android:insetLeft="0dp"
-                        android:insetTop="0dp"
-                        android:insetRight="0dp"
-                        android:insetBottom="0dp"
-                        android:text="@string/unit_cm"
-                        android:textAllCaps="false"
-                        android:textColor="#FFFFFF"
-                        android:textSize="11sp"
-                        android:textStyle="bold"
-                        app:backgroundTint="@null"
-                        app:icon="@drawable/outline_height_24"
-                        app:iconGravity="top"
-                        app:iconSize="24dp"
-                        app:iconTint="#FFFFFF" />
-                </LinearLayout>
+                    <TextView
+                        android:fontFamily="@font/noto_sans_bengali_thin"
+                        android:text="@string/underweight"
+                        android:textColor="@color/text_secondary_dynamic" />
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:baselineAligned="false"
-                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_gravity="end"
+                        android:fontFamily="@font/noto_sans_bengali_thin"
+                        android:gravity="end"
+                        android:text="@string/_17_0_18_4"
+                        android:textColor="@color/text_secondary_dynamic" />
+                </TableRow>
 
-                    <com.google.android.material.textfield.TextInputLayout
-                        android:id="@+id/til_weight"
-                        style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:hint="@string/enter_weight"
-                        app:boxBackgroundColor="#FFFFFF"
-                        app:boxBackgroundMode="outline"
-                        app:boxCornerRadiusBottomEnd="8dp"
-                        app:boxCornerRadiusBottomStart="8dp"
-                        app:boxCornerRadiusTopEnd="8dp"
-                        app:boxCornerRadiusTopStart="8dp"
-                        app:boxStrokeColor="#A0A0A0"
-                        app:boxStrokeWidth="1dp"
-                        app:boxStrokeWidthFocused="1.2dp"
-                        app:hintTextColor="?attr/colorOnSurfaceVariant">
+                <TableRow
+                    android:id="@+id/tvChartHealthy"
+                    android:paddingVertical="2dp">
 
-                        <com.google.android.material.textfield.TextInputEditText
-                            android:id="@+id/etWeight"
-                            style="@style/Widget.BMITracker.TextInputEditText"
-                            android:layout_width="match_parent"
-                            android:layout_height="54dp"
-                            android:fontFamily="@font/noto_sans_bengali_thin"
-                            android:imeOptions="actionDone"
-                            android:inputType="numberDecimal"
-                            android:paddingTop="0dp"
-                            android:paddingBottom="0dp"
-                            android:textColor="?attr/colorOnSurface"
-                            android:textColorHint="?attr/colorOnSurfaceVariant"
-                            android:textSize="16sp" />
-                    </com.google.android.material.textfield.TextInputLayout>
+                    <TextView
+                        android:fontFamily="@font/noto_sans_bengali_thin"
+                        android:text="@string/healthy_weight"
+                        android:textColor="@color/text_secondary_dynamic" />
 
-                    <com.google.android.material.button.MaterialButton
-                        android:id="@+id/dropdownWeightUnit"
-                        style="@style/Widget.MaterialComponents.Button.TextButton"
-                        android:layout_width="62dp"
-                        android:layout_height="62dp"
-                        android:layout_gravity="center_vertical"
-                        android:layout_marginStart="12dp"
-                        android:background="@drawable/circle_button"
-                        android:contentDescription="@string/unit_kg"
-                        android:insetLeft="0dp"
-                        android:insetTop="0dp"
-                        android:insetRight="0dp"
-                        android:insetBottom="0dp"
-                        android:text="@string/unit_kg"
-                        android:textAllCaps="false"
-                        android:textColor="#FFFFFF"
-                        android:textSize="11sp"
-                        android:textStyle="bold"
-                        app:backgroundTint="@null"
-                        app:icon="@drawable/outline_monitor_weight_24"
-                        app:iconGravity="top"
-                        app:iconSize="24dp"
-                        app:iconTint="#FFFFFF" />
-                </LinearLayout>
-            </LinearLayout>
-        </com.google.android.material.card.MaterialCardView>
+                    <TextView
+                        android:layout_gravity="end"
+                        android:fontFamily="@font/noto_sans_bengali_thin"
+                        android:gravity="end"
+                        android:text="@string/_18_5_24_9"
+                        android:textColor="@color/text_secondary_dynamic" />
+                </TableRow>
 
-        <com.github.anastr.speedviewlib.SpeedView
-            android:id="@+id/speedView"
-            android:layout_width="160dp"
-            android:layout_height="160dp"
-            android:layout_marginTop="6dp"
-            android:contentDescription="@string/a11y_bmi_gauge"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/cardInputs"
-            app:sv_maxSpeed="50"
-            app:sv_minSpeed="0"
-            app:sv_unit="BMI" />
+                <TableRow
+                    android:id="@+id/tvChartOverweight"
+                    android:paddingVertical="2dp">
 
-        <TextView
-            android:id="@+id/tvLabelCategory"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="0dp"
-            android:fontFamily="@font/noto_sans_bengali_thin"
-            android:text="@string/category"
-            android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/speedView" />
+                    <TextView
+                        android:fontFamily="@font/noto_sans_bengali_thin"
+                        android:text="@string/overweight"
+                        android:textColor="@color/text_secondary_dynamic" />
 
-        <TextView
-            android:id="@+id/lblDifference"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/noto_sans_bengali_thin"
-            android:text="@string/difference"
-            android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="@id/tvLabelCategory" />
+                    <TextView
+                        android:layout_gravity="end"
+                        android:fontFamily="@font/noto_sans_bengali_thin"
+                        android:gravity="end"
+                        android:text="@string/_25_0_29_9"
+                        android:textColor="@color/text_secondary_dynamic" />
+                </TableRow>
 
-        <TextView
-            android:id="@+id/tvWeightDifference"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
-            android:fontFamily="@font/noto_sans_bengali_thin"
-            android:text="@string/placeholder_dash"
-            android:textColor="?attr/colorPrimary"
-            android:textSize="16sp"
-            android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/lblDifference" />
+                <TableRow
+                    android:id="@+id/tvChartObeseClassI"
+                    android:paddingVertical="2dp">
 
-        <TextView
-            android:id="@+id/tvCategory"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
-            android:fontFamily="@font/noto_sans_bengali_thin"
-            android:text="@string/placeholder_dash"
-            android:textColor="?attr/colorPrimary"
-            android:textSize="16sp"
-            android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tvLabelCategory" />
+                    <TextView
+                        android:fontFamily="@font/noto_sans_bengali_thin"
+                        android:text="@string/obese_class_i"
+                        android:textColor="@color/text_secondary_dynamic" />
 
-        <TextView
-            android:id="@+id/tvNormalWeightRange"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/noto_sans_bengali_thin"
-            android:text="@string/normal_weight_range"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="@id/lblNormal" />
+                    <TextView
+                        android:layout_gravity="end"
+                        android:fontFamily="@font/noto_sans_bengali_thin"
+                        android:gravity="end"
+                        android:text="@string/_30_0_34_9"
+                        android:textColor="@color/text_secondary_dynamic" />
+                </TableRow>
 
-        <View
-            android:id="@+id/divider2"
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:layout_marginTop="6dp"
-            android:background="#D1D1D1"
-            app:layout_constraintTop_toBottomOf="@id/lblNormal" />
+                <TableRow
+                    android:id="@+id/tvChartObeseClassII"
+                    android:paddingVertical="2dp">
 
-        <TableLayout
-            android:id="@+id/bmiChartTable"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="2dp"
-            android:stretchColumns="0"
-            app:layout_constraintTop_toBottomOf="@id/divider2">
+                    <TextView
+                        android:fontFamily="@font/noto_sans_bengali_thin"
+                        android:text="@string/obese_class_ii"
+                        android:textColor="@color/text_secondary_dynamic" />
 
-            <TableRow
-                android:id="@+id/tvChartVerySeverelyUnderweight"
-                android:paddingVertical="2dp">
+                    <TextView
+                        android:layout_gravity="end"
+                        android:fontFamily="@font/noto_sans_bengali_thin"
+                        android:gravity="end"
+                        android:text="@string/_35_0_39_9"
+                        android:textColor="@color/text_secondary_dynamic" />
+                </TableRow>
 
-                <TextView
-                    android:fontFamily="@font/noto_sans_bengali_thin"
-                    android:text="@string/very_severely_underweight"
-                    android:textColor="@color/text_secondary_dynamic" />
+                <TableRow
+                    android:id="@+id/tvChartObeseClassIII"
+                    android:paddingVertical="2dp">
 
-                <TextView
-                    android:layout_gravity="end"
-                    android:fontFamily="@font/noto_sans_bengali_thin"
-                    android:gravity="end"
-                    android:text="@string/lt_15_9"
-                    android:textColor="@color/text_secondary_dynamic" />
-            </TableRow>
+                    <TextView
+                        android:fontFamily="@font/noto_sans_bengali_thin"
+                        android:text="@string/obese_class_iii"
+                        android:textColor="@color/text_secondary_dynamic" />
 
-            <TableRow
-                android:id="@+id/tvChartSeverelyUnderweight"
-                android:paddingVertical="2dp">
+                    <TextView
+                        android:layout_gravity="end"
+                        android:fontFamily="@font/noto_sans_bengali_thin"
+                        android:gravity="end"
+                        android:text="@string/gt_40"
+                        android:textColor="@color/text_secondary_dynamic" />
+                </TableRow>
+            </TableLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
 
-                <TextView
-                    android:fontFamily="@font/noto_sans_bengali_thin"
-                    android:text="@string/severely_underweight"
-                    android:textColor="@color/text_secondary_dynamic" />
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/adView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        ads:adSize="BANNER"
+        ads:adUnitId="ca-app-pub-3940256099942544/6300978111" />
 
-                <TextView
-                    android:layout_gravity="end"
-                    android:fontFamily="@font/noto_sans_bengali_thin"
-                    android:gravity="end"
-                    android:text="@string/_16_0_16_9"
-                    android:textColor="@color/text_secondary_dynamic" />
-            </TableRow>
 
-            <TableRow
-                android:id="@+id/tvChartUnderweight"
-                android:paddingVertical="2dp">
 
-                <TextView
-                    android:fontFamily="@font/noto_sans_bengali_thin"
-                    android:text="@string/underweight"
-                    android:textColor="@color/text_secondary_dynamic" />
-
-                <TextView
-                    android:layout_gravity="end"
-                    android:fontFamily="@font/noto_sans_bengali_thin"
-                    android:gravity="end"
-                    android:text="@string/_17_0_18_4"
-                    android:textColor="@color/text_secondary_dynamic" />
-            </TableRow>
-
-            <TableRow
-                android:id="@+id/tvChartHealthy"
-                android:paddingVertical="2dp">
-
-                <TextView
-                    android:fontFamily="@font/noto_sans_bengali_thin"
-                    android:text="@string/healthy_weight"
-                    android:textColor="@color/text_secondary_dynamic" />
-
-                <TextView
-                    android:layout_gravity="end"
-                    android:fontFamily="@font/noto_sans_bengali_thin"
-                    android:gravity="end"
-                    android:text="@string/_18_5_24_9"
-                    android:textColor="@color/text_secondary_dynamic" />
-            </TableRow>
-
-            <TableRow
-                android:id="@+id/tvChartOverweight"
-                android:paddingVertical="2dp">
-
-                <TextView
-                    android:fontFamily="@font/noto_sans_bengali_thin"
-                    android:text="@string/overweight"
-                    android:textColor="@color/text_secondary_dynamic" />
-
-                <TextView
-                    android:layout_gravity="end"
-                    android:fontFamily="@font/noto_sans_bengali_thin"
-                    android:gravity="end"
-                    android:text="@string/_25_0_29_9"
-                    android:textColor="@color/text_secondary_dynamic" />
-            </TableRow>
-
-            <TableRow
-                android:id="@+id/tvChartObeseClassI"
-                android:paddingVertical="2dp">
-
-                <TextView
-                    android:fontFamily="@font/noto_sans_bengali_thin"
-                    android:text="@string/obese_class_i"
-                    android:textColor="@color/text_secondary_dynamic" />
-
-                <TextView
-                    android:layout_gravity="end"
-                    android:fontFamily="@font/noto_sans_bengali_thin"
-                    android:gravity="end"
-                    android:text="@string/_30_0_34_9"
-                    android:textColor="@color/text_secondary_dynamic" />
-            </TableRow>
-
-            <TableRow
-                android:id="@+id/tvChartObeseClassII"
-                android:paddingVertical="2dp">
-
-                <TextView
-                    android:fontFamily="@font/noto_sans_bengali_thin"
-                    android:text="@string/obese_class_ii"
-                    android:textColor="@color/text_secondary_dynamic" />
-
-                <TextView
-                    android:layout_gravity="end"
-                    android:fontFamily="@font/noto_sans_bengali_thin"
-                    android:gravity="end"
-                    android:text="@string/_35_0_39_9"
-                    android:textColor="@color/text_secondary_dynamic" />
-            </TableRow>
-
-            <TableRow
-                android:id="@+id/tvChartObeseClassIII"
-                android:paddingVertical="2dp">
-
-                <TextView
-                    android:fontFamily="@font/noto_sans_bengali_thin"
-                    android:text="@string/obese_class_iii"
-                    android:textColor="@color/text_secondary_dynamic" />
-
-                <TextView
-                    android:layout_gravity="end"
-                    android:fontFamily="@font/noto_sans_bengali_thin"
-                    android:gravity="end"
-                    android:text="@string/gt_40"
-                    android:textColor="@color/text_secondary_dynamic" />
-            </TableRow>
-        </TableLayout>
-    </androidx.constraintlayout.widget.ConstraintLayout>
-</ScrollView>
+</RelativeLayout>

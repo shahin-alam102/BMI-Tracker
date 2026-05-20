@@ -38,8 +38,11 @@ public class MainActivity extends BaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+        // ads load
+        loadBannerAd(binding.adView);
 
         viewModel = new ViewModelProvider(this).get(BmiViewModel.class);
         historyViewModel = new ViewModelProvider(this).get(HistoryViewModel.class);

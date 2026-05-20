@@ -5,13 +5,13 @@ import android.content.SharedPreferences;
 import android.content.res.Configuration;
 import android.content.res.Resources;
 import android.os.Bundle;
-
 import androidx.appcompat.app.AppCompatActivity;
-
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.MobileAds;
 import java.util.Locale;
 
 public class BaseActivity extends AppCompatActivity {
-
     private static final String PREFS_NAME = "settings";
     private static final String KEY_LANGUAGE = "pref_language";
     private String currentLanguage;
@@ -22,6 +22,13 @@ public class BaseActivity extends AppCompatActivity {
         applyLanguagePreference(this);
         SharedPreferences prefs = getSharedPreferences(PREFS_NAME, MODE_PRIVATE);
         currentLanguage = prefs.getString(KEY_LANGUAGE, "system");
+        MobileAds.initialize(this, initializationStatus -> {});
+    }
+    protected void loadBannerAd(AdView madView) {
+        if (madView != null) {
+            AdRequest adRequest = new AdRequest.Builder().build();
+            madView.loadAd(adRequest);
+        }
     }
 
     @Override
