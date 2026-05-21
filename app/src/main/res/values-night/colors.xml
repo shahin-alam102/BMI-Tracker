@@ -7,4 +7,7 @@
     <color name="spinner_text_soft">#CFD8DC</color>
     <color name="spinner_popup_background">#2D2D2D</color>
     <color name="spinner_ripple_soft">#28FFFFFF</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="input_text_color">#FFFFFF</color>
 </resources>

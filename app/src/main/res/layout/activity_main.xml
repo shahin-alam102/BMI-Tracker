@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:ads="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -65,6 +65,7 @@
                 android:layout_marginTop="8dp"
                 android:fontFamily="@font/noto_sans_bengali_thin"
                 android:text="@string/ideal_weight"
+                android:textColor="?attr/colorOnSurface"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/tvCategory" />
 
@@ -101,7 +102,8 @@
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:hint="@string/age"
-                            app:boxBackgroundColor="#FFFFFF"
+                            android:textColorHint="?attr/colorOnSurface"
+                            app:boxBackgroundColor="@color/spinner_popup_background"
                             app:boxBackgroundMode="outline"
                             app:boxCornerRadiusBottomEnd="8dp"
                             app:boxCornerRadiusBottomStart="8dp"
@@ -117,16 +119,15 @@
                                 style="@style/Widget.BMITracker.TextInputEditText"
                                 android:layout_width="match_parent"
                                 android:layout_height="54dp"
+                                android:layout_marginTop="0dp"
                                 android:fontFamily="@font/noto_sans_bengali_thin"
                                 android:gravity="center_vertical"
                                 android:imeOptions="actionNext"
                                 android:inputType="numberDecimal"
                                 android:maxLength="3"
-                                android:layout_marginTop="0dp"
                                 android:paddingTop="0dp"
                                 android:paddingBottom="0dp"
-                                android:textColor="?attr/colorOnSurface"
-                                android:textColorHint="?attr/colorOnSurfaceVariant"
+                                android:textColor="@color/input_text_color"
                                 android:textSize="16sp" />
                         </com.google.android.material.textfield.TextInputLayout>
 
@@ -169,7 +170,8 @@
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:hint="@string/enter_height"
-                            app:boxBackgroundColor="#FFFFFF"
+                            android:textColorHint="?attr/colorOnSurface"
+                            app:boxBackgroundColor="@color/spinner_popup_background"
                             app:boxBackgroundMode="outline"
                             app:boxCornerRadiusBottomEnd="8dp"
                             app:boxCornerRadiusBottomStart="8dp"
@@ -190,8 +192,7 @@
                                 android:inputType="numberDecimal"
                                 android:paddingTop="0dp"
                                 android:paddingBottom="0dp"
-                                android:textColor="?attr/colorOnSurface"
-                                android:textColorHint="?attr/colorOnSurfaceVariant"
+                                android:textColor="@color/input_text_color"
                                 android:textSize="16sp" />
                         </com.google.android.material.textfield.TextInputLayout>
 
@@ -233,16 +234,17 @@
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:hint="@string/enter_weight"
-                            app:boxBackgroundColor="#FFFFFF"
+                            android:textColorHint="?attr/colorOnSurface"
+                            app:boxBackgroundColor="@color/spinner_popup_background"
                             app:boxBackgroundMode="outline"
                             app:boxCornerRadiusBottomEnd="8dp"
                             app:boxCornerRadiusBottomStart="8dp"
                             app:boxCornerRadiusTopEnd="8dp"
                             app:boxCornerRadiusTopStart="8dp"
-                            app:boxStrokeColor="#A0A0A0"
+                            app:boxStrokeColor="@color/white"
                             app:boxStrokeWidth="1dp"
                             app:boxStrokeWidthFocused="1.2dp"
-                            app:hintTextColor="?attr/colorOnSurfaceVariant">
+                            app:hintTextColor="@color/white">
 
                             <com.google.android.material.textfield.TextInputEditText
                                 android:id="@+id/etWeight"
@@ -254,8 +256,7 @@
                                 android:inputType="numberDecimal"
                                 android:paddingTop="0dp"
                                 android:paddingBottom="0dp"
-                                android:textColor="?attr/colorOnSurface"
-                                android:textColorHint="?attr/colorOnSurfaceVariant"
+                                android:textColor="@color/input_text_color"
                                 android:textSize="16sp" />
                         </com.google.android.material.textfield.TextInputLayout>
 
@@ -306,6 +307,7 @@
                 android:layout_marginTop="0dp"
                 android:fontFamily="@font/noto_sans_bengali_thin"
                 android:text="@string/category"
+                android:textColor="?attr/colorOnSurface"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/speedView" />
@@ -316,6 +318,7 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/noto_sans_bengali_thin"
                 android:text="@string/difference"
+                android:textColor="?attr/colorOnSurface"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="@id/tvLabelCategory" />
@@ -517,7 +520,6 @@
         android:layout_alignParentBottom="true"
         ads:adSize="BANNER"
         ads:adUnitId="ca-app-pub-3940256099942544/6300978111" />
-
 
 
 </RelativeLayout>

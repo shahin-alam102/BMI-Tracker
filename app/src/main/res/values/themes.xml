@@ -1,15 +1,28 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <!-- Base application theme. -->
     <style name="Base.Theme.BMITracker" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- Customize your light theme here. -->
-        <item name="android:windowBackground">#F5F5F5</item>
-        <item name="android:textColorPrimary">@color/text_main</item>
-        <item name="android:textColorSecondary">@color/text_secondary_dynamic</item>
+
+        <!-- Primary brand color -->
+        <item name="colorPrimary">@color/appBar_background</item>
+        <item name="colorOnPrimary">@color/white</item>
+
+        <!-- Surface colors (IMPORTANT for TextInputLayout) -->
+        <item name="colorSurface">@color/cardColor</item>
+        <item name="colorSurfaceVariant">@color/screen_bg</item>
         <item name="colorOnSurface">@color/text_main</item>
         <item name="colorOnSurfaceVariant">@color/text_secondary_dynamic</item>
+        <item name="colorOutline">@color/secondaryTextColor</item>
+
+        <!-- Background -->
+        <item name="android:windowBackground">@color/screen_bg</item>
+
+        <!-- Text colors -->
+        <item name="android:textColorPrimary">@color/text_main</item>
+        <item name="android:textColorSecondary">@color/text_secondary_dynamic</item>
+
+        <!-- Other -->
         <item name="android:colorControlHighlight">@color/spinner_ripple_soft</item>
         <item name="fontFamily">@font/noto_sans_bengali_regular</item>
-       >
+        <item name="android:fontFamily">@font/noto_sans_bengali_regular</item>
     </style>
 
     <style name="Theme.BMITracker" parent="Base.Theme.BMITracker" />
