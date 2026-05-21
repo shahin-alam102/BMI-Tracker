@@ -9,22 +9,17 @@ import android.text.TextWatcher;
 import android.view.View;
 import android.view.MenuItem;
 import android.widget.PopupMenu;
-
 import com.voxo.bmitracker.R;
-
 import android.widget.TextView;
 import android.widget.TableRow;
 import android.widget.Toast;
-
 import androidx.annotation.NonNull;
 import androidx.lifecycle.ViewModelProvider;
-
 import com.github.anastr.speedviewlib.components.Section;
 import com.voxo.bmitracker.databinding.ActivityMainBinding;
 import com.voxo.bmitracker.model.BmiHistory;
 import com.voxo.bmitracker.viewmodel.BmiViewModel;
 import com.voxo.bmitracker.viewmodel.HistoryViewModel;
-
 import java.util.Locale;
 
 public class MainActivity extends BaseActivity {
@@ -51,6 +46,7 @@ public class MainActivity extends BaseActivity {
         initUI();
         setupObservers();
         setupListeners();
+        loadInterstitialAd();
     }
 
     @Override
@@ -528,8 +524,10 @@ public class MainActivity extends BaseActivity {
     private void handleMenuItemClick(MenuItem item) {
         int itemId = item.getItemId();
         if (itemId == R.id.menu_history) {
-            Intent intent = new Intent(MainActivity.this, HistoryActivity.class);
-            startActivity(intent);
+            showInterstitialAd(() -> {
+                Intent intent = new Intent(MainActivity.this, HistoryActivity.class);
+                startActivity(intent);
+            });
         } else if (itemId == R.id.menu_settings) {
             startActivity(new Intent(this, SettingsActivity.class));
         } else if (itemId == R.id.menu_about) {

@@ -5,13 +5,21 @@ import android.content.SharedPreferences;
 import android.content.res.Configuration;
 import android.content.res.Resources;
 import android.os.Bundle;
+
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.FullScreenContentCallback;
+import com.google.android.gms.ads.LoadAdError;
 import com.google.android.gms.ads.MobileAds;
+import com.google.android.gms.ads.interstitial.InterstitialAd;
+import com.google.android.gms.ads.interstitial.InterstitialAdLoadCallback;
+
 import java.util.Locale;
 
 public class BaseActivity extends AppCompatActivity {
+    protected InterstitialAd mInterstitialAd;
     private static final String PREFS_NAME = "settings";
     private static final String KEY_LANGUAGE = "pref_language";
     private String currentLanguage;
@@ -28,6 +36,37 @@ public class BaseActivity extends AppCompatActivity {
         if (madView != null) {
             AdRequest adRequest = new AdRequest.Builder().build();
             madView.loadAd(adRequest);
+        }
+    }
+    protected void loadInterstitialAd() {
+        AdRequest adRequest = new AdRequest.Builder().build();
+        InterstitialAd.load(this, "ca-app-pub-3940256099942544/1033173712", adRequest,
+                new InterstitialAdLoadCallback() {
+                    @Override
+                    public void onAdLoaded(@NonNull InterstitialAd interstitialAd) {
+                        mInterstitialAd = interstitialAd;
+                    }
+
+                    @Override
+                    public void onAdFailedToLoad(@NonNull LoadAdError loadAdError) {
+                        mInterstitialAd = null;
+                    }
+                });
+    }
+
+    protected void showInterstitialAd(Runnable onAdClosedAction) {
+        if (mInterstitialAd != null) {
+            mInterstitialAd.show(this);
+            mInterstitialAd.setFullScreenContentCallback(new FullScreenContentCallback() {
+                @Override
+                public void onAdDismissedFullScreenContent() {
+                    super.onAdDismissedFullScreenContent();
+                    onAdClosedAction.run();
+                    loadInterstitialAd();
+                }
+            });
+        } else {
+            onAdClosedAction.run(); // অ্যাড রেডি না থাকলে সরাসরি কাজটি হয়ে যাবে
         }
     }
 
