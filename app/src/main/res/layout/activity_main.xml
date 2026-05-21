@@ -244,7 +244,7 @@
                             app:boxStrokeColor="@color/white"
                             app:boxStrokeWidth="1dp"
                             app:boxStrokeWidthFocused="1.2dp"
-                            app:hintTextColor="@color/white">
+                            app:hintTextColor="?attr/colorOnSurfaceVariant">
 
                             <com.google.android.material.textfield.TextInputEditText
                                 android:id="@+id/etWeight"
