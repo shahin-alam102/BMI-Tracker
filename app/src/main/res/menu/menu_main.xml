@@ -6,6 +6,9 @@
         android:id="@+id/menu_history"
         android:title="@string/menu_item_history"
         app:showAsAction="never" />
+    <item
+        android:id="@+id/menu_health_tips"
+        android:title="@string/title_health_tips" />
 
     <item
         android:id="@+id/menu_settings"

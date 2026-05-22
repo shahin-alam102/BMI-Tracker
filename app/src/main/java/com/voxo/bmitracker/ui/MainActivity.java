@@ -539,7 +539,9 @@ public class MainActivity extends BaseActivity {
                 Intent intent = new Intent(MainActivity.this, HistoryActivity.class);
                 startActivity(intent);
             }
-
+        } else if (itemId == R.id.menu_health_tips) {
+            Intent intent = new Intent(MainActivity.this, HealthTipsActivity.class);
+            startActivity(intent);
         } else if (itemId == R.id.menu_settings) {
             startActivity(new Intent(this, SettingsActivity.class));
         } else if (itemId == R.id.menu_about) {

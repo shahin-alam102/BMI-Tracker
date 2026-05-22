@@ -82,12 +82,19 @@
     <string name="menu_item_share">Share</string>
     <string name="more_apps">More Apps</string>
     <string name="english">English</string>
-    <string name="system_default_english">System Default (English)</string>
     <string name="system_default_english1">System Default (English)</string>
     <string name="system_default_bangla">System Default (বাংলা)</string>
     <string name="ad_icon">ad_icon</string>
     <string name="ad">Ad</string>
     <string name="install">Install</string>
+
+    <string name="title_health_tips">Health &amp; Weight Tips</string>
+    <string name="title_weight_loss">📉 Weight Loss Tips</string>
+    <string name="title_weight_gain">📈 Weight Gain Tips</string>
+    <string name="title_healthy_living">🥗 Healthy Living Tips</string>
+    <string name="content_weight_loss">1. Understand Calorie Deficit:\nThe key to weight loss is consuming fewer calories than your body needs. Consume 200–300 calories less than your daily expenditure.\n\n2. Cut Sugar &amp; Refined Carbs:\nSignificantly reduce sweets, cold drinks, fast food, and white rice. Instead, opt for brown rice, oats, or whole-wheat bread.\n\n3. Increase Protein &amp; Fiber:\nInclude adequate protein (eggs, chicken, fish, lentils) and fiber-rich vegetables in every meal to keep you full longer.\n\n4. Drink Water Rightly:\nDrink 3–4 liters of water daily. Drink a glass of water 30 minutes before meals to prevent overeating.\n\n5. Regular Moderate Exercise:\nExercise or brisk walk for 30–40 minutes at least 5 days a week to boost metabolism and burn fat.</string>
+    <string name="content_weight_gain">1. Calorie Surplus Diet:\nTo gain weight, eat 300–500 calories more than your daily requirement. Focus on nutrient-dense foods instead of junk food.\n\n2. Nutrient-Rich &amp; High-Calorie Foods:\nEat calorie-dense foods like almonds, cashews, peanut butter, raisins, dates, eggs, whole milk, bananas, and ghee.\n\n3. Frequent Meals:\nEat 5–6 smaller, nutritious meals instead of 3 large meals. Snack on nuts, fruits, or puddings in between.\n\n4. No Water Before Meals:\nAvoid drinking water right before or during meals, as it fills your stomach and reduces your appetite.\n\n5. Strength Training:\nDo push-ups, squats, or light gym work to build muscle mass rather than just gaining unhealthy fat.</string>
+    <string name="content_healthy_living">1. Balanced Diet:\nFill half your plate with veggies and fruits, one-quarter with protein, and one-quarter with complex carbs. Eat at least one seasonal fruit daily.\n\n2. Adequate &amp; Deep Sleep:\n7 to 8 hours of uninterrupted sleep is essential. Poor sleep disrupts hormonal balance, causing unexpected weight changes.\n\n3. Manage Stress:\nHigh stress slows down metabolism. Practice deep breathing exercises or meditation for 10–15 minutes daily.\n\n4. Avoid Processed &amp; Trans-Fats:\nPackaged foods, deep-fried items, and excessive salt harm your heart. Always prefer fresh, home-cooked food.\n\n5. Stay Active:\nAvoid sitting continuously. Stand up or walk for 2 minutes every hour. Choose stairs over elevators whenever possible.</string>
 
 
     <string-array name="height_units">

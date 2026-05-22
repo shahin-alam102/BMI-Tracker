@@ -30,6 +30,12 @@
             android:name=".ui.HistoryActivity"
             android:configChanges="orientation|screenSize|screenLayout|keyboardHidden|smallestScreenSize"
             android:exported="false" />
+        <activity
+            android:name=".ui.HealthTipsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.TipsDetailActivity"
+            android:exported="false" />
 
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"
