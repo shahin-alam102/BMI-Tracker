@@ -28,6 +28,7 @@ public class MainActivity extends BaseActivity {
     private HistoryViewModel historyViewModel;
     private String lastSavedHeight = "";
     private String lastSavedWeight = "";
+    private int interstitialClickCount = 0;
 
 
     @Override
@@ -37,7 +38,9 @@ public class MainActivity extends BaseActivity {
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
         // ads load
-        loadBannerAd(binding.adView);
+        if (binding != null) {
+            loadBannerAd(binding.adView);
+        }
 
         viewModel = new ViewModelProvider(this).get(BmiViewModel.class);
         historyViewModel = new ViewModelProvider(this).get(HistoryViewModel.class);
@@ -524,10 +527,19 @@ public class MainActivity extends BaseActivity {
     private void handleMenuItemClick(MenuItem item) {
         int itemId = item.getItemId();
         if (itemId == R.id.menu_history) {
-            showInterstitialAd(() -> {
+
+            interstitialClickCount++; //
+            if (interstitialClickCount >= 3) {
+                interstitialClickCount = 0;
+                showInterstitialAd(() -> {
+                    Intent intent = new Intent(MainActivity.this, HistoryActivity.class);
+                    startActivity(intent);
+                });
+            } else {
                 Intent intent = new Intent(MainActivity.this, HistoryActivity.class);
                 startActivity(intent);
-            });
+            }
+
         } else if (itemId == R.id.menu_settings) {
             startActivity(new Intent(this, SettingsActivity.class));
         } else if (itemId == R.id.menu_about) {

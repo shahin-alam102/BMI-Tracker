@@ -13,11 +13,14 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.recyclerview.widget.ItemTouchHelper;
 
+import com.google.android.gms.ads.AdLoader;
+import com.google.android.gms.ads.AdRequest;
 import com.voxo.bmitracker.R;
 import com.voxo.bmitracker.databinding.ActivityHistoryBinding;
 import com.voxo.bmitracker.model.BmiHistory;
 import com.voxo.bmitracker.viewmodel.HistoryViewModel;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
 
@@ -26,6 +29,7 @@ public class HistoryActivity extends BaseActivity {
     private ActivityHistoryBinding binding;
     private HistoryViewModel historyViewModel;
     private HistoryAdapter historyAdapter;
+    private final List<Object> combinedList = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -81,7 +85,9 @@ public class HistoryActivity extends BaseActivity {
 
             @Override
             public void onHistoryItemLongClick(int position) {
-                showDeleteConfirmation(position);
+                if (combinedList.get(position) instanceof BmiHistory) {
+                    showDeleteConfirmation(position);
+                }
             }
         });
 
@@ -98,12 +104,18 @@ public class HistoryActivity extends BaseActivity {
             }
 
             @Override
+            public int getSwipeDirs(@NonNull RecyclerView recyclerView, @NonNull RecyclerView.ViewHolder viewHolder) {
+                if (viewHolder instanceof HistoryAdapter.AdViewHolder) return 0;
+                return super.getSwipeDirs(recyclerView, viewHolder);
+            }
+
+            @Override
             public void onSwiped(@NonNull RecyclerView.ViewHolder viewHolder, int direction) {
                 int position = viewHolder.getBindingAdapterPosition();
                 if (position == RecyclerView.NO_POSITION) {
                     position = viewHolder.getAbsoluteAdapterPosition();
                 }
-                if (position != RecyclerView.NO_POSITION) {
+                if (position != RecyclerView.NO_POSITION && combinedList.get(position) instanceof BmiHistory) {
                     showDeleteConfirmation(position);
                 }
             }
@@ -119,7 +131,39 @@ public class HistoryActivity extends BaseActivity {
         } else {
             binding.recyclerViewHistory.setVisibility(View.VISIBLE);
             binding.emptyStateContainer.setVisibility(View.GONE);
-            historyAdapter.setHistoryList(historyList);
+            AdLoader adLoader = new AdLoader.Builder(this, "ca-app-pub-3940256099942544/2247696110")
+                    .forNativeAd(nativeAd -> {
+                        // Run list building on background thread
+                        new Thread(() -> {
+                            List<Object> newList = new ArrayList<>();
+                            int index = 0;
+                            for (BmiHistory item : historyList) {
+                                newList.add(item);
+                                index++;
+                                if (index % 4 == 0) {
+                                    newList.add(nativeAd);
+                                }
+                            }
+                            // Update UI on main thread
+                            runOnUiThread(() -> {
+                                combinedList.clear();
+                                combinedList.addAll(newList);
+                                historyAdapter.setHistoryList(combinedList);
+                            });
+                        }).start();
+                    })
+                    .withAdListener(new com.google.android.gms.ads.AdListener() {
+                        @Override
+                        public void onAdFailedToLoad(@NonNull com.google.android.gms.ads.LoadAdError adError) {
+                            super.onAdFailedToLoad(adError);
+                            combinedList.clear();
+                            combinedList.addAll(historyList);
+                            historyAdapter.setHistoryList(combinedList);
+                        }
+                    })
+                    .build();
+
+            adLoader.loadAd(new AdRequest.Builder().build());
         }
     }
 
@@ -169,12 +213,18 @@ public class HistoryActivity extends BaseActivity {
                 .setTitle("Delete Entry")
                 .setMessage("Are you sure you want to delete this BMI entry?")
                 .setPositiveButton("Delete", (dialog, which) -> {
-                    historyViewModel.deleteItem(position);
+                    int realDatabasePosition = 0;
+                    for (int i = 0; i < position; i++) {
+                        if (combinedList.get(i) instanceof BmiHistory) {
+                            realDatabasePosition++;
+                        }
+                    }
+
+                    historyViewModel.deleteItem(realDatabasePosition);
                     dialog.dismiss();
                 })
                 .setNegativeButton("Cancel", (dialog, which) -> {
                     dialog.dismiss();
-                    // Refresh adapter target state if dialog dismissed on swipe
                     if (historyAdapter != null) {
                         historyAdapter.notifyItemChanged(position);
                     }

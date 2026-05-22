@@ -4,12 +4,16 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.DiffUtil;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.google.android.gms.ads.nativead.NativeAd;
+import com.google.android.gms.ads.nativead.NativeAdView;
 import com.voxo.bmitracker.R;
 import com.voxo.bmitracker.model.BmiHistory;
 
@@ -18,14 +22,16 @@ import java.util.List;
 import java.util.Locale;
 import java.util.Objects;
 
-public class HistoryAdapter extends RecyclerView.Adapter<HistoryAdapter.HistoryViewHolder> {
+public class HistoryAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
-    private List<BmiHistory> historyList = new ArrayList<>();
+    private static final int TYPE_ITEM = 0;
+    private static final int TYPE_AD = 1;
+
+    private List<Object> historyList = new ArrayList<>();
     private OnHistoryItemClickListener listener;
 
     public interface OnHistoryItemClickListener {
         void onHistoryItemClick(BmiHistory history);
-
         void onHistoryItemLongClick(int position);
     }
 
@@ -33,18 +39,37 @@ public class HistoryAdapter extends RecyclerView.Adapter<HistoryAdapter.HistoryV
         this.listener = listener;
     }
 
+    @Override
+    public int getItemViewType(int position) {
+        if (historyList.get(position) instanceof NativeAd) {
+            return TYPE_AD;
+        }
+        return TYPE_ITEM;
+    }
+
     @NonNull
     @Override
-    public HistoryViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.item_history, parent, false);
-        return new HistoryViewHolder(view);
+    public RecyclerView.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        if (viewType == TYPE_AD) {
+            View view = LayoutInflater.from(parent.getContext())
+                    .inflate(R.layout.layout_native_ad, parent, false);
+            return new AdViewHolder(view);
+        } else {
+            View view = LayoutInflater.from(parent.getContext())
+                    .inflate(R.layout.item_history, parent, false);
+            return new HistoryViewHolder(view);
+        }
     }
 
     @Override
-    public void onBindViewHolder(@NonNull HistoryViewHolder holder, int position) {
-        BmiHistory history = historyList.get(position);
-        holder.bind(history);
+    public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, int position) {
+        if (getItemViewType(position) == TYPE_AD) {
+            NativeAd nativeAd = (NativeAd) historyList.get(position);
+            ((AdViewHolder) holder).bind(nativeAd);
+        } else {
+            BmiHistory history = (BmiHistory) historyList.get(position);
+            ((HistoryViewHolder) holder).bind(history);
+        }
     }
 
     @Override
@@ -52,8 +77,7 @@ public class HistoryAdapter extends RecyclerView.Adapter<HistoryAdapter.HistoryV
         return historyList.size();
     }
 
-    // 1 usage
-    public void setHistoryList(List<BmiHistory> newHistoryList) {
+    public void setHistoryList(List<Object> newHistoryList) {
         if (newHistoryList == null) newHistoryList = new ArrayList<>();
         BmiHistoryDiffCallback diffCallback = new BmiHistoryDiffCallback(this.historyList, newHistoryList);
         DiffUtil.DiffResult diffResult = DiffUtil.calculateDiff(diffCallback);
@@ -79,7 +103,10 @@ public class HistoryAdapter extends RecyclerView.Adapter<HistoryAdapter.HistoryV
             itemView.setOnClickListener(v -> {
                 int position = getBindingAdapterPosition();
                 if (position != RecyclerView.NO_POSITION && listener != null) {
-                    listener.onHistoryItemClick(historyList.get(position));
+                    Object item = historyList.get(position);
+                    if (item instanceof BmiHistory) {
+                        listener.onHistoryItemClick((BmiHistory) item);
+                    }
                 }
             });
 
@@ -178,11 +205,63 @@ public class HistoryAdapter extends RecyclerView.Adapter<HistoryAdapter.HistoryV
         }
     }
 
-    private static class BmiHistoryDiffCallback extends DiffUtil.Callback {
-        private final List<BmiHistory> oldList;
-        private final List<BmiHistory> newList;
+    public static class AdViewHolder extends RecyclerView.ViewHolder {
+        private final NativeAdView adView;
 
-        public BmiHistoryDiffCallback(List<BmiHistory> oldList, List<BmiHistory> newList) {
+        public AdViewHolder(@NonNull View itemView) {
+            super(itemView);
+            // itemView IS the NativeAdView, don't search inside it
+            adView = (NativeAdView) itemView; // ← CHANGE THIS
+        }
+        public void bind(NativeAd nativeAd) {
+            if (nativeAd == null) return;
+
+            // ভিউ আইডি ম্যাপিং
+            adView.setHeadlineView(adView.findViewById(R.id.ad_headline));
+            adView.setBodyView(adView.findViewById(R.id.ad_body));
+            adView.setCallToActionView(adView.findViewById(R.id.ad_call_to_action));
+            adView.setIconView(adView.findViewById(R.id.ad_app_icon));
+            adView.setMediaView(adView.findViewById(R.id.ad_media));
+            adView.setAdvertiserView(adView.findViewById(R.id.ad_advertiser));
+
+            ((TextView) Objects.requireNonNull(adView.getHeadlineView())).setText(nativeAd.getHeadline());
+            if (nativeAd.getBody() == null) {
+                Objects.requireNonNull(adView.getBodyView()).setVisibility(View.GONE);
+            } else {
+                Objects.requireNonNull(adView.getBodyView()).setVisibility(View.VISIBLE);
+                ((TextView) adView.getBodyView()).setText(nativeAd.getBody());
+            }
+
+            if (nativeAd.getCallToAction() == null) {
+                Objects.requireNonNull(adView.getCallToActionView()).setVisibility(View.INVISIBLE);
+            } else {
+                Objects.requireNonNull(adView.getCallToActionView()).setVisibility(View.VISIBLE);
+                ((Button) adView.getCallToActionView()).setText(nativeAd.getCallToAction());
+            }
+            if (nativeAd.getIcon() == null) {
+                Objects.requireNonNull(adView.getIconView()).setVisibility(View.GONE);
+            } else {
+                ((ImageView) Objects.requireNonNull(adView.getIconView())).setImageDrawable(nativeAd.getIcon().getDrawable());
+                adView.getIconView().setVisibility(View.VISIBLE);
+            }
+            if (nativeAd.getAdvertiser() == null) {
+                Objects.requireNonNull(adView.getAdvertiserView()).setVisibility(View.GONE);
+            } else {
+                ((TextView) Objects.requireNonNull(adView.getAdvertiserView())).setText(nativeAd.getAdvertiser());
+                adView.getAdvertiserView().setVisibility(View.VISIBLE);
+            }
+            if (adView.getMediaView() != null && nativeAd.getMediaContent() != null) {
+                adView.getMediaView().setMediaContent(nativeAd.getMediaContent());
+            }
+            adView.setNativeAd(nativeAd);
+        }
+    }
+
+    private static class BmiHistoryDiffCallback extends DiffUtil.Callback {
+        private final List<Object> oldList;
+        private final List<Object> newList;
+
+        public BmiHistoryDiffCallback(List<Object> oldList, List<Object> newList) {
             this.oldList = oldList;
             this.newList = newList;
         }
@@ -199,25 +278,38 @@ public class HistoryAdapter extends RecyclerView.Adapter<HistoryAdapter.HistoryV
 
         @Override
         public boolean areItemsTheSame(int oldPos, int newPos) {
-            BmiHistory oldItem = oldList.get(oldPos);
-            BmiHistory newItem = newList.get(newPos);
-            if (oldItem.getDatabaseId() != -1 && newItem.getDatabaseId() != -1) {
-                return oldItem.getDatabaseId() == newItem.getDatabaseId();
+            Object oldItem = oldList.get(oldPos);
+            Object newItem = newList.get(newPos);
+
+            if (oldItem instanceof BmiHistory && newItem instanceof BmiHistory) {
+                BmiHistory oldHistory = (BmiHistory) oldItem;
+                BmiHistory newHistory = (BmiHistory) newItem;
+                if (oldHistory.getDatabaseId() != -1 && newHistory.getDatabaseId() != -1) {
+                    return oldHistory.getDatabaseId() == newHistory.getDatabaseId();
+                }
+                return oldHistory.getTimestamp() == newHistory.getTimestamp();
+            } else if (oldItem instanceof NativeAd && newItem instanceof NativeAd) {
+                return oldItem.hashCode() == newItem.hashCode();
             }
-            return oldItem.getTimestamp() == newItem.getTimestamp();
+            return false;
         }
 
         @Override
         public boolean areContentsTheSame(int oldPos, int newPos) {
-            BmiHistory oldItem = oldList.get(oldPos);
-            BmiHistory newItem = newList.get(newPos);
-            return oldItem.getBmi() == newItem.getBmi()
-                    && Objects.equals(oldItem.getCategory(), newItem.getCategory())
-                    && Objects.equals(oldItem.getHeight(), newItem.getHeight())
-                    && Objects.equals(oldItem.getWeight(), newItem.getWeight())
-                    && Objects.equals(oldItem.getAge(), newItem.getAge())
-                    && Objects.equals(oldItem.getGender(), newItem.getGender());
+            Object oldItem = oldList.get(oldPos);
+            Object newItem = newList.get(newPos);
+
+            if (oldItem instanceof BmiHistory && newItem instanceof BmiHistory) {
+                BmiHistory oldHistory = (BmiHistory) oldItem;
+                BmiHistory newHistory = (BmiHistory) newItem;
+                return oldHistory.getBmi() == newHistory.getBmi()
+                        && Objects.equals(oldHistory.getCategory(), newHistory.getCategory())
+                        && Objects.equals(oldHistory.getHeight(), newHistory.getHeight())
+                        && Objects.equals(oldHistory.getWeight(), newHistory.getWeight())
+                        && Objects.equals(oldHistory.getAge(), newHistory.getAge())
+                        && Objects.equals(oldHistory.getGender(), newHistory.getGender());
+            }
+            return oldItem == newItem;
         }
     }
-
 }

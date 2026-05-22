@@ -52,5 +52,6 @@ dependencies {
     implementation(libs.gson)
     implementation(libs.room.runtime)
     annotationProcessor(libs.room.compiler)
-    implementation ("com.google.android.gms:play-services-ads:25.2.0")
+    implementation (libs.play.services.ads)
+
 }
