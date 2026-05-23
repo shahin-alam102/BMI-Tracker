@@ -87,6 +87,7 @@
     <string name="ad">বিজ্ঞাপন</string>
     <string name="install">ইনস্টল</string>
     <string name="english">ইংরেজি</string>
+    <string name="bmi_history">বিএমআই ইতিহাস</string>
 
     <string name="title_health_tips">স্বাস্থ্য ও ওজন পরামর্শ</string>
     <string name="title_weight_loss">📉 ওজন কমানোর সহজ উপায়</string>

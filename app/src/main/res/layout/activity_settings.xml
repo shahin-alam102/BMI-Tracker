@@ -11,7 +11,7 @@
         android:layout_height="?attr/actionBarSize"
         android:background="@color/appBar_background"
         app:navigationIcon="@drawable/outline_arrow_back_24"
-        app:title="Settings"
+        app:title="@string/menu_item_settings"
         app:titleTextAppearance="@style/TextAppearance.Material3.TitleLarge"
         app:titleTextColor="?attr/colorOnPrimary" />
 

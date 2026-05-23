@@ -7,7 +7,7 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.cardview.widget.CardView;
 import com.voxo.bmitracker.R;
 
-public class HealthTipsActivity extends AppCompatActivity {
+public class HealthTipsActivity extends BaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -69,6 +69,7 @@
     <string name="status_obese_class_i">Obese Class I</string>
     <string name="status_obese_class_ii">Obese Class II</string>
     <string name="status_obese_class_iii">Obese Class III</string>
+    <string name="bmi_history">BMI History</string>
 
     <string name="english_bangla">English</string>
     <string name="choose_language">Choose Language</string>

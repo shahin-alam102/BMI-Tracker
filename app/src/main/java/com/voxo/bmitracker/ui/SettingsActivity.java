@@ -29,11 +29,22 @@ public class SettingsActivity extends BaseActivity {
             androidx.activity.EdgeToEdge.enable(this);
         } catch (Throwable ignored) {
         }
-
         setContentView(R.layout.activity_settings);
 
         androidx.appcompat.widget.Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+        androidx.core.view.ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.toolbar), (v, windowInsets) -> {
+            androidx.core.graphics.Insets insets = windowInsets.getInsets(androidx.core.view.WindowInsetsCompat.Type.systemBars());
+            v.setPadding(v.getPaddingLeft(), insets.top, v.getPaddingRight(), v.getPaddingBottom());
+            v.getLayoutParams().height = androidx.appcompat.widget.Toolbar.LayoutParams.WRAP_CONTENT;
+            v.requestLayout();
+
+            return windowInsets;
+        });
+        androidx.core.view.WindowCompat.getInsetsController(getWindow(), getWindow().getDecorView())
+                .setAppearanceLightStatusBars(false);
+
         if (getSupportActionBar() != null) {
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         }
@@ -47,6 +58,7 @@ public class SettingsActivity extends BaseActivity {
 
         layoutLanguage.setOnClickListener(v -> showLanguageDialog());
     }
+
 
     private String getSavedLanguage() {
         SharedPreferences prefs = getSharedPreferences(PREFS_NAME, MODE_PRIVATE);

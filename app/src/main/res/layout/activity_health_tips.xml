@@ -12,6 +12,7 @@
         android:layout_height="?attr/actionBarSize"
         android:background="#E91E63"
         app:title="@string/title_health_tips"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
         app:titleTextColor="@android:color/white"
         app:navigationIcon="@drawable/abc_ic_ab_back_material" />
 

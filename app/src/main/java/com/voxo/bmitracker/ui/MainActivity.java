@@ -28,7 +28,7 @@ public class MainActivity extends BaseActivity {
     private HistoryViewModel historyViewModel;
     private String lastSavedHeight = "";
     private String lastSavedWeight = "";
-    private int interstitialClickCount = 3;
+    private int interstitialClickCount = 0;
 
 
     @Override

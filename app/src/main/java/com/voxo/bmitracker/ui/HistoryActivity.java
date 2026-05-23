@@ -41,7 +41,7 @@ public class HistoryActivity extends BaseActivity {
         setSupportActionBar(binding.toolbar);
         if (getSupportActionBar() != null) {
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-            getSupportActionBar().setTitle("BMI History");
+            getSupportActionBar().setTitle(R.string.bmi_history);
         }
 
         // Ensure toolbar back button handles navigation safely

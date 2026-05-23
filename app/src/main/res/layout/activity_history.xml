@@ -18,8 +18,9 @@
             android:layout_height="?attr/actionBarSize"
             android:background="?attr/colorPrimary"
             android:elevation="4dp"
+            app:title="BMI Calculator"
             app:navigationIconTint="@android:color/white"
-            app:popupTheme="@style/ThemeOverlay.Material3.Light"
+            app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
             app:titleTextAppearance="@style/TextAppearance.Material3.TitleLarge" />
 
     </com.google.android.material.appbar.AppBarLayout>
