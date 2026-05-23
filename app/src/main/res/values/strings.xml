@@ -1,80 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">BMI Tracker</string>
     <string name="bmi_calculator">BMI Calculator</string>
     <string name="reset">Reset</string>
-    <string name="age">Age</string>
-    <string name="enter_age">Enter age</string>
-    <string name="height">Height</string>
-    <string name="enter_height">Enter height</string>
-    <string name="gender">Gender</string>
-    <string name="enter_weight">Enter weight</string>
-    <string name="category">Category</string>
-    <string name="difference">Difference</string>
-    <string name="normal_weight">Normal Weight</string>
-    <string name="normal_weight_range">00.00 - 00.00 kg</string>
-    <string name="very_severely_underweight">Very severely underweight</string>
-    <string name="severely_underweight">Severely underweight</string>
-    <string name="_16_0_16_9">16.0 - 16.9</string>
-    <string name="underweight">Underweight</string>
-    <string name="_17_0_18_4">17.0 - 18.4</string>
-    <string name="healthy_weight">Healthy Weight</string>
-    <string name="_18_5_24_9">18.5 - 24.9</string>
-    <string name="overweight">Overweight</string>
-    <string name="_25_0_29_9">25.0 - 29.9</string>
-    <string name="obese_class_i">Obese Class I</string>
-    <string name="obese_class_ii">Obese Class II</string>
-    <string name="_30_0_34_9">30.0 - 34.9</string>
-    <string name="_35_0_39_9">35.0 - 39.9</string>
-    <string name="obese_class_iii">Obese Class III</string>
-    <string name="gt_40"><![CDATA[>= 40]]></string>
-    <string name="lt_15_9"><![CDATA[<= 15.9]]></string>
-    <string name="weight">Weight</string>
-    <string name="enterheight">Height</string>
-    <string name="weight_">Weight</string>
-    <string name="ageYour">Age</string>
-    <string name="unit">Unit</string>
-    <string name="clear_history">Clear History</string>
-    <string name="history_empty">No history found</string>
-    <string name="bmi_label">BMI</string>
-    <string name="history_empty_message">No BMI history yet&#10;&#10;
-        Calculate your BMI to see history here!</string>
-    <string name="no_history_available">No history available to clear.</string>
     <string name="menu">Menu</string>
-    <string name="default_height_unit">Default Height Unit</string>
-    <string name="ideal_weight">Ideal Weight</string>
-    <string name="a11y_gender_dropdown">Gender selection</string>
-    <string name="a11y_height_unit_dropdown">Height unit selection</string>
-    <string name="a11y_weight_unit_dropdown">Weight unit selection</string>
-    <string name="a11y_bmi_gauge">BMI gauge</string>
-    <string name="placeholder_dash">— </string>
     <string name="preferences">Preferences</string>
     <string name="language">Language</string>
-    <string name="history_age">Age: %1$s</string>
-    <string name="history_gender">Gender: %1$s</string>
-    <string name="gender_male">Male</string>
-    <string name="gender_female">Female</string>
-    <string name="unit_cm">cm</string>
-    <string name="unit_inch">Fit</string>
-    <string name="unit_kg">kg</string>
-    <string name="unit_lbs">Lbs</string>
-
-    <string name="status_healthy">Healthy Weight</string>
-    <string name="status_overweight">Overweight</string>
-    <string name="status_underweight">Underweight</string>
-    <string name="lose_weight">Lose - %1$s kg</string>
-    <string name="gain_weight">Gain + %1$s kg</string>
-    <string name="weight_perfect">Your weight is perfect!</string>
-    <string name="status_very_severely_underweight">Very severely underweight</string>
-    <string name="status_severely_underweight">Severely underweight</string>
-    <string name="status_obese_class_i">Obese Class I</string>
-    <string name="status_obese_class_ii">Obese Class II</string>
-    <string name="status_obese_class_iii">Obese Class III</string>
-    <string name="bmi_history">BMI History</string>
-
-    <string name="english_bangla">English</string>
     <string name="choose_language">Choose Language</string>
-    <string name="system_default">System Default(English)</string>
+    <string name="english_bangla">English</string>
+    <string name="english">English</string>
+    <string name="system_default">System Default (English)</string>
+    <string name="system_default_english1">System Default (English)</string>
+    <string name="system_default_bangla">System Default (বাংলা)</string>
     <string name="language_changed">Language changed successfully</string>
+    <string name="placeholder_dash">— </string>
 
     <string name="menu_item_history">History</string>
     <string name="menu_item_settings">Settings</string>
@@ -82,21 +21,194 @@
     <string name="menu_item_feedback">Feedback</string>
     <string name="menu_item_share">Share</string>
     <string name="more_apps">More Apps</string>
-    <string name="english">English</string>
-    <string name="system_default_english1">System Default (English)</string>
-    <string name="system_default_bangla">System Default (বাংলা)</string>
+
+    <string name="age">Age</string>
+    <string name="ageYour">Age</string>
+    <string name="enter_age">Enter age</string>
+    <string name="gender">Gender</string>
+    <string name="gender_male">Male</string>
+    <string name="gender_female">Female</string>
+    <string name="height">Height</string>
+    <string name="enter_height">Enter height</string>
+    <string name="enterheight">Height</string>
+    <string name="weight">Weight</string>
+    <string name="weight_">Weight</string>
+    <string name="enter_weight">Enter weight</string>
+    <string name="unit">Unit</string>
+    <string name="default_height_unit">Default Height Unit</string>
+
+    <string name="unit_cm">cm</string>
+    <string name="unit_inch">Fit</string>
+    <string name="unit_kg">kg</string>
+    <string name="unit_lbs">Lbs</string>
+
+    <string name="category">Category</string>
+    <string name="difference">Difference</string>
+    <string name="ideal_weight">Ideal Weight</string>
+    <string name="normal_weight">Normal Weight</string>
+    <string name="normal_weight_range">00.00 - 00.00 kg</string>
+    <string name="healthy_weight">Healthy Weight</string>
+    <string name="underweight">Underweight</string>
+    <string name="moderately_underweight">Moderately Underweight</string>
+    <string name="severely_underweight">Severely underweight</string>
+    <string name="very_severely_underweight">Very severely underweight</string>
+    <string name="overweight">Overweight</string>
+    <string name="obese_class_i">Obese Class I</string>
+    <string name="obese_class_ii">Obese Class II</string>
+    <string name="obese_class_iii">Obese Class III</string>
+
+    <string name="_16_0_16_9">16.0 - 16.9</string>
+    <string name="_17_0_18_4">17.0 - 18.4</string>
+    <string name="_18_5_24_9">18.5 - 24.9</string>
+    <string name="_25_0_29_9">25.0 - 29.9</string>
+    <string name="_30_0_34_9">30.0 - 34.9</string>
+    <string name="_35_0_39_9">35.0 - 39.9</string>
+    <string name="gt_40"><![CDATA[>= 40]]></string>
+    <string name="lt_15_9"><![CDATA[<= 15.9]]></string>
+
+    <string name="status_healthy">Healthy Weight</string>
+    <string name="status_overweight">Overweight</string>
+    <string name="status_underweight">Underweight</string>
+    <string name="status_very_severely_underweight">Very severely underweight</string>
+    <string name="status_severely_underweight">Severely underweight</string>
+    <string name="status_obese_class_i">Obese Class I</string>
+    <string name="status_obese_class_ii">Obese Class II</string>
+    <string name="status_obese_class_iii">Obese Class III</string>
+
+    <string name="lose_weight">Lose - %1$s kg</string>
+    <string name="gain_weight">Gain + %1$s kg</string>
+    <string name="weight_perfect">Your weight is perfect!</string>
+
+    <string name="bmi_history">BMI History</string>
+    <string name="clear_history">Clear History</string>
+    <string name="history_empty">No history found</string>
+    <string name="bmi_label">BMI</string>
+    <string name="history_empty_message">No BMI history yet&#10;&#10;Calculate your BMI to see history here!</string>
+    <string name="no_history_available">No history available to clear.</string>
+    <string name="history_age">Age: %1$s</string>
+    <string name="history_gender">Gender: %1$s</string>
+
+    <string name="a11y_gender_dropdown">Gender selection</string>
+    <string name="a11y_height_unit_dropdown">Height unit selection</string>
+    <string name="a11y_weight_unit_dropdown">Weight unit selection</string>
+    <string name="a11y_bmi_gauge">BMI gauge</string>
+
     <string name="ad_icon">ad_icon</string>
     <string name="ad">Ad</string>
     <string name="install">Install</string>
+
+    <string name="btn_health_tips">Your Health Tips</string>
+    <string name="health_tips_title">💡 Your Health Tips</string>
+    <string name="bmi_summary">BMI Summary</string>
+    <string name="detailed_tips">📋 Detailed Tips</string>
+    <string name="disclaimer">⚠️ Remember: This is only guidance. Consult a doctor for personal health issues.</string>
+    <string name="close">Close</string>
+
+    <string name="food_habits">🍽️ Food Habits</string>
+    <string name="exercise">🏃 Exercise</string>
+    <string name="other_tips">💊 Other Tips</string>
+
+    <string name="section_emergency">🔴 Emergency Advice</string>
+    <string name="section_target">🎯 Target</string>
+    <string name="section_diet">🍽️ Diet Plan</string>
+    <string name="section_exercise">🏃 Exercise</string>
+    <string name="section_other">💡 Other Tips</string>
+    <string name="section_warning">⚠️ Warning</string>
+    <string name="section_medical">👨‍⚕️ Medical Advice</string>
+
+    <string name="tips_bmi_below_16_title">Your BMI: %.1f — Critical Underweight</string>
+    <string name="tips_bmi_below_16_emergency">• Consult a doctor immediately\n• Get blood tests done (Thyroid, Diabetes, Iron)\n• Take a diet chart from a nutritionist</string>
+    <string name="tips_bmi_below_16_target">Target: Gain 4–5 kg in 2 months</string>
+    <string name="tips_bmi_below_16_diet">• Breakfast: 2 eggs + 1 glass milk\n• Lunch: 2 cups rice + fish/meat + lentils\n• Evening: 1 banana + 5–6 nuts\n• Dinner: 2 breads + vegetables + 1 glass milk</string>
+    <string name="tips_bmi_below_16_exercise">• Light weight lifting (3 kg start)\n• Squats &amp; Push–ups (10–15 times/day)\n• Yoga - Surya Namaskar</string>
+    <string name="tips_bmi_below_16_other">• Drink 2 liters water daily\n• 8 hours sleep mandatory\n• Follow up after 1 month</string>
+
+    <string name="tips_bmi_16_to_169_title">Your BMI: %.1f — Moderately Underweight</string>
+    <string name="tips_bmi_16_to_169_target">Target: Gain 3–4 kg in 2 months</string>
+    <string name="tips_bmi_16_to_169_diet">• Breakfast: 2 breads + egg + 1 glass milk\n• Lunch: 2 cups rice + 1 cup lentils + 200g fish/meat\n• Evening: 1 banana + 10 nuts + 1 date\n• Dinner: 2 breads + vegetables + 1 egg\n• Before bed: 1 glass warm milk</string>
+    <string name="tips_bmi_16_to_169_exercise">• Push-ups: 10 reps × 3 sets\n• Squats: 15 reps × 3 sets\n• Dumbbell curls: 10 reps × 3 sets</string>
+    <string name="tips_bmi_16_to_169_other">• Vitamin D + Calcium supplements (consult doctor)\n• Protein powder if needed</string>
+
+    <string name="tips_bmi_17_to_184_title">Your BMI: %.1f — Underweight</string>
+    <string name="tips_bmi_17_to_184_target">Target: Gain 3–4 kg in 3 months</string>
+    <string name="tips_bmi_17_to_184_diet">• Breakfast: Oats + milk + banana + nuts\n• Lunch: 2 cups rice + fish + lentils + yogurt\n• Evening: Sweet yogurt + 2 dates\n• Dinner: 2 breads + chicken + vegetables</string>
+    <string name="tips_bmi_17_to_184_exercise">• Mon/Wed/Fri: Light weight training\n• Tue/Thu: Yoga\n• Sat/Sun: Rest + light walking</string>
+    <string name="tips_bmi_17_to_184_other">• Weigh yourself every Monday morning\n• Take photos at month start and end\n• Keep a food diary</string>
+
+    <string name="tips_bmi_185_to_199_title">Your BMI: %.1f — Normal Weight (Lower Range)</string>
+    <string name="tips_bmi_185_to_199_target">Target: Maintain this weight</string>
+    <string name="tips_bmi_185_to_199_diet">• Breakfast: 2 breads + egg + vegetables\n• Lunch: 2 cups rice + 1 cup lentils + fish/meat\n• Evening: Fruit + nuts + tea\n• Dinner: 1–2 cups rice + vegetables + fish</string>
+    <string name="tips_bmi_185_to_199_exercise">• 30 min cardio (walking/running)\n• 20 min strength training\n• 10 min stretching\n• 5 days per week</string>
+    <string name="tips_bmi_185_to_199_other">• Sleep 7–8 hours daily\n• Avoid sugar &amp; processed food</string>
+
+    <string name="tips_bmi_20_to_229_title">Your BMI: %.1f — Normal Weight (Ideal Range)</string>
+    <string name="tips_bmi_20_to_229_target">Target: Maintain this healthy weight</string>
+    <string name="tips_bmi_20_to_229_diet">• Protein: 50–60g daily\n• Vegetables: 3–4 types daily\n• Fruits: 2 pieces daily\n• Water: 2.5–3 liters</string>
+    <string name="tips_bmi_20_to_229_exercise">• Gym/exercise 3–4 days per week\n• Walk 8,000 steps daily\n• Rest 2 days per week</string>
+    <string name="tips_bmi_20_to_229_other">• Check weight once a week\n• Keep BMI between 18.5–24.9\n• Full health checkup once a year</string>
+
+    <string name="tips_bmi_23_to_249_title">Your BMI: %.1f — Normal Weight (Upper Range)</string>
+    <string name="tips_bmi_23_to_249_target">Target: Don\'t gain more weight</string>
+    <string name="tips_bmi_23_to_249_diet">• Breakfast: Oats/puffed rice + fruit + milk\n• Lunch: 1.5 cups rice + more vegetables + fish\n• Evening: Tea + half pack biscuit\n• Dinner: 1 cup rice + vegetables + lentils</string>
+    <string name="tips_bmi_23_to_249_exercise">• Walk 10,000 steps daily\n• Exercise 45 min, 4 days/week\n• Use stairs instead of elevator</string>
+    <string name="tips_bmi_23_to_249_other">• Check weight twice a month\n• Measure waist (Male &lt; 90cm, Female &lt; 80cm)</string>
+
+    <string name="tips_bmi_25_to_269_title">Your BMI: %.1f — Overweight (Mild)</string>
+    <string name="tips_bmi_25_to_269_target">Target: Lose 2-3 kg in 3 months</string>
+    <string name="tips_bmi_25_to_269_diet">• Reduce 300-400 calories daily\n• Reduce rice to 1 cup\n• Avoid fried foods &amp; sweets\n• No food after 8 PM</string>
+    <string name="tips_bmi_25_to_269_exercise">• Morning: 30 min brisk walk\n• Evening: 30 min cycling/jogging\n• Strength training 3 days/week</string>
+    <string name="tips_bmi_25_to_269_other">• Drink 3-3.5 liters water daily\n• Drink 1 glass water 30 min before meal</string>
+
+    <string name="tips_bmi_27_to_289_title">Your BMI: %.1f — Overweight (Moderate)</string>
+    <string name="tips_bmi_27_to_289_target">Target: Lose 4-5 kg in 4 months</string>
+    <string name="tips_bmi_27_to_289_diet">• Breakfast: 2 breads + vegetables + 1 egg (no yolk)\n• Lunch: 1 cup rice + 2 cups vegetables + 1 cup lentils\n• Evening: 1 fruit + green tea\n• Dinner: 1 cup rice + fish/chicken + vegetable soup</string>
+    <string name="tips_bmi_27_to_289_exercise">• 1 hour moderate exercise daily\n• HIIT 3 days/week\n• Yoga 2 days/week</string>
+    <string name="tips_bmi_27_to_289_other">• Avoid: Cold drinks, juice, sugar\n• Avoid: Fast food, pizza, burger\n• Avoid: Fried food, butter, ghee</string>
+
+    <string name="tips_bmi_29_to_299_title">Your BMI: %.1f — Overweight (Borderline)</string>
+    <string name="tips_bmi_29_to_299_target">Target: Lose 6-7 kg in 5 months</string>
+    <string name="tips_bmi_29_to_299_diet">• Intermittent fasting (16:8)\n• More protein, less carbs (50:30:20 ratio)\n• 4 small meals daily (avoid large meals)</string>
+    <string name="tips_bmi_29_to_299_exercise">• Empty stomach walk: 30 min morning\n• Jogging 45 min + warmup 15 min, 4 days/week\n• Swimming/cycling 2 days/week</string>
+    <string name="tips_bmi_29_to_299_other">• Track weight &amp; waist daily\n• Check BMI twice a month\n• See doctor if no change in 2 months</string>
+
+    <string name="tips_bmi_30_to_319_title">Your BMI: %.1f — Obese Class I</string>
+    <string name="tips_bmi_30_to_319_target">Target: Lose 8-10 kg in 6 months</string>
+    <string name="tips_bmi_30_to_319_diet">• 1200-1500 calories/day (Female) / 1500-1800 (Male)\n• Reduce carbs (1 cup rice/bread)\n• Increase protein (fish, chicken, soybean)\n• Unlimited vegetables</string>
+    <string name="tips_bmi_30_to_319_exercise">• Start with walking (20-30 min daily)\n• Light jogging after 1 month\n• Avoid joint stress\n• Swimming is best</string>
+    <string name="tips_bmi_30_to_319_other">• Consult doctor &amp; nutritionist\n• Get sugar, cholesterol, thyroid tests\n• Target: Bring BMI below 25</string>
+
+    <string name="tips_bmi_32_to_349_title">Your BMI: %.1f — Obese Class I (Moderate)</string>
+    <string name="tips_bmi_32_to_349_emergency">High risk for: High BP, Diabetes, Heart problems, Sleep apnea, Joint pain</string>
+    <string name="tips_bmi_32_to_349_target">Target: Lose 2–3 kg per month</string>
+    <string name="tips_bmi_32_to_349_diet">• 1000-1200 calorie diet (doctor supervised)\n• Low-carb, high-protein diet\n• No oil, butter, ghee\n• No sugar at all</string>
+    <string name="tips_bmi_32_to_349_exercise">• Start with 20 min walking\n• Gradually increase to 45 min\n• Water exercise/swimming safest\n• Use stairs instead of elevator</string>
+    <string name="tips_bmi_32_to_349_other">• Monthly doctor visit mandatory\n• Don\'t lose weight too fast\n• Vitamin &amp; mineral supplements</string>
+
+    <string name="tips_bmi_35_to_399_title">Your BMI: %.1f — Obese Class II</string>
+    <string name="tips_bmi_35_to_399_emergency">Severe health risk — Take action now!</string>
+    <string name="tips_bmi_35_to_399_medical">• See Medicine specialist immediately\n• Consult Endocrinologist &amp; Dietitian\n• Get complete blood profile test\n• Get Echocardiogram &amp; sugar profile</string>
+    <string name="tips_bmi_35_to_399_diet">• 800-1000 calorie diet (very low calorie)\n• Medical shakes or special food\n• Very low carbs (50g/day)\n• Protein shakes &amp; vitamin supplements</string>
+    <string name="tips_bmi_35_to_399_exercise">• Join guided program\n• Start with water therapy/swimming\n• Gradually add walking + strength training\n• NO high-impact exercise</string>
+    <string name="tips_bmi_35_to_399_other">• Weight loss medication (doctor prescribed)\n• Intensive lifestyle intervention\n• Consider bariatric surgery if needed</string>
+
+    <string name="tips_bmi_40_plus_title">Your BMI: %.1f — Obese Class III (Severe Obesity)</string>
+    <string name="tips_bmi_40_plus_emergency">🔴 EMERGENCY! This is a serious health condition</string>
+    <string name="tips_bmi_40_plus_medical">• Contact hospital Medicine department within 24 hours\n• See Cardiologist &amp; Diabetologist\n• Target: Bring BMI below 35\n• Regular follow-up with family physician</string>
+    <string name="tips_bmi_40_plus_tests">• HbA1c (Diabetes)\n• Lipid Profile (Cholesterol)\n• Liver Function Test\n• Thyroid Profile\n• ECG &amp; 2D Echo</string>
+    <string name="tips_bmi_40_plus_diet">• Below 800 calories — ONLY medical supervision\n• Liquid diet or shake supplements\n• Strict protein &amp; vitamin monitoring</string>
+    <string name="tips_bmi_40_plus_treatment">• Approved weight loss medication\n• Gastric bypass or sleeve gastrectomy surgery\n• Intensive behavioral therapy</string>
+    <string name="tips_bmi_40_plus_mental">• Psychologist or counselor help\n• Join support groups\n• Family therapy may be needed</string>
 
     <string name="title_health_tips">Health &amp; Weight Tips</string>
     <string name="title_weight_loss">📉 Weight Loss Tips</string>
     <string name="title_weight_gain">📈 Weight Gain Tips</string>
     <string name="title_healthy_living">🥗 Healthy Living Tips</string>
-    <string name="content_weight_loss">1. Understand Calorie Deficit:\nThe key to weight loss is consuming fewer calories than your body needs. Consume 200–300 calories less than your daily expenditure.\n\n2. Cut Sugar &amp; Refined Carbs:\nSignificantly reduce sweets, cold drinks, fast food, and white rice. Instead, opt for brown rice, oats, or whole-wheat bread.\n\n3. Increase Protein &amp; Fiber:\nInclude adequate protein (eggs, chicken, fish, lentils) and fiber-rich vegetables in every meal to keep you full longer.\n\n4. Drink Water Rightly:\nDrink 3–4 liters of water daily. Drink a glass of water 30 minutes before meals to prevent overeating.\n\n5. Regular Moderate Exercise:\nExercise or brisk walk for 30–40 minutes at least 5 days a week to boost metabolism and burn fat.</string>
-    <string name="content_weight_gain">1. Calorie Surplus Diet:\nTo gain weight, eat 300–500 calories more than your daily requirement. Focus on nutrient-dense foods instead of junk food.\n\n2. Nutrient-Rich &amp; High-Calorie Foods:\nEat calorie-dense foods like almonds, cashews, peanut butter, raisins, dates, eggs, whole milk, bananas, and ghee.\n\n3. Frequent Meals:\nEat 5–6 smaller, nutritious meals instead of 3 large meals. Snack on nuts, fruits, or puddings in between.\n\n4. No Water Before Meals:\nAvoid drinking water right before or during meals, as it fills your stomach and reduces your appetite.\n\n5. Strength Training:\nDo push-ups, squats, or light gym work to build muscle mass rather than just gaining unhealthy fat.</string>
-    <string name="content_healthy_living">1. Balanced Diet:\nFill half your plate with veggies and fruits, one-quarter with protein, and one-quarter with complex carbs. Eat at least one seasonal fruit daily.\n\n2. Adequate &amp; Deep Sleep:\n7 to 8 hours of uninterrupted sleep is essential. Poor sleep disrupts hormonal balance, causing unexpected weight changes.\n\n3. Manage Stress:\nHigh stress slows down metabolism. Practice deep breathing exercises or meditation for 10–15 minutes daily.\n\n4. Avoid Processed &amp; Trans-Fats:\nPackaged foods, deep-fried items, and excessive salt harm your heart. Always prefer fresh, home-cooked food.\n\n5. Stay Active:\nAvoid sitting continuously. Stand up or walk for 2 minutes every hour. Choose stairs over elevators whenever possible.</string>
 
+    <string name="content_weight_loss">1. Understand Calorie Deficit:\nThe key to weight loss is consuming fewer calories than your body needs. Consume 200–300 calories less than your daily expenditure.\n\n2. Cut Sugar &amp; Refined Carbs:\nSignificantly reduce sweets, cold drinks, fast food, and white rice. Instead, opt for brown rice, oats, or whole-wheat bread.\n\n3. Increase Protein &amp; Fiber:\nInclude adequate protein (eggs, chicken, fish, lentils) and fiber-rich vegetables in every meal to keep you full longer.\n\n4. Drink Water Rightly:\nDrink 3–4 liters of water daily. Drink a glass of water 30 minutes before meals to prevent overeating.\n\n5. Regular Moderate Exercise:\nExercise or brisk walk for 30–40 minutes at least 5 days a week to boost metabolism and burn fat.</string>
+
+    <string name="content_weight_gain">1. Calorie Surplus Diet:\nTo gain weight, eat 300–500 calories more than your daily requirement. Focus on nutrient-dense foods instead of junk food.\n\n2. Nutrient-Rich &amp; High-Calorie Foods:\nEat calorie-dense foods like almonds, cashews, peanut butter, raisins, dates, eggs, whole milk, bananas, and ghee.\n\n3. Frequent Meals:\nEat 5–6 smaller, nutritious meals instead of 3 large meals. Snack on nuts, fruits, or puddings in between.\n\n4. No Water Before Meals:\nAvoid drinking water right before or during meals, as it fills your stomach and reduces your appetite.\n\n5. Strength Training:\nDo push-ups, squats, or light gym work to build muscle mass rather than just gaining unhealthy fat.</string>
+
+    <string name="content_healthy_living">1. Balanced Diet:\nFill half your plate with veggies and fruits, one-quarter with protein, and one-quarter with complex carbs. Eat at least one seasonal fruit daily.\n\n2. Adequate &amp; Deep Sleep:\n7 to 8 hours of uninterrupted sleep is essential. Poor sleep disrupts hormonal balance, causing unexpected weight changes.\n\n3. Manage Stress:\nHigh stress slows down metabolism. Practice deep breathing exercises or meditation for 10–15 minutes daily.\n\n4. Avoid Processed &amp; Trans-Fats:\nPackaged foods, deep-fried items, and excessive salt harm your heart. Always prefer fresh, home-cooked food.\n\n5. Stay Active:\nAvoid sitting continuously. Stand up or walk for 2 minutes every hour. Choose stairs over elevators whenever possible.</string>
 
     <string-array name="height_units">
         <item>cm</item>
@@ -107,6 +219,7 @@
         <item>kg</item>
         <item>lb</item>
     </string-array>
+
     <string-array name="gender_options">
         <item>Male</item>
         <item>Female</item>

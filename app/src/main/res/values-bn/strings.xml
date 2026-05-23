@@ -1,101 +1,214 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <string name="app_name">বিএমআই ট্র্যাকার</string>
     <string name="bmi_calculator">বিএমআই ক্যালকুলেটর</string>
     <string name="reset">রিসেট</string>
-    <string name="age">বয়স</string>
-    <string name="enter_age">বয়স লিখুন</string>
-    <string name="height">উচ্চতা</string>
-    <string name="enter_height">উচ্চতা লিখুন</string>
-    <string name="gender">লিঙ্গ</string>
-    <string name="enter_weight">ওজন লিখুন</string>
-    <string name="category">ক্যাটাগরি</string>
-    <string name="difference">পার্থক্য</string>
-    <string name="normal_weight">স্বাভাবিক ওজন</string>
-    <string name="normal_weight_range">00.00 – 00.00 কেজি</string>
-    <string name="very_severely_underweight">অত্যন্ত কম ওজন</string>
-    <string name="severely_underweight">গুরুতর কম ওজন</string>
-    <string name="_16_0_16_9">16.0 - 16.9</string>
-    <string name="underweight">কম ওজন</string>
-    <string name="_17_0_18_4">17.0 - 18.4</string>
-    <string name="healthy_weight">স্বাস্থ্যকর ওজন</string>
-    <string name="_18_5_24_9">18.5 - 24.9</string>
-    <string name="overweight">অতিরিক্ত ওজন</string>
-    <string name="_25_0_29_9">25.0 - 29.9</string>
-    <string name="obese_class_i">স্থূলতা শ্রেণি I</string>
-    <string name="obese_class_ii">স্থূলতা শ্রেণি II</string>
-    <string name="_30_0_34_9">30.0 - 34.9</string>
-    <string name="_35_0_39_9">35.0 - 39.9</string>
-    <string name="obese_class_iii">স্থূলতা শ্রেণি III</string>
-    <string name="gt_40"><![CDATA[>= 40]]></string>
-    <string name="lt_15_9"><![CDATA[<= 15.9]]></string>
-    <string name="weight">ওজন</string>
-    <string name="enterheight">উচ্চতা</string>
-    <string name="weight_">ওজন</string>
-    <string name="ageYour">বয়স</string>
-    <string name="unit">ইউনিট</string>
-    <string name="clear_history">ইতিহাস মুছুন</string>
-    <string name="history_empty">কোনো ইতিহাস পাওয়া যায়নি</string>
-    <string name="bmi_label">বিএমআই</string>
-    <string name="ideal_weight">আদর্শ ওজন</string>
-    <string name="history_empty_message">কোনো বিএমআই ইতিহাস নেই&#10;&#10;ইতিহাস দেখতে আগে বিএমআই ক্যালকুলেট করুন!</string>
-    <string name="no_history_available">মুছার মতো কোনো ইতিহাস নেই।</string>
-    <string name="english_bangla">বাংলা</string>
+    <string name="menu">Menu</string>
+    <string name="preferences">পছন্দসমূহ</string>
+    <string name="language">ভাষা</string>
     <string name="choose_language">ভাষা পরিবর্তন করুন</string>
-    <string name="system_default">System Default(বাংলা)</string>
+    <string name="english_bangla">বাংলা</string>
+    <string name="english">ইংরেজি</string>
+    <string name="system_default">System Default (বাংলা)</string>
+    <string name="system_default_bangla">System Default (বাংলা)</string>
+    <string name="system_default_english1">সিস্টেম ডিফল্ট (ইংরেজি)</string>
     <string name="language_changed">ভাষা সফলভাবে পরিবর্তন করা হয়েছে</string>
-    <string name="history_age">বয়স: %1$s</string>
-    <string name="history_gender">লিঙ্গ: %1$s</string>
+    <string name="placeholder_dash">— </string>
+
+    <string name="menu_item_history">ইতিহাস</string>
+    <string name="menu_item_settings">সেটিংস</string>
+    <string name="menu_item_about">সম্পর্কে</string>
+    <string name="menu_item_feedback">مতামত</string>
+    <string name="menu_item_share">শেয়ার</string>
+    <string name="more_apps">আরও অ্যাপস</string>
+
+    <string name="age">বয়স</string>
+    <string name="ageYour">বয়স</string>
+    <string name="enter_age">বয়স লিখুন</string>
+    <string name="gender">লিঙ্গ</string>
     <string name="gender_male">পুরুষ</string>
     <string name="gender_female">নারী</string>
+    <string name="height">উচ্চতা</string>
+    <string name="enter_height">উচ্চতা লিখুন</string>
+    <string name="enterheight">উচ্চতা</string>
+    <string name="weight">ওজন</string>
+    <string name="weight_">ওজন</string>
+    <string name="enter_weight">ওজন লিখুন</string>
+    <string name="unit">ইউনিট</string>
+    <string name="default_height_unit">ডিফল্ট উচ্চতার একক</string>
+
     <string name="unit_cm">সেমি</string>
     <string name="unit_inch">ফুট</string>
     <string name="unit_kg">কেজি</string>
     <string name="unit_lbs">পাউন্ড</string>
-    <string name="status_healthy">স্বাস্থ্যকর ওজন</string>
+
+    <string name="category">ক্যাটাগরি</string>
+    <string name="difference">পার্থক্য</string>
+    <string name="ideal_weight">আদর্শ ওজন</string>
+    <string name="normal_weight">স্বাভাবিক ওজন</string>
+    <string name="normal_weight_range">00.00 – 00.00 কেজি</string>
+    <string name="healthy_weight">স্বাস্থ্যকর ওজন</string>
+    <string name="underweight">کم ওজন</string>
+    <string name="moderately_underweight">মাঝারি মাত্রার কম ওজন</string>
+    <string name="severely_underweight">গুরুতর কম ওজন</string>
+    <string name="very_severely_underweight">অত্যন্ত কম ওজন</string>
+    <string name="overweight">অতিরিক্ত ওজন</string>
+    <string name="obese_class_i">স্থূলতা শ্রেণি I</string>
+    <string name="obese_class_ii">স্থূলতা শ্রেণি II</string>
+    <string name="obese_class_iii">স্থূলতা শ্রেণি III</string>
+
+    <string name="_16_0_16_9">16.0 - 16.9</string>
+    <string name="_17_0_18_4">17.0 - 18.4</string>
+    <string name="_18_5_24_9">18.5 - 24.9</string>
+    <string name="_25_0_29_9">25.0 - 29.9</string>
+    <string name="_30_0_34_9">30.0 - 34.9</string>
+    <string name="_35_0_39_9">35.0 - 39.9</string>
+    <string name="gt_40"><![CDATA[>= 40]]></string>
+    <string name="lt_15_9"><![CDATA[<= 15.9]]></string>
+
+    <string name="status_healthy">HEALTHY WEIGHT</string>
     <string name="status_overweight">অতিরিক্ত ওজন</string>
     <string name="status_underweight">কম ওজন</string>
-    <string name="lose_weight">কমাইতে হবে - %1$s কেজি</string>
-    <string name="gain_weight">বাড়াইতে হবে + %1$s কেজি</string>
-    <string name="weight_perfect">আপনার ওজন একদম নিখুঁত!</string>
     <string name="status_very_severely_underweight">অত্যন্ত মারাত্মক কম ওজন</string>
     <string name="status_severely_underweight">গুরুতর কম ওজন</string>
-    <string name="status_obese_class_i">স্থূলতা শ্রেণী I</string>
-    <string name="status_obese_class_ii">স্থূলতা শ্রেণী II</string>
-    <string name="status_obese_class_iii">স্থূলতা শ্রেণী III</string>
+    <string name="status_obese_class_i">স্থূলতা শ্রেণি I</string>
+    <string name="status_obese_class_ii">স্থূলতা শ্রেণি II</string>
+    <string name="status_obese_class_iii">স্থূলতা শ্রেণি III</string>
+
+    <string name="lose_weight">কমাতে হবে - %1$s কেজি</string>
+    <string name="gain_weight">বাড়াতে হবে + %1$s কেজি</string>
+    <string name="weight_perfect">আপনার ওজন একদম নিখুঁত!</string>
+
+    <string name="bmi_history">বিএমআই ইতিহাস</string>
+    <string name="clear_history">ইতিহাস মুছুন</string>
+    <string name="history_empty">কোনো ইতিহাস পাওয়া যায়নি</string>
+    <string name="bmi_label">বিএমআই</string>
+    <string name="history_empty_message">কোনো বিএমআই ইতিহাস নেই&#10;&#10;ইতিহাস দেখতে আগে বিএমআই ক্যালকুলেট করুন!</string>
+    <string name="no_history_available">মুছার মতো কোনো ইতিহাস নেই।</string>
+    <string name="history_age">বয়স: %1$s</string>
+    <string name="history_gender">লিঙ্গ: %1$s</string>
 
     <string name="a11y_gender_dropdown">লিঙ্গ নির্বাচন</string>
     <string name="a11y_height_unit_dropdown">উচ্চতার একক নির্বাচন</string>
     <string name="a11y_weight_unit_dropdown">ওজনের একক নির্বাচন</string>
     <string name="a11y_bmi_gauge">বিএমআই নির্দেশক</string>
-    <string name="placeholder_dash">— </string>
-    <string name="preferences">পছন্দসমূহ</string>
-    <string name="language">ভাষা</string>
-    <string name="menu">মেনু</string>
-    <string name="default_height_unit">ডিফল্ট উচ্চতার একক</string>
 
-    <string name="menu_item_history">ইতিহাস</string>
-    <string name="menu_item_settings">সেটিংস</string>
-    <string name="menu_item_about">সম্পর্কে</string>
-    <string name="menu_item_feedback">মতামত</string>
-    <string name="menu_item_share">শেয়ার</string>
-    <string name="more_apps">আরও অ্যাপস</string>
-    <string name="system_default_bangla">System Default (বাংলা)</string>
-    <string name="system_default_english1">সিস্টেম ডিফল্ট (ইংরেজি)</string>
     <string name="ad_icon">বিজ্ঞাপন আইকন</string>
     <string name="ad">বিজ্ঞাপন</string>
     <string name="install">ইনস্টল</string>
-    <string name="english">ইংরেজি</string>
-    <string name="bmi_history">বিএমআই ইতিহাস</string>
+
+    <string name="btn_health_tips">আপনার স্বাস্থ্য পরামর্শ</string>
+    <string name="health_tips_title">💡 আপনার স্বাস্থ্য পরামর্শ</string>
+    <string name="bmi_summary">বিএমআই সারাংশ</string>
+    <string name="detailed_tips">📋 বিস্তারিত পরামর্শ</string>
+    <string name="disclaimer">⚠️ মনে রাখবেন: এটি শুধুমাত্র নির্দেশনা। ব্যক্তিগত স্বাস্থ্য সমস্যায় ডাক্তারের পরামর্শ নিন।</string>
+    <string name="close">বন্ধ</string>
+
+    <string name="food_habits">🍽️ খাদ্যাভ্যাস</string>
+    <string name="exercise">🏃 ব্যায়াম</string>
+    <string name="other_tips">💊 অন্যান্য পরামর্শ</string>
+
+    <string name="section_emergency">🔴 জরুরি পরামর্শ</string>
+    <string name="section_target">🎯 লক্ষ্য</string>
+    <string name="section_diet">🍽️ খাদ্য তালিকা</string>
+    <string name="section_exercise">🏃 ব্যায়াম</string>
+    <string name="section_other">💡 অন্যান্য টিপস</string>
+    <string name="section_warning">⚠️ সতর্কতা</string>
+    <string name="section_medical">👨‍⚕️ চিকিৎসা পরামর্শ</string>
+
+    <string name="tips_bmi_below_16_title">আপনার BMI: %.1f — অত্যন্ত গুরুতর কম ওজন</string>
+    <string name="tips_bmi_below_16_emergency">• অবিলম্বে ডাক্তার দেখান\n• রক্ত পরীক্ষা করান (থাইরয়েড, ডায়াবেটিস, আয়রন)\n• পুষ্টিবিদের ডায়েট চার্ট নিন</string>
+    <string name="tips_bmi_below_16_target">লক্ষ্য: ২ মাসে ৪-৫ কেজি ওজন বাড়ানো</string>
+    <string name="tips_bmi_below_16_diet">• সকাল: ২টি ডিম + ১ গ্লাস দুধ\n• দুপুর: ২ কাপ ভাত + মাছ/মাংস + ডাল\n• বিকেল: ১টি কলা + ৫-৬টি বাদাম\n• রাত: ২টি রুটি + সবজি + ১ গ্লাস দুধ</string>
+    <string name="tips_bmi_below_16_exercise">• হালকা ওজন তোলা (৩ কেজি থেকে শুরু)\n• স্কোয়াট ও পুশ-আপ (দিনে ১০-১৫ বার)\n• যোগব্যায়াম - সূর্য নমস্কার</string>
+    <string name="tips_bmi_below_16_other">• প্রতিদিন ২ লিটার পানি পান করুন\n• ৮ ঘণ্টা ঘুম আবশ্যক\n• ১ মাস পর ফলোআপ করান</string>
+
+    <string name="tips_bmi_16_to_169_title">Your BMI: %.1f — গুরুতর কম ওজন</string>
+    <string name="tips_bmi_16_to_169_target">লক্ষ্য: ২ মাসে ৩-৪ কেজি ওজন বাড়ানো</string>
+    <string name="tips_bmi_16_to_169_diet">• সকাল: ২টি রুটি + ডিম + ১ গ্লাস দুধ\n• দুপুর: ২ কাপ ভাত + ১ কাপ ডাল + ২০০ গ্রাম মাছ/মাংস\n• বিকেল: ১টি কলা + ১০টি বাদাম + ১টি খেজুর\n• রাত: ২টি রুটি + সবজি + ১টি ডিম\n• শোবার আগে: ১ গ্লাস গরম দুধ</string>
+    <string name="tips_bmi_16_to_169_exercise">• পুশ-আপ: ১০ বার × ৩ সেট\n• স্কোয়াট: ১৫ বার × ৩ সেট\n• ডাম্বেল কার্ল: ১০ বার × ৩ সেট</string>
+    <string name="tips_bmi_16_to_169_other">• ভিটামিন ডি + ক্যালসিয়াম সাপ্লিমেন্ট (ডাক্তারের পরামর্শে)\n• প্রোটিন পাউডার (যদি প্রয়োজন হয়)</string>
+
+    <string name="tips_bmi_17_to_184_title">Your BMI: %.1f — কম ওজন</string>
+    <string name="tips_bmi_17_to_184_target">লক্ষ্য: ৩ মাসে ৩-৪ কেজি ওজন বাড়ানো</string>
+    <string name="tips_bmi_17_to_184_diet">• সকাল: ওটস + দুধ + কলা + বাদাম\n• দুপুর: ২ কাপ ভাত + মাছ + ডাল + দই\n• বিকেল: মিষ্টি দই + ২টি খেজুর\n• রাত: ২টি রুটি + মুরগির মাংস + সবজি</string>
+    <string name="tips_bmi_17_to_184_exercise">• সোম/বুধ/শুক্র: হালকা ওজন প্রশিক্ষণ\n• মঙ্গল/বৃহস্পতি: যোগব্যায়াম\n• শনি/রবি: বিশ্রাম + হালকা হাঁটা</string>
+    <string name="tips_bmi_17_to_184_other">• প্রতি সোমবার সকালে ওজন মাপুন\n• মাসের শুরু ও শেষে ছবি তুলুন\n• খাবারের ডায়েরি রাখুন</string>
+
+    <string name="tips_bmi_185_to_199_title">Your BMI: %.1f — স্বাস্থ্যকর ওজন (নিম্ন সীমা)</string>
+    <string name="tips_bmi_185_to_199_target">লক্ষ্য: এই ওজন ধরে রাখা</string>
+    <string name="tips_bmi_185_to_199_diet">• সকাল: ২টি রুটি + ডিম + সবজি\n• দুপুর: ২ কাপ ভাত + ১ কাপ ডাল + মাছ/মাংস\n• বিকেল: ফল + বাদাম + চা\n• রাত: ১-২ কাপ ভাত + সবজি + মাছ</string>
+    <string name="tips_bmi_185_to_199_exercise">• ৩০ মিনিট CARDIO (হাঁটা/দৌড়ানো)\n• ২০ মিনিট স্ট্রেংথ ট্রেনিং\n• ১০ মিনিট স্ট্রেচিং\n• সপ্তাহে ৫ দিন</string>
+    <string name="tips_bmi_185_to_199_other">• প্রতিদিন ७-৮ ঘণ্টা ঘুমান\n• চিনি ও প্রসেসড ফুড এড়িয়ে চলুন\n• বছরে ১ বার চেকআপ করান</string>
+
+    <string name="tips_bmi_20_to_229_title">Your BMI: %.1f — স্বাস্থ্যকর ওজন (আদর্শ সীমা)</string>
+    <string name="tips_bmi_20_to_229_target">লক্ষ্য: এই স্বাস্থ্যকর ওজন ধরে রাখুন</string>
+    <string name="tips_bmi_20_to_229_diet">• প্রোটিন: দৈনিক ৫০-৬০ গ্রাম\n• শাকসবজি: দৈনিক ৩-৪ ধরনের\n• ফল: দৈনিক ২ টি ফল\n• পানি: ২.৫-৩ লিটার</string>
+    <string name="tips_bmi_20_to_229_exercise">• সপ্তাহে ৩-৪ দিন জিম/ব্যায়াম\n• প্রতিদিন ৮,০০০ ধাপ হাঁটা\n• সপ্তাহে ২ দিন বিশ্রাম</string>
+    <string name="tips_bmi_20_to_229_other">• সপ্তাহে একবার ওজন চেক করুন\n• BMI ১৮.৫-২৪.৯ এর মধ্যে রাখুন\n• বছরে একবার সম্পূর্ণ স্বাস্থ্য পরীক্ষা করান</string>
+
+    <string name="tips_bmi_23_to_249_title">Your BMI: %.1f — স্বাস্থ্যকর ওজন (উচ্চ সীমা)</string>
+    <string name="tips_bmi_23_to_249_target">লক্ষ্য: আর ওজন না বাড়ানো</string>
+    <string name="tips_bmi_23_to_249_diet">• সকাল: ওটস/মুড়ি + ফল + দুধ\n• দুপুর: দেড় কাপ ভাত + বেশি সবজি + মাছ\n• বিকেল: চা + আধা প্যাকেট বিস্কুট\n• রাত: ১ কাপ ভাত + সবজি + ডাল</string>
+    <string name="tips_bmi_23_to_249_exercise">• প্রতিদিন ১০,০০০ ধাপ হাঁটুন\n• সপ্তাহে ৪ দিন ৪৫ মিনিট ব্যায়াম করুন\n• লিফটের বদলে সিঁড়ি ব্যবহার করুন</string>
+    <string name="tips_bmi_23_to_249_other">• মাসে দুইবার ওজন মাপুন\n• কোমর মাপুন (পুরুষ &lt; ৯০ সেমি, নারী &lt; ৮০ সেমি)</string>
+
+    <string name="tips_bmi_25_to_269_title">Your BMI: %.1f — অতিরিক্ত ওজন (হালকা)</string>
+    <string name="tips_bmi_25_to_269_target">লক্ষ্য: ৩ মাসে ২-৩ কেজি কমানো</string>
+    <string name="tips_bmi_25_to_269_diet">• দৈনিক ৩০০-৪০০ ক্যালরি কমান\n• ভাত কমিয়ে ১ কাপ করুন\n• ভাজাপোড়া ও মিষ্টি এড়িয়ে চলুন\n• রাত ৮টার পর কিছু খাবেন না</string>
+    <string name="tips_bmi_25_to_269_exercise">• সকাল: ৩০ মিনিট দ্রুত হাঁটা\n• বিকেল: ৩০ মিনিট সাইক্লিং/জগিং\n• সপ্তাহে ৩ দিন শক্তি প্রশিক্ষণ</string>
+    <string name="tips_bmi_25_to_269_other">• দৈনিক ৩-৩.৫ লিটার পানি পান করুন\n• খাবারের ৩০ মিনিট আগে ১ গ্লাস পানি পান করুন</string>
+
+    <string name="tips_bmi_27_to_289_title">Your BMI: %.1f — অতিরিক্ত ওজন (মধ্যম)</string>
+    <string name="tips_bmi_27_to_289_target">লক্ষ্য: ৪ মাসে ৪-৫ কেজি কমানো</string>
+    <string name="tips_bmi_27_to_289_diet">• সকাল: ২টি রুটি + সবজি + ১টি ডিম (কুসুম ছাড়া)\n• দুপুর: ১ কাপ ভাত + ২ কাপ সবজি + ১ কাপ ডাল\n• বিকেল: ১টি ফল + গ্রিন টি\n• রাত: ১ কাপ ভাত + মাছ/মুরগি + সবজির স্যুপ</string>
+    <string name="tips_bmi_27_to_289_exercise">• প্রতিদিন ১ ঘণ্টা মাঝারি ব্যায়াম\n• সপ্তাহে ৩ দিন HIIT\n• সপ্তাহে ২ দিন যোগব্যায়াম</string>
+    <string name="tips_bmi_27_to_289_other">• এড়িয়ে চলুন: কোল্ড ড্রিংকস, জুস, চিনি\n• এড়িয়ে চলুন: ফাস্টফুড, পিৎজা, বার্গার\n• এড়িয়ে চলুন: ভাজা খাবার, maখন, ঘি</string>
+
+    <string name="tips_bmi_29_to_299_title">Your BMI: %.1f — অতিরিক্ত ওজন (সীমার শেষে)</string>
+    <string name="tips_bmi_29_to_299_target">লক্ষ্য: ৫ মাসে ৬-৭ কেজি কমানো</string>
+    <string name="tips_bmi_29_to_299_diet">• Intermittent Fasting (১৬:৮)\n• প্রোটিন বেশি, কার্ব কম (৫০:৩০:২০ অনুপাত)\n• দৈনিক ৪টি ছোট খাবার (বড় খাবার এড়িয়ে চলুন)</string>
+    <string name="tips_bmi_29_to_299_exercise">• সকালে খালি পেটে ৩০ মিনিট হাঁটা\n• সপ্তাহে ৪ দিন ৪৫ মিনিট জগিং + ১৫ মিনিট ওয়ার্মআপ\n• সপ্তাহে ২ দিন সাঁতার/সাইক্লিং</string>
+    <string name="tips_bmi_29_to_299_other">• প্রতিদিন ওজন ও কোমর ট্র্যাক করুন\n• মাসে দুইবার BMI চেক করুন\n• ২ মাসে কোনো পরিবর্তন না হলে ডাক্তার দেখান</string>
+
+    <string name="tips_bmi_30_to_319_title">Your BMI: %.1f — স্থূলতা শ্রেণি I</string>
+    <string name="tips_bmi_30_to_319_target">লক্ষ্য: ৬ মাসে ৮-১০ কেজি কমানো</string>
+    <string name="tips_bmi_30_to_319_diet">• নারী: দৈনিক ১২০০-১৫০০ ক্যালরি / পুরুষ: ১৫০০-১৮০০ ক্যালরি\n• কার্ব কমিয়ে দিন (১ কাপ ভাত/রুটি)\n• প্রোটিন বাড়ান (মাছ, মুরগি, সয়াবিন)\n• সবজি সীমাহীন</string>
+    <string name="tips_bmi_30_to_319_exercise">• হাঁটা দিয়ে শুরু করুন (দৈনিক ২০-৩০ মিনিট)\n• ১ মাস পর হালকা জগিং শুরু করুন\n• জয়েন্টে চাপ এড়িয়ে চলুন\n• সাঁতার সবচেয়ে ভালো</string>
+    <string name="tips_bmi_30_to_319_other">• ডাক্তার ও পুষ্টিবিদের পরামর্শ নিন\n• সুগার, কোলেস্টেরল, থাইরয়েড পরীক্ষা করান\n• লক্ষ্য: BMI ২৫-এর নিচে আনা</string>
+
+    <string name="tips_bmi_32_to_349_title">Your BMI: %.1f — স্থূলতা শ্রেণি I (মধ্যম)</string>
+    <string name="tips_bmi_32_to_349_emergency">উচ্চ ঝুঁকি: উচ্চ রক্তচাপ, ডায়াবেটিস, হৃদরোগ, স্লিপ অ্যাপনিয়া, জয়েন্টে ব্যথা</string>
+    <string name="tips_bmi_32_to_349_target">লক্ষ্য: প্রতি মাসে ২-৩ কেজি কমানো</string>
+    <string name="tips_bmi_32_to_349_diet">• ১০০০-১২০০ ক্যালরি ডায়েট (ডাক্তারের তত্ত্বাবধানে)\n• কম কার্ব, উচ্চ প্রোটিন ডায়েট\n• তেল, মাখন, ঘি বাদ\n• চিনি সম্পূর্ণ বাদ</string>
+    <string name="tips_bmi_32_to_349_exercise">• ২০ মিনিট হাঁটা দিয়ে শুরু করুন\n• ধীরে ধীরে ৪৫ মিনিটে বাড়ান\n• পানির ব্যায়াম/সাঁতার সবচেয়ে নিরাপদ\n• লিফটের বদলে সিঁড়ি ব্যবহার করুন</string>
+    <string name="tips_bmi_32_to_349_other">• মাসিক ডাক্তার দেখানো বাধ্যতামূলক\n• খুব দ্রুত ওজন কমানো যাবে না\n• ভিটামিন ও খনিজ সাপ্লিমেন্ট</string>
+
+    <string name="tips_bmi_35_to_399_title">Your BMI: %.1f — স্থূলতা শ্রেণি II</string>
+    <string name="tips_bmi_35_to_399_emergency">গুরুতর স্বাস্থ্য ঝুঁকি — এখনই ব্যবস্থা নিন!</string>
+    <string name="tips_bmi_35_to_399_medical">• অবিলম্বে মেডিসিন বিশেষজ্ঞ দেখুন\n• এন্ডোক্রাইনোলজিস্ট ও ডায়েটিশিয়ানের পরামর্শ নিন\n• সম্পূর্ণ রক্তের প্রোফাইল পরীক্ষা করান\n• ইকোকার্ডিওগ্রাম ও সুগার প্রোফাইল করান</string>
+    <string name="tips_bmi_35_to_399_diet">• ৮০০-১০০০ ক্যালরি ডায়েট (খুব কম ক্যালরি)\n• মেডিকেল শেক বা বিশেষ খাবার\n• খুব কম কার্ব (দৈনিক ৫০ গ্রাম)\n• প্রোটিন শেক ও ভিটামিন সাপ্লিমেন্ট</string>
+    <string name="tips_bmi_35_to_399_exercise">• গাইডেড প্রোগ্রামে যোগ দিন\n• পানি থেরাপি/সাঁতার দিয়ে শুরু করুন\n• ধীরে ধীরে হাঁটা + শক্তি প্রশিক্ষণ যোগ করুন\n• কোনো উচ্চ-প্রप्रभाव ব্যায়াম নয়</string>
+    <string name="tips_bmi_35_to_399_other">• ওজন কমানোর ওষুধ (ডাক্তারের প্রেসক্রিপশনে)\n• নিবিড় জীবনযাত্রার পরিবর্তন\n• প্রয়োজনে বারিয়াট্রিক সার্জারি বিবেচনা করুন</string>
+
+    <string name="tips_bmi_40_plus_title">Your BMI: %.1f — স্থূলতা শ্রেণি III (গুরুতর)</string>
+    <string name="tips_bmi_40_plus_emergency">🔴 জরুরি! এটি একটি গুরুতর স্বাস্থ্য পরিস্থিতি</string>
+    <string name="tips_bmi_40_plus_medical">• ২৪ ঘণ্টার মধ্যে হাসপাতালের মেডিসিন বিভাগে যোগাযোগ করুন\n• কার্ডিওলজিস্ট ও ডায়াবেটোলজিস্ট দেখান\n• লক্ষ্য: BMI ৩৫-এর নিচে আনা\n• पारिवारिक চিকিৎসকের নিয়মিত ফলোআপ</string>
+    <string name="tips_bmi_40_plus_tests">• এইচবিএ১সি (ডায়াবেটিস)\n• লিপিড প্রোফাইল (কোলেস্টেরল)\n• লিভার ফাংশন টেস্ট\n• থাইরয়েড প্রোফাইল\n• ইসিজি ও ২ডি ইকো</string>
+    <string name="tips_bmi_40_plus_diet">• ৮০০ ক্যালরির নিচে — শুধু মেডিকেল তত্ত্বাবধানে\n• লিকুইড ডায়েট বা শেক সাপ্লিমেন্ট\n• কঠোর প্রোটিন ও ভিটামিন মনিটরিং</string>
+    <string name="tips_bmi_40_plus_treatment">• এপ্রুভড ওজন কমানোর ওষুধ\n• গ্যাস্ট্রিক বাইপাস বা স্লিভ গ্যাস্ট্রেক্টমি সার্জারি\n• ইনটেনসিভ বিহেভিয়ারাল থেরাপি</string>
+    <string name="tips_bmi_40_plus_mental">• সাইকোলজিস্ট বা কাউন্সেলরের সাহায্য নিন\n• সাপোর্ট গ্রুপে যোগ দিন\n• ফ্যামিলি থেরাপি প্রয়োজন হতে পারে</string>
 
     <string name="title_health_tips">স্বাস্থ্য ও ওজন পরামর্শ</string>
-    <string name="title_weight_loss">📉 ওজন কমানোর সহজ উপায়</string>
-    <string name="title_weight_gain">📈 ওজন বাড়ানোর উপায়</string>
-    <string name="title_healthy_living">🥗 সুস্থ থাকার সাধারণ নিয়ম</string>
-    <string name="content_weight_loss">১. ক্যালোরি ডেফিসিট বুঝুন:\nওজন কমানোর মূল চাবিকাঠি হলো শরীরে প্রয়োজনের চেয়ে কম ক্যালোরি নেওয়া। প্রতিদিন যে পরিমাণ ক্যালোরি খরচ করেন, খাবার থেকে তার চেয়ে ২০০-৩০০ ক্যালোরি কম গ্রহণ করুন।\n\n২. চিনি ও অতিরিক্ত কার্বোহাইড্রেট বর্জন করুন:\nমিষ্টি, কোল্ড ড্রিংকস, ফাস্টফুড এবং অতিরিক্ত সাদা ভাত বা ময়দা খাওয়া একবারে কমিয়ে দিন। এর বদলে লাল চালের ভাত, ওটস বা লাল আটার রুটি খান।\n\n৩. প্রোটিন ও ফাইবারের পরিমাণ বাড়ান:\nপ্রতিবেলার খাবারে পর্যাপ্ত প্রোটিন (ডিম, মুরগির মাংস, মাছ, ডাল) এবং ফাইবার যুক্ত সবুজ শাকসবজি ও ফলমূল রাখুন। এটি বারবার ক্ষুধা লাগার প্রবণতা কমায়।\n\n৪. পানি পানের সঠিক নিয়ম:\nদৈনিক অন্তত ৩-৪ লিটার পানি পান করুন। প্রতিবার প্রধান খাবার খাওয়ার ৩০ মিনিট আগে এক গ্লাস পানি পান করুন, এটি অতিরিক্ত খাওয়া রোধ করবে।\n\n৫. নিয়মিত পরিমিত ব্যায়াম:\nসваете অন্তত ৫ দিন ৩০-৪০ মিনিট মাঝারি ধরনের ব্যায়াম বা দ্রুত হাঁটার অভ্যাস করুন। এটি মেটাবলিজম বাড়ায় এবং চর্বি ঝরাতে সাহায্য করে।</string>
-    <string name="content_weight_gain">১. ক্যালোরি সারপ্লাস ডায়েট:\nওজন বাড়াতে হলে আপনার দৈনিক চাহিদার চেয়ে ৩০০-৫০০ ক্যালোরি বেশি খাবার গ্রহণ করতে হবে। তবে পুষ্টিকর খাবারের মাধ্যমে এই ক্যালোরি বাড়াতে হবে।\n\n২. পুষ্টিকর ও উচ্চ ক্যালোরিযুক্ত খাবার:\nখাদ্যতালিকায় এমন খাবার রাখুন যা আকারে ছোট কিন্তু ক্যালোরি বেশি। যেমন: কাঠবাদাম, কাজুবাদাম, পিনাট বাটার, কিশমিশ, খেজুর, ডিম, পূর্ণাঙ্গ দুধ, কলা এবং ঘি-মাখন।\n\n৩. ঘন ঘন খাওয়ার অভ্যাস:\nএকবারে অনেক বেশি না খেয়ে দিনে ৫-৬ বার অল্প অল্প করে পুষ্টিকর খাবার খান। প্রধান খাবারের মাঝখানের সময়গুলোতে বাদাম, ফল বা পুডিং খেতে পারেন।\n\n৪. খাবারের আগে পানি নয়:\nখাবার খাওয়ার ঠিক আগে বা খাবার চলাকালীন বেশি পানি পান করবেন না। এতে পেট ভরে যায় এবং আসল পুষ্টিকর খাবার খাওয়ার ক্ষুধা নষ্ট হয়ে যায়।\n\n৫. পেশী গঠনের ব্যায়াম:\nঅতিরিক্ত চর্বি না বাড়িয়ে শরীরে সুন্দর মাসল বা পেশী গঠনের জন্য ফ্রি-হ্যান্ড পুশ-আপ, স্কোয়াট বা জিম করতে পারেন।</string>
-    <string name="content_healthy_living">১. সুষম খাদ্যতালিকা:\nসুস্থ থাকার জন্য প্লেটের অর্ধেক অংশ শাকসবজি ও ফলমূল, এক-চতুর্থাংশ প্রোটিন এবং বাকি এক-চতুর্থাংশ জটিল কার্বোহাইড্রেট দিয়ে সাজান। প্রতিদিন অন্তত একটি মরসুমি ফল খান।\n\n২. পর্যাপ্ত ও গভীর ঘুম:\nপ্রতি রাতে ৭ থেকে ৮ ঘণ্টা নিরবচ্ছিন্ন ঘুম স্বাস্থ্যের জন্য অপরিহার্য। ঘুম ঠিকমতো না হলে শরীরের হরমোনাল ভারসাম্য নষ্ট হয়, যা ওজন পরিবর্তনের জন্য দায়ী।\n\n৩. মানসিক চাপ নিয়ন্ত্রণ:\nঅতিরিক্ত মানসিক চাপ শরীরের মেটাবলিজম কমিয়ে দেয়। স্ট্রেস কমাতে প্রতিদিন ১০-১৫ মিনিট গভীরভাবে শ্বাস-প্রশ্বাসের ব্যায়াম (Meditation) করতে পারেন।\n\n৪. প্রসেসড ও ট্রান্স-ফ্যাট বর্জন:\nপ্যাকেটজাত খাবার, অতিরিক্ত তেলে ভাজা পোড়া এবং অতিরিক্ত লবণযুক্ত খাবার রক্তচাপ ও হার্টের ক্ষতি করে। সবসময় তাজা ও ঘরে তৈরি খাবার খান।\n\n৫. সচল থাকুন:\nএকটানা ডেস্কে বা সোফায় বসে থাকবেন না। প্রতি এক ঘণ্টা পর পর ২ মিনিটের জন্য উঠে দাঁড়ান বা একটু হাঁটুন। লিফটের পরিবর্তে সিঁড়ি ব্যবহার করুন।</string>
+    <string name="title_weight_loss">📉 ওজন কমানোর সহজ উপায়</string>
+    <string name="title_weight_gain">📈 ওজন বাড়ানোর উপায়</string>
+    <string name="title_healthy_living">🥗 সুস্থ থাকার সাধারণ নিয়ম</string>
+
+    <string name="content_weight_loss">১. ক্যালোরি ডেফিসিট বুঝুন:\nওজন কমানোর মূল চাবিকাঠি হলো শরীরে প্রয়োজনের চেয়ে কম ক্যালোরি নেওয়া। প্রতিদিন যে পরিমাণ ক্যালোরি খরচ করেন, খাবার থেকে তার চেয়ে ২০০-৩০০ ক্যালোরি কম গ্রহণ করুন।\n\n২. চিনি ও অতিরিক্ত কার্বোহাইড্রেট বর্জন করুন:\nমিষ্টি, কোল্ড ড্রিংকস, ফাস্টফুড এবং অতিরিক্ত সাদা ভাত বা ময়দা খাওয়া একবারে কমিয়ে দিন। এর বদলে লাল চালের ভাত, ওটস বা লাল আটার রুটি খান।\n\n৩. প্রোটিন ও ফাইবারের পরিমাণ বাড়ান:\nপ্রতিবেলার খাবারে পর্যাপ্ত প্রোটিন (ডিম, মুরগির মাংস, মাছ, ডাল) এবং ফাইবার যুক্ত সবুজ শাকসবজি ও ফলমূল রাখুন। এটি বারবার ক্ষুধা লাগার প্রবণতা কমায়।\n\n৪. পানি পানের সঠিক নিয়ম:\nদৈনিক অন্তত ৩-৪ লিটার পানি পান করুন। প্রতিবার প্রধান খাবার খাওয়ার ৩০ মিনিট আগে এক গ্লাস পানি পান করুন, এটি অতিরিক্ত খাওয়া রোধ করবে।\n\n৫. নিয়মিত পরিমিত ব্যায়াম:\nসপ্তাহে অন্তত ৫ দিন ৩০-৪০ মিনিট মাঝারি ধরনের ব্যায়াম বা দ্রুত হাঁটার অভ্যাস করুন। এটি মেটাবলিজম বাড়ায় এবং চর্বি ঝরাতে সাহায্য করে।</string>
+
+    <string name="content_weight_gain">১. ক্যালোরি সারপ্লাস ডায়েট:\nওজন বাড়াতে হলে আপনার দৈনিক চাহিদার চেয়ে ৩০০-৫০০ ক্যালোরি বেশি খাবার গ্রহণ করতে হবে। তবে পুষ্টিকর খাবারের মাধ্যমে এই ক্যালোরি বাড়াতে হবে।\n\n২. পুষ্টিকর ও উচ্চ ক্যালোরিযুক্ত খাবার:\nখাদ্যতালিকায় এমন খাবার রাখুন যা আকারে ছোট কিন্তু ক্যালোরি বেশি। যেমন: কাঠবাদাম, কাজুবাদাম, পিনাট বাটার, কিশমিশ, খেজুর, ডিম, পূর্ণাঙ্গ দুধ, কলা এবং ঘি-মাখন।\n\n৩. ঘন ঘন খাওয়ার অভ্যাস:\nএকবারে অনেক বেশি না খেয়ে দিনে ৫-৬ বার অল্প অল্প করে পুষ্টিকর খাবার খান। প্রধান খাবারের মাঝখানের সময়গুলোতে বাদাম, ফল বা পুডিং খেতে পারেন।\n\n৪. খাবারের আগে পানি নয়:\nখাবার খাওয়ার ঠিক আগে বা খাবার চলাকালীন বেশি পানি পান করবেন না। এতে পেট ভরে যায় এবং আসল পুষ্টিকর খাবার খাওয়ার ক্ষুধা নষ্ট হয়ে যায়।\n\n৫. পেশী গঠনের ব্যায়াম:\nঅতিরিক্ত চর্বি না বাড়িয়ে শরীরে সুন্দর মাসল বা পেশী গঠনের জন্য ফ্রি-হ্যান্ড পুশ-আপ, স্কোয়াট বা জিম করতে পারেন।</string>
+
+    <string name="content_healthy_living">১. সুষম খাদ্যতালিকা:\nসুস্থ থাকার জন্য প্লেটের অর্ধেক অংশ শাকসবজি ও ফলমূল, এক-চতুর্থাংশ প্রোটিন এবং বাকি এক-চতুর্থাংশ জটিল কার্বোহাইড্রেট দিয়ে সাজান। প্রতিদিন অন্তত একটি মরসুমি ফল খান।\n\n২. পর্যাপ্ত ও গভীর ঘুম:\nপ্রতি রাতে ৭ থেকে ৮ ঘণ্টা নিরবচ্ছিন্ন ঘুম স্বাস্থ্যের জন্য অপরিহার্য। ঘুম ঠিকমতো না হলে শরীরের হরমোনাল ভারসাম্য নষ্ট হয়, যা ওজন পরিবর্তনের জন্য দায়ী।\n\n৩. মানসিক চাপ নিয়ন্ত্রণ:\nঅতিরিক্ত মানসিক চাপ শরীরের মেটাবলিজম কমিয়ে দেয়। স্ট্রেস কমাতে প্রতিদিন ১০-১৫ মিনিট গভীরভাবে শ্বাস-প্রশ্বাসের ব্যায়াম (Meditation) করতে পারেন।\n\n৪. প্রসেসড ও ট্রান্স-ফ্যাট বর্জন:\nপ্যাকেটজাত খাবার, অতিরিক্ত তেলে ভাজা পোড়া এবং অতিরিক্ত লবণযুক্ত খাবার রক্তচাপ ও হার্টের ক্ষতি করে। সবসময় তাজা ও ঘরে তৈরি খাবার খান।\n\n৫. সচল থাকুন:\nএকটানা ডেস্কে বা সোফায় বসে থাকবেন না। প্রতি এক ঘণ্টা পর পর ২ মিনিটের জন্য উঠে দাঁড়ান বা একটু হাঁটুন। লিফটের পরিবর্তে সিঁড়ি ব্যবহার করুন।</string>
 
     <string-array name="height_units">
         <item>সেমি</item>
@@ -112,5 +225,4 @@
         <item>মহিলা</item>
         <item>অন্যান্য</item>
     </string-array>
-
 </resources>

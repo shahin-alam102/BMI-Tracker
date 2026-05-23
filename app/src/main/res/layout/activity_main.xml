@@ -293,12 +293,26 @@
                 android:layout_height="160dp"
                 android:layout_marginTop="6dp"
                 android:contentDescription="@string/a11y_bmi_gauge"
-                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/btnHealthTips"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/cardInputs"
                 app:sv_maxSpeed="50"
                 app:sv_minSpeed="0"
                 app:sv_unit="BMI" />
+            <Button
+                android:id="@+id/btnHealthTips"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="0dp"
+                android:text="@string/btn_health_tips"
+                android:backgroundTint="#4CAF50"
+                android:textColor="@android:color/white"
+                android:textSize="14sp"
+                android:fontFamily="@font/noto_sans_bengali_regular"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="@id/speedView"
+                app:layout_constraintTop_toBottomOf="@id/cardInputs"/>
 
             <TextView
                 android:id="@+id/tvLabelCategory"
@@ -311,6 +325,7 @@
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/speedView" />
+
 
             <TextView
                 android:id="@+id/lblDifference"

@@ -8,6 +8,7 @@ import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.View;
 import android.view.MenuItem;
+import android.widget.Button;
 import android.widget.PopupMenu;
 import com.voxo.bmitracker.R;
 import android.widget.TextView;
@@ -29,6 +30,7 @@ public class MainActivity extends BaseActivity {
     private String lastSavedHeight = "";
     private String lastSavedWeight = "";
     private int interstitialClickCount = 0;
+    private final double currentBmi = 0.0;
 
 
     @Override
@@ -37,6 +39,13 @@ public class MainActivity extends BaseActivity {
 
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+
+
+        binding.btnHealthTips.setOnClickListener(v -> {
+            Intent intent = new Intent(MainActivity.this, HealthTipsAccordingBmiActivity.class);
+            intent.putExtra("bmi_value", currentBmi);
+            startActivity(intent);
+        });
         // ads load
         if (binding != null) {
             loadBannerAd(binding.adView);
