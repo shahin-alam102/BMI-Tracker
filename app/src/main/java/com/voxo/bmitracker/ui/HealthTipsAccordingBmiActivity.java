@@ -1,46 +1,37 @@
-package com.voxo.bmitracker.ui; // আপনার প্যাকেজ নাম দিন
+package com.voxo.bmitracker.ui;
 
 import android.os.Bundle;
-import android.widget.ImageButton;
-import android.widget.TextView;
-
 import com.voxo.bmitracker.R;
+import com.voxo.bmitracker.databinding.ActivityHealthTipsAccordingBmiBinding;
 
 public class HealthTipsAccordingBmiActivity extends BaseActivity {
 
-
-    private TextView tvBmiValue, tvBmiCategory, tvHealthTips;
-    private ImageButton btnClose;
+    private ActivityHealthTipsAccordingBmiBinding binding;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_health_tips_according_bmi);
-
-        initViews();
+        binding = ActivityHealthTipsAccordingBmiBinding.inflate(getLayoutInflater());
+        setContentView(binding.getRoot());
 
         double bmi = getIntent().getDoubleExtra("bmi_value", 0.0);
 
+        if (binding != null) {
+            loadBannerAd(binding.adViewTipsAsBmi);
+        }
         displayBmiInfo(bmi);
-        showPersonalizedHealthTips(bmi);  // BMI অনুযায়ী ডায়নামিক টিপস
+        showPersonalizedHealthTips(bmi);
+        binding.btnClose.setOnClickListener(v -> finish());
 
-        btnClose.setOnClickListener(v -> finish());
-    }
-
-    private void initViews() {
-        tvBmiValue = findViewById(R.id.tvBmiValue);
-        tvBmiCategory = findViewById(R.id.tvBmiCategory);
-        tvHealthTips = findViewById(R.id.tvHealthTips);
-        btnClose = findViewById(R.id.btnClose);
     }
 
     private void displayBmiInfo(double bmi) {
-        tvBmiValue.setText(String.format("%.1f", bmi));
-        tvBmiCategory.setText(getBmiCategory(bmi));
+        binding.tvBmiValue.setText(String.format("%.1f", bmi));
+        binding.tvBmiCategory.setText(getBmiCategory(bmi));
 
         int color = getCategoryColor(bmi);
-        tvBmiValue.setTextColor(color);
-        tvBmiCategory.setTextColor(color);
+        binding.tvBmiValue.setTextColor(color);
+        binding.tvBmiCategory.setTextColor(color);
     }
 
     private String getBmiCategory(double bmi) {
@@ -61,12 +52,8 @@ public class HealthTipsAccordingBmiActivity extends BaseActivity {
         else return getColor(android.R.color.holo_red_dark);
     }
 
-    /**
-     * BMI রেজাল্টের ভ্যালু অনুযায়ী ডায়নামিক টিপস দেখায়
-     * লোকালাইজেশন স্বয়ংক্রিয়ভাবে কাজ করে (strings.xml থেকে)
-     */
     private void showPersonalizedHealthTips(double bmi) {
-        String tips = "";
+        String tips;
 
         if (bmi < 16.0) {
             tips = String.format(getString(R.string.tips_bmi_below_16_title), bmi) + "\n\n" +
@@ -76,80 +63,70 @@ public class HealthTipsAccordingBmiActivity extends BaseActivity {
                     getString(R.string.section_diet) + ":\n" + getString(R.string.tips_bmi_below_16_diet) + "\n\n" +
                     getString(R.string.section_exercise) + ":\n" + getString(R.string.tips_bmi_below_16_exercise) + "\n\n" +
                     getString(R.string.section_other) + ":\n" + getString(R.string.tips_bmi_below_16_other);
-        }
-        else if (bmi < 17.0) {
+        } else if (bmi < 17.0) {
             tips = String.format(getString(R.string.tips_bmi_16_to_169_title), bmi) + "\n\n" +
                     "━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n" +
                     getString(R.string.section_target) + ":\n" + getString(R.string.tips_bmi_16_to_169_target) + "\n\n" +
                     getString(R.string.section_diet) + ":\n" + getString(R.string.tips_bmi_16_to_169_diet) + "\n\n" +
                     getString(R.string.section_exercise) + ":\n" + getString(R.string.tips_bmi_16_to_169_exercise) + "\n\n" +
                     getString(R.string.section_other) + ":\n" + getString(R.string.tips_bmi_16_to_169_other);
-        }
-        else if (bmi < 18.5) {
+        } else if (bmi < 18.5) {
             tips = String.format(getString(R.string.tips_bmi_17_to_184_title), bmi) + "\n\n" +
                     "━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n" +
                     getString(R.string.section_target) + ":\n" + getString(R.string.tips_bmi_17_to_184_target) + "\n\n" +
                     getString(R.string.section_diet) + ":\n" + getString(R.string.tips_bmi_17_to_184_diet) + "\n\n" +
                     getString(R.string.section_exercise) + ":\n" + getString(R.string.tips_bmi_17_to_184_exercise) + "\n\n" +
                     getString(R.string.section_other) + ":\n" + getString(R.string.tips_bmi_17_to_184_other);
-        }
-        else if (bmi < 20.0) {
+        } else if (bmi < 20.0) {
             tips = String.format(getString(R.string.tips_bmi_185_to_199_title), bmi) + "\n\n" +
                     "━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n" +
                     getString(R.string.section_target) + ":\n" + getString(R.string.tips_bmi_185_to_199_target) + "\n\n" +
                     getString(R.string.section_diet) + ":\n" + getString(R.string.tips_bmi_185_to_199_diet) + "\n\n" +
                     getString(R.string.section_exercise) + ":\n" + getString(R.string.tips_bmi_185_to_199_exercise) + "\n\n" +
                     getString(R.string.section_other) + ":\n" + getString(R.string.tips_bmi_185_to_199_other);
-        }
-        else if (bmi < 23.0) {
+        } else if (bmi < 23.0) {
             tips = String.format(getString(R.string.tips_bmi_20_to_229_title), bmi) + "\n\n" +
                     "━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n" +
                     getString(R.string.section_target) + ":\n" + getString(R.string.tips_bmi_20_to_229_target) + "\n\n" +
                     getString(R.string.section_diet) + ":\n" + getString(R.string.tips_bmi_20_to_229_diet) + "\n\n" +
                     getString(R.string.section_exercise) + ":\n" + getString(R.string.tips_bmi_20_to_229_exercise) + "\n\n" +
                     getString(R.string.section_other) + ":\n" + getString(R.string.tips_bmi_20_to_229_other);
-        }
-        else if (bmi <= 24.9) {
+        } else if (bmi <= 24.9) {
             tips = String.format(getString(R.string.tips_bmi_23_to_249_title), bmi) + "\n\n" +
                     "━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n" +
                     getString(R.string.section_target) + ":\n" + getString(R.string.tips_bmi_23_to_249_target) + "\n\n" +
                     getString(R.string.section_diet) + ":\n" + getString(R.string.tips_bmi_23_to_249_diet) + "\n\n" +
                     getString(R.string.section_exercise) + ":\n" + getString(R.string.tips_bmi_23_to_249_exercise) + "\n\n" +
                     getString(R.string.section_other) + ":\n" + getString(R.string.tips_bmi_23_to_249_other);
-        }
-        else if (bmi < 27.0) {
+        } else if (bmi < 27.0) {
             tips = String.format(getString(R.string.tips_bmi_25_to_269_title), bmi) + "\n\n" +
                     "━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n" +
                     getString(R.string.section_target) + ":\n" + getString(R.string.tips_bmi_25_to_269_target) + "\n\n" +
                     getString(R.string.section_diet) + ":\n" + getString(R.string.tips_bmi_25_to_269_diet) + "\n\n" +
                     getString(R.string.section_exercise) + ":\n" + getString(R.string.tips_bmi_25_to_269_exercise) + "\n\n" +
                     getString(R.string.section_other) + ":\n" + getString(R.string.tips_bmi_25_to_269_other);
-        }
-        else if (bmi < 29.0) {
+        } else if (bmi < 29.0) {
             tips = String.format(getString(R.string.tips_bmi_27_to_289_title), bmi) + "\n\n" +
                     "━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n" +
                     getString(R.string.section_target) + ":\n" + getString(R.string.tips_bmi_27_to_289_target) + "\n\n" +
                     getString(R.string.section_diet) + ":\n" + getString(R.string.tips_bmi_27_to_289_diet) + "\n\n" +
                     getString(R.string.section_exercise) + ":\n" + getString(R.string.tips_bmi_27_to_289_exercise) + "\n\n" +
                     getString(R.string.section_other) + ":\n" + getString(R.string.tips_bmi_27_to_289_other);
-        }
-        else if (bmi < 30.0) {
+        } else if (bmi < 30.0) {
             tips = String.format(getString(R.string.tips_bmi_29_to_299_title), bmi) + "\n\n" +
                     "━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n" +
                     getString(R.string.section_target) + ":\n" + getString(R.string.tips_bmi_29_to_299_target) + "\n\n" +
                     getString(R.string.section_diet) + ":\n" + getString(R.string.tips_bmi_29_to_299_diet) + "\n\n" +
                     getString(R.string.section_exercise) + ":\n" + getString(R.string.tips_bmi_29_to_299_exercise) + "\n\n" +
                     getString(R.string.section_other) + ":\n" + getString(R.string.tips_bmi_29_to_299_other);
-        }
-        else if (bmi < 32.0) {
+        } else if (bmi < 32.0) {
             tips = String.format(getString(R.string.tips_bmi_30_to_319_title), bmi) + "\n\n" +
                     "━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n" +
                     getString(R.string.section_target) + ":\n" + getString(R.string.tips_bmi_30_to_319_target) + "\n\n" +
                     getString(R.string.section_diet) + ":\n" + getString(R.string.tips_bmi_30_to_319_diet) + "\n\n" +
                     getString(R.string.section_exercise) + ":\n" + getString(R.string.tips_bmi_30_to_319_exercise) + "\n\n" +
                     getString(R.string.section_other) + ":\n" + getString(R.string.tips_bmi_30_to_319_other);
-        }
-        else if (bmi < 35.0) {
+        } else if (bmi < 35.0) {
             tips = String.format(getString(R.string.tips_bmi_32_to_349_title), bmi) + "\n\n" +
                     "━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n" +
                     getString(R.string.section_warning) + ":\n" + getString(R.string.tips_bmi_32_to_349_emergency) + "\n\n" +
@@ -157,8 +134,7 @@ public class HealthTipsAccordingBmiActivity extends BaseActivity {
                     getString(R.string.section_diet) + ":\n" + getString(R.string.tips_bmi_32_to_349_diet) + "\n\n" +
                     getString(R.string.section_exercise) + ":\n" + getString(R.string.tips_bmi_32_to_349_exercise) + "\n\n" +
                     getString(R.string.section_other) + ":\n" + getString(R.string.tips_bmi_32_to_349_other);
-        }
-        else if (bmi < 40.0) {
+        } else if (bmi < 40.0) {
             tips = String.format(getString(R.string.tips_bmi_35_to_399_title), bmi) + "\n\n" +
                     "━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n" +
                     getString(R.string.section_warning) + ":\n" + getString(R.string.tips_bmi_35_to_399_emergency) + "\n\n" +
@@ -166,8 +142,7 @@ public class HealthTipsAccordingBmiActivity extends BaseActivity {
                     getString(R.string.section_diet) + ":\n" + getString(R.string.tips_bmi_35_to_399_diet) + "\n\n" +
                     getString(R.string.section_exercise) + ":\n" + getString(R.string.tips_bmi_35_to_399_exercise) + "\n\n" +
                     getString(R.string.section_other) + ":\n" + getString(R.string.tips_bmi_35_to_399_other);
-        }
-        else {
+        } else {
             tips = String.format(getString(R.string.tips_bmi_40_plus_title), bmi) + "\n\n" +
                     "━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n" +
                     getString(R.string.section_emergency) + ":\n" + getString(R.string.tips_bmi_40_plus_emergency) + "\n\n" +
@@ -178,6 +153,12 @@ public class HealthTipsAccordingBmiActivity extends BaseActivity {
                     "🧠 মানসিক স্বাস্থ্য:\n" + getString(R.string.tips_bmi_40_plus_mental);
         }
 
-        tvHealthTips.setText(tips);
+        binding.tvHealthTips.setText(tips);
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        binding = null; // memory leak এড়ানোর জন্য
     }
 }

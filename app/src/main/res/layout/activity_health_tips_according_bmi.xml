@@ -1,9 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="#F5F5F5">
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+  <ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F5F5"
+      android:layout_above="@id/adViewTipsAsBmi">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -57,7 +65,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/bmi_summary"
-                    android:textSize="14sp"
+                    android:textSize="18sp"
                     android:textColor="#666666"
                     android:fontFamily="@font/noto_sans_bengali_regular" />
 
@@ -136,4 +144,13 @@
 
     </LinearLayout>
 
-</ScrollView>
+  </ScrollView>
+
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/adViewTipsAsBmi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        ads:adSize="BANNER"
+        ads:adUnitId="ca-app-pub-3940256099942544/6300978111" />
+</RelativeLayout>
