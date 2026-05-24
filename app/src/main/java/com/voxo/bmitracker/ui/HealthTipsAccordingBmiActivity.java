@@ -15,7 +15,7 @@ public class HealthTipsAccordingBmiActivity extends BaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_health_tips);
+        setContentView(R.layout.activity_health_tips_according_bmi);
 
         initViews();
 
@@ -47,7 +47,7 @@ public class HealthTipsAccordingBmiActivity extends BaseActivity {
         if (bmi <= 15.9) return getString(R.string.severely_underweight);
         else if (bmi <= 16.9) return getString(R.string.moderately_underweight);
         else if (bmi <= 18.4) return getString(R.string.underweight);
-        else if (bmi <= 24.9) return getString(R.string.normal_weight);
+        else if (bmi <= 24.9) return getString(R.string.healthy_weight);
         else if (bmi <= 29.9) return getString(R.string.overweight);
         else if (bmi <= 34.9) return getString(R.string.obese_class_i);
         else if (bmi <= 39.9) return getString(R.string.obese_class_ii);

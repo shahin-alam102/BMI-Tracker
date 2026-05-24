@@ -30,7 +30,7 @@ public class MainActivity extends BaseActivity {
     private String lastSavedHeight = "";
     private String lastSavedWeight = "";
     private int interstitialClickCount = 0;
-    private final double currentBmi = 0.0;
+    private double currentBmi = 0.0;
 
 
     @Override
@@ -40,7 +40,7 @@ public class MainActivity extends BaseActivity {
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-
+        binding.btnHealthTips.setVisibility(View.GONE);
         binding.btnHealthTips.setOnClickListener(v -> {
             Intent intent = new Intent(MainActivity.this, HealthTipsAccordingBmiActivity.class);
             intent.putExtra("bmi_value", currentBmi);
@@ -96,6 +96,8 @@ public class MainActivity extends BaseActivity {
     private void setupObservers() {
         viewModel.bmiResult.observe(this, result -> {
             if (result != null) {
+                currentBmi = result.getBmi();
+                showHealthTipsButton();
                 // Check current system language configuration
                 boolean isBangla = Locale.getDefault().getLanguage().equals("bn");
 
@@ -110,7 +112,7 @@ public class MainActivity extends BaseActivity {
                 } else if (databaseCategory.equalsIgnoreCase("Underweight")) {
                     localizedCategory = getString(R.string.status_underweight);
                 } else if (databaseCategory.equalsIgnoreCase("Healthy Weight")) {
-                    localizedCategory = getString(R.string.status_healthy);
+                    localizedCategory = getString(R.string.healthy_weight);
                 } else if (databaseCategory.equalsIgnoreCase("Overweight")) {
                     localizedCategory = getString(R.string.status_overweight);
                 } else if (databaseCategory.contains("Class III") || databaseCategory.contains("III")) {
@@ -181,6 +183,7 @@ public class MainActivity extends BaseActivity {
                 }
             } else {
                 clearResults();
+                hideHealthTipsButton();
             }
         });
     }
@@ -504,6 +507,7 @@ public class MainActivity extends BaseActivity {
         clearResults();
         lastSavedHeight = "";
         lastSavedWeight = "";
+        hideHealthTipsButton();
     }
 
     private void clearResults() {
@@ -606,6 +610,32 @@ public class MainActivity extends BaseActivity {
             }
         }
         return builder.toString();
+    }
+    // এই মেথড যোগ করুন
+    private void showHealthTipsButton() {
+        binding.btnHealthTips.setVisibility(View.VISIBLE);
+        binding.btnHealthTips.setAlpha(0f);
+        binding.btnHealthTips.setScaleX(0.5f);
+        binding.btnHealthTips.setScaleY(0.5f);
+
+        binding.btnHealthTips.animate()
+                .alpha(1f)
+                .scaleX(1f)
+                .scaleY(1f)
+                .setDuration(400)
+                .setInterpolator(new android.view.animation.OvershootInterpolator())
+                .start();
+    }
+
+    private void hideHealthTipsButton() {
+        binding.btnHealthTips.animate()
+                .alpha(0f)
+                .scaleX(0.5f)
+                .scaleY(0.5f)
+                .setDuration(200)
+                .withEndAction(() ->
+                        binding.btnHealthTips.setVisibility(View.GONE))
+                .start();
     }
 
 

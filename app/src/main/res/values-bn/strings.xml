@@ -48,7 +48,7 @@
     <string name="normal_weight">স্বাভাবিক ওজন</string>
     <string name="normal_weight_range">00.00 – 00.00 কেজি</string>
     <string name="healthy_weight">স্বাস্থ্যকর ওজন</string>
-    <string name="underweight">کم ওজন</string>
+    <string name="underweight">কম ওজন</string>
     <string name="moderately_underweight">মাঝারি মাত্রার কম ওজন</string>
     <string name="severely_underweight">গুরুতর কম ওজন</string>
     <string name="very_severely_underweight">অত্যন্ত কম ওজন</string>
@@ -116,82 +116,82 @@
     <string name="section_warning">⚠️ সতর্কতা</string>
     <string name="section_medical">👨‍⚕️ চিকিৎসা পরামর্শ</string>
 
-    <string name="tips_bmi_below_16_title">আপনার BMI: %.1f — অত্যন্ত গুরুতর কম ওজন</string>
+    <string name="tips_bmi_below_16_title">আপনার বিএমআই: %.1f — অত্যন্ত গুরুতর কম ওজন</string>
     <string name="tips_bmi_below_16_emergency">• অবিলম্বে ডাক্তার দেখান\n• রক্ত পরীক্ষা করান (থাইরয়েড, ডায়াবেটিস, আয়রন)\n• পুষ্টিবিদের ডায়েট চার্ট নিন</string>
     <string name="tips_bmi_below_16_target">লক্ষ্য: ২ মাসে ৪-৫ কেজি ওজন বাড়ানো</string>
     <string name="tips_bmi_below_16_diet">• সকাল: ২টি ডিম + ১ গ্লাস দুধ\n• দুপুর: ২ কাপ ভাত + মাছ/মাংস + ডাল\n• বিকেল: ১টি কলা + ৫-৬টি বাদাম\n• রাত: ২টি রুটি + সবজি + ১ গ্লাস দুধ</string>
     <string name="tips_bmi_below_16_exercise">• হালকা ওজন তোলা (৩ কেজি থেকে শুরু)\n• স্কোয়াট ও পুশ-আপ (দিনে ১০-১৫ বার)\n• যোগব্যায়াম - সূর্য নমস্কার</string>
     <string name="tips_bmi_below_16_other">• প্রতিদিন ২ লিটার পানি পান করুন\n• ৮ ঘণ্টা ঘুম আবশ্যক\n• ১ মাস পর ফলোআপ করান</string>
 
-    <string name="tips_bmi_16_to_169_title">Your BMI: %.1f — গুরুতর কম ওজন</string>
+    <string name="tips_bmi_16_to_169_title">আপনার বিএমআই: %.1f — গুরুতর কম ওজন</string>
     <string name="tips_bmi_16_to_169_target">লক্ষ্য: ২ মাসে ৩-৪ কেজি ওজন বাড়ানো</string>
     <string name="tips_bmi_16_to_169_diet">• সকাল: ২টি রুটি + ডিম + ১ গ্লাস দুধ\n• দুপুর: ২ কাপ ভাত + ১ কাপ ডাল + ২০০ গ্রাম মাছ/মাংস\n• বিকেল: ১টি কলা + ১০টি বাদাম + ১টি খেজুর\n• রাত: ২টি রুটি + সবজি + ১টি ডিম\n• শোবার আগে: ১ গ্লাস গরম দুধ</string>
     <string name="tips_bmi_16_to_169_exercise">• পুশ-আপ: ১০ বার × ৩ সেট\n• স্কোয়াট: ১৫ বার × ৩ সেট\n• ডাম্বেল কার্ল: ১০ বার × ৩ সেট</string>
     <string name="tips_bmi_16_to_169_other">• ভিটামিন ডি + ক্যালসিয়াম সাপ্লিমেন্ট (ডাক্তারের পরামর্শে)\n• প্রোটিন পাউডার (যদি প্রয়োজন হয়)</string>
 
-    <string name="tips_bmi_17_to_184_title">Your BMI: %.1f — কম ওজন</string>
+    <string name="tips_bmi_17_to_184_title">আপনার বিএমআই: %.1f — কম ওজন</string>
     <string name="tips_bmi_17_to_184_target">লক্ষ্য: ৩ মাসে ৩-৪ কেজি ওজন বাড়ানো</string>
     <string name="tips_bmi_17_to_184_diet">• সকাল: ওটস + দুধ + কলা + বাদাম\n• দুপুর: ২ কাপ ভাত + মাছ + ডাল + দই\n• বিকেল: মিষ্টি দই + ২টি খেজুর\n• রাত: ২টি রুটি + মুরগির মাংস + সবজি</string>
     <string name="tips_bmi_17_to_184_exercise">• সোম/বুধ/শুক্র: হালকা ওজন প্রশিক্ষণ\n• মঙ্গল/বৃহস্পতি: যোগব্যায়াম\n• শনি/রবি: বিশ্রাম + হালকা হাঁটা</string>
     <string name="tips_bmi_17_to_184_other">• প্রতি সোমবার সকালে ওজন মাপুন\n• মাসের শুরু ও শেষে ছবি তুলুন\n• খাবারের ডায়েরি রাখুন</string>
 
-    <string name="tips_bmi_185_to_199_title">Your BMI: %.1f — স্বাস্থ্যকর ওজন (নিম্ন সীমা)</string>
+    <string name="tips_bmi_185_to_199_title">আপনার বিএমআই: %.1f — স্বাস্থ্যকর ওজন (নিম্ন সীমা)</string>
     <string name="tips_bmi_185_to_199_target">লক্ষ্য: এই ওজন ধরে রাখা</string>
     <string name="tips_bmi_185_to_199_diet">• সকাল: ২টি রুটি + ডিম + সবজি\n• দুপুর: ২ কাপ ভাত + ১ কাপ ডাল + মাছ/মাংস\n• বিকেল: ফল + বাদাম + চা\n• রাত: ১-২ কাপ ভাত + সবজি + মাছ</string>
     <string name="tips_bmi_185_to_199_exercise">• ৩০ মিনিট CARDIO (হাঁটা/দৌড়ানো)\n• ২০ মিনিট স্ট্রেংথ ট্রেনিং\n• ১০ মিনিট স্ট্রেচিং\n• সপ্তাহে ৫ দিন</string>
     <string name="tips_bmi_185_to_199_other">• প্রতিদিন ७-৮ ঘণ্টা ঘুমান\n• চিনি ও প্রসেসড ফুড এড়িয়ে চলুন\n• বছরে ১ বার চেকআপ করান</string>
 
-    <string name="tips_bmi_20_to_229_title">Your BMI: %.1f — স্বাস্থ্যকর ওজন (আদর্শ সীমা)</string>
+    <string name="tips_bmi_20_to_229_title">আপনার বিএমআই: %.1f — স্বাস্থ্যকর ওজন (আদর্শ সীমা)</string>
     <string name="tips_bmi_20_to_229_target">লক্ষ্য: এই স্বাস্থ্যকর ওজন ধরে রাখুন</string>
     <string name="tips_bmi_20_to_229_diet">• প্রোটিন: দৈনিক ৫০-৬০ গ্রাম\n• শাকসবজি: দৈনিক ৩-৪ ধরনের\n• ফল: দৈনিক ২ টি ফল\n• পানি: ২.৫-৩ লিটার</string>
     <string name="tips_bmi_20_to_229_exercise">• সপ্তাহে ৩-৪ দিন জিম/ব্যায়াম\n• প্রতিদিন ৮,০০০ ধাপ হাঁটা\n• সপ্তাহে ২ দিন বিশ্রাম</string>
     <string name="tips_bmi_20_to_229_other">• সপ্তাহে একবার ওজন চেক করুন\n• BMI ১৮.৫-২৪.৯ এর মধ্যে রাখুন\n• বছরে একবার সম্পূর্ণ স্বাস্থ্য পরীক্ষা করান</string>
 
-    <string name="tips_bmi_23_to_249_title">Your BMI: %.1f — স্বাস্থ্যকর ওজন (উচ্চ সীমা)</string>
+    <string name="tips_bmi_23_to_249_title">আপনার বিএমআই: %.1f — স্বাস্থ্যকর ওজন (উচ্চ সীমা)</string>
     <string name="tips_bmi_23_to_249_target">লক্ষ্য: আর ওজন না বাড়ানো</string>
     <string name="tips_bmi_23_to_249_diet">• সকাল: ওটস/মুড়ি + ফল + দুধ\n• দুপুর: দেড় কাপ ভাত + বেশি সবজি + মাছ\n• বিকেল: চা + আধা প্যাকেট বিস্কুট\n• রাত: ১ কাপ ভাত + সবজি + ডাল</string>
     <string name="tips_bmi_23_to_249_exercise">• প্রতিদিন ১০,০০০ ধাপ হাঁটুন\n• সপ্তাহে ৪ দিন ৪৫ মিনিট ব্যায়াম করুন\n• লিফটের বদলে সিঁড়ি ব্যবহার করুন</string>
     <string name="tips_bmi_23_to_249_other">• মাসে দুইবার ওজন মাপুন\n• কোমর মাপুন (পুরুষ &lt; ৯০ সেমি, নারী &lt; ৮০ সেমি)</string>
 
-    <string name="tips_bmi_25_to_269_title">Your BMI: %.1f — অতিরিক্ত ওজন (হালকা)</string>
+    <string name="tips_bmi_25_to_269_title">আপনার বিএমআই: %.1f — অতিরিক্ত ওজন (হালকা)</string>
     <string name="tips_bmi_25_to_269_target">লক্ষ্য: ৩ মাসে ২-৩ কেজি কমানো</string>
     <string name="tips_bmi_25_to_269_diet">• দৈনিক ৩০০-৪০০ ক্যালরি কমান\n• ভাত কমিয়ে ১ কাপ করুন\n• ভাজাপোড়া ও মিষ্টি এড়িয়ে চলুন\n• রাত ৮টার পর কিছু খাবেন না</string>
     <string name="tips_bmi_25_to_269_exercise">• সকাল: ৩০ মিনিট দ্রুত হাঁটা\n• বিকেল: ৩০ মিনিট সাইক্লিং/জগিং\n• সপ্তাহে ৩ দিন শক্তি প্রশিক্ষণ</string>
     <string name="tips_bmi_25_to_269_other">• দৈনিক ৩-৩.৫ লিটার পানি পান করুন\n• খাবারের ৩০ মিনিট আগে ১ গ্লাস পানি পান করুন</string>
 
-    <string name="tips_bmi_27_to_289_title">Your BMI: %.1f — অতিরিক্ত ওজন (মধ্যম)</string>
+    <string name="tips_bmi_27_to_289_title">আপনার বিএমআই: %.1f — অতিরিক্ত ওজন (মধ্যম)</string>
     <string name="tips_bmi_27_to_289_target">লক্ষ্য: ৪ মাসে ৪-৫ কেজি কমানো</string>
     <string name="tips_bmi_27_to_289_diet">• সকাল: ২টি রুটি + সবজি + ১টি ডিম (কুসুম ছাড়া)\n• দুপুর: ১ কাপ ভাত + ২ কাপ সবজি + ১ কাপ ডাল\n• বিকেল: ১টি ফল + গ্রিন টি\n• রাত: ১ কাপ ভাত + মাছ/মুরগি + সবজির স্যুপ</string>
     <string name="tips_bmi_27_to_289_exercise">• প্রতিদিন ১ ঘণ্টা মাঝারি ব্যায়াম\n• সপ্তাহে ৩ দিন HIIT\n• সপ্তাহে ২ দিন যোগব্যায়াম</string>
     <string name="tips_bmi_27_to_289_other">• এড়িয়ে চলুন: কোল্ড ড্রিংকস, জুস, চিনি\n• এড়িয়ে চলুন: ফাস্টফুড, পিৎজা, বার্গার\n• এড়িয়ে চলুন: ভাজা খাবার, maখন, ঘি</string>
 
-    <string name="tips_bmi_29_to_299_title">Your BMI: %.1f — অতিরিক্ত ওজন (সীমার শেষে)</string>
+    <string name="tips_bmi_29_to_299_title">আপনার বিএমআই: %.1f — অতিরিক্ত ওজন (সীমার শেষে)</string>
     <string name="tips_bmi_29_to_299_target">লক্ষ্য: ৫ মাসে ৬-৭ কেজি কমানো</string>
     <string name="tips_bmi_29_to_299_diet">• Intermittent Fasting (১৬:৮)\n• প্রোটিন বেশি, কার্ব কম (৫০:৩০:২০ অনুপাত)\n• দৈনিক ৪টি ছোট খাবার (বড় খাবার এড়িয়ে চলুন)</string>
     <string name="tips_bmi_29_to_299_exercise">• সকালে খালি পেটে ৩০ মিনিট হাঁটা\n• সপ্তাহে ৪ দিন ৪৫ মিনিট জগিং + ১৫ মিনিট ওয়ার্মআপ\n• সপ্তাহে ২ দিন সাঁতার/সাইক্লিং</string>
     <string name="tips_bmi_29_to_299_other">• প্রতিদিন ওজন ও কোমর ট্র্যাক করুন\n• মাসে দুইবার BMI চেক করুন\n• ২ মাসে কোনো পরিবর্তন না হলে ডাক্তার দেখান</string>
 
-    <string name="tips_bmi_30_to_319_title">Your BMI: %.1f — স্থূলতা শ্রেণি I</string>
+    <string name="tips_bmi_30_to_319_title">আপনার বিএমআই: %.1f — স্থূলতা শ্রেণি I</string>
     <string name="tips_bmi_30_to_319_target">লক্ষ্য: ৬ মাসে ৮-১০ কেজি কমানো</string>
     <string name="tips_bmi_30_to_319_diet">• নারী: দৈনিক ১২০০-১৫০০ ক্যালরি / পুরুষ: ১৫০০-১৮০০ ক্যালরি\n• কার্ব কমিয়ে দিন (১ কাপ ভাত/রুটি)\n• প্রোটিন বাড়ান (মাছ, মুরগি, সয়াবিন)\n• সবজি সীমাহীন</string>
     <string name="tips_bmi_30_to_319_exercise">• হাঁটা দিয়ে শুরু করুন (দৈনিক ২০-৩০ মিনিট)\n• ১ মাস পর হালকা জগিং শুরু করুন\n• জয়েন্টে চাপ এড়িয়ে চলুন\n• সাঁতার সবচেয়ে ভালো</string>
     <string name="tips_bmi_30_to_319_other">• ডাক্তার ও পুষ্টিবিদের পরামর্শ নিন\n• সুগার, কোলেস্টেরল, থাইরয়েড পরীক্ষা করান\n• লক্ষ্য: BMI ২৫-এর নিচে আনা</string>
 
-    <string name="tips_bmi_32_to_349_title">Your BMI: %.1f — স্থূলতা শ্রেণি I (মধ্যম)</string>
+    <string name="tips_bmi_32_to_349_title">আপনার বিএমআই: %.1f — স্থূলতা শ্রেণি I (মধ্যম)</string>
     <string name="tips_bmi_32_to_349_emergency">উচ্চ ঝুঁকি: উচ্চ রক্তচাপ, ডায়াবেটিস, হৃদরোগ, স্লিপ অ্যাপনিয়া, জয়েন্টে ব্যথা</string>
     <string name="tips_bmi_32_to_349_target">লক্ষ্য: প্রতি মাসে ২-৩ কেজি কমানো</string>
     <string name="tips_bmi_32_to_349_diet">• ১০০০-১২০০ ক্যালরি ডায়েট (ডাক্তারের তত্ত্বাবধানে)\n• কম কার্ব, উচ্চ প্রোটিন ডায়েট\n• তেল, মাখন, ঘি বাদ\n• চিনি সম্পূর্ণ বাদ</string>
     <string name="tips_bmi_32_to_349_exercise">• ২০ মিনিট হাঁটা দিয়ে শুরু করুন\n• ধীরে ধীরে ৪৫ মিনিটে বাড়ান\n• পানির ব্যায়াম/সাঁতার সবচেয়ে নিরাপদ\n• লিফটের বদলে সিঁড়ি ব্যবহার করুন</string>
     <string name="tips_bmi_32_to_349_other">• মাসিক ডাক্তার দেখানো বাধ্যতামূলক\n• খুব দ্রুত ওজন কমানো যাবে না\n• ভিটামিন ও খনিজ সাপ্লিমেন্ট</string>
 
-    <string name="tips_bmi_35_to_399_title">Your BMI: %.1f — স্থূলতা শ্রেণি II</string>
+    <string name="tips_bmi_35_to_399_title">আপনার বিএমআই: %.1f — স্থূলতা শ্রেণি II</string>
     <string name="tips_bmi_35_to_399_emergency">গুরুতর স্বাস্থ্য ঝুঁকি — এখনই ব্যবস্থা নিন!</string>
     <string name="tips_bmi_35_to_399_medical">• অবিলম্বে মেডিসিন বিশেষজ্ঞ দেখুন\n• এন্ডোক্রাইনোলজিস্ট ও ডায়েটিশিয়ানের পরামর্শ নিন\n• সম্পূর্ণ রক্তের প্রোফাইল পরীক্ষা করান\n• ইকোকার্ডিওগ্রাম ও সুগার প্রোফাইল করান</string>
     <string name="tips_bmi_35_to_399_diet">• ৮০০-১০০০ ক্যালরি ডায়েট (খুব কম ক্যালরি)\n• মেডিকেল শেক বা বিশেষ খাবার\n• খুব কম কার্ব (দৈনিক ৫০ গ্রাম)\n• প্রোটিন শেক ও ভিটামিন সাপ্লিমেন্ট</string>
     <string name="tips_bmi_35_to_399_exercise">• গাইডেড প্রোগ্রামে যোগ দিন\n• পানি থেরাপি/সাঁতার দিয়ে শুরু করুন\n• ধীরে ধীরে হাঁটা + শক্তি প্রশিক্ষণ যোগ করুন\n• কোনো উচ্চ-প্রप्रभाव ব্যায়াম নয়</string>
     <string name="tips_bmi_35_to_399_other">• ওজন কমানোর ওষুধ (ডাক্তারের প্রেসক্রিপশনে)\n• নিবিড় জীবনযাত্রার পরিবর্তন\n• প্রয়োজনে বারিয়াট্রিক সার্জারি বিবেচনা করুন</string>
 
-    <string name="tips_bmi_40_plus_title">Your BMI: %.1f — স্থূলতা শ্রেণি III (গুরুতর)</string>
+    <string name="tips_bmi_40_plus_title">আপনার বিএমআই: %.1f — স্থূলতা শ্রেণি III (গুরুতর)</string>
     <string name="tips_bmi_40_plus_emergency">🔴 জরুরি! এটি একটি গুরুতর স্বাস্থ্য পরিস্থিতি</string>
     <string name="tips_bmi_40_plus_medical">• ২৪ ঘণ্টার মধ্যে হাসপাতালের মেডিসিন বিভাগে যোগাযোগ করুন\n• কার্ডিওলজিস্ট ও ডায়াবেটোলজিস্ট দেখান\n• লক্ষ্য: BMI ৩৫-এর নিচে আনা\n• पारिवारिक চিকিৎসকের নিয়মিত ফলোআপ</string>
     <string name="tips_bmi_40_plus_tests">• এইচবিএ১সি (ডায়াবেটিস)\n• লিপিড প্রোফাইল (কোলেস্টেরল)\n• লিভার ফাংশন টেস্ট\n• থাইরয়েড প্রোফাইল\n• ইসিজি ও ২ডি ইকো</string>
