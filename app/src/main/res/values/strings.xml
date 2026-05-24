@@ -97,7 +97,7 @@
     <string name="ad">Ad</string>
     <string name="install">Install</string>
 
-    <string name="btn_health_tips">Your Health Tips</string>
+    <string name="btn_health_tips"> Health Tips</string>
     <string name="health_tips_title">💡 Your Health Tips</string>
     <string name="bmi_summary">BMI Summary</string>
     <string name="detailed_tips">📋 Detailed Tips</string>

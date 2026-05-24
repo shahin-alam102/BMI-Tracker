@@ -97,7 +97,7 @@
     <string name="ad">বিজ্ঞাপন</string>
     <string name="install">ইনস্টল</string>
 
-    <string name="btn_health_tips">আপনার স্বাস্থ্য পরামর্শ</string>
+    <string name="btn_health_tips">স্বাস্থ্য পরামর্শ</string>
     <string name="health_tips_title">💡 আপনার স্বাস্থ্য পরামর্শ</string>
     <string name="bmi_summary">বিএমআই সারাংশ</string>
     <string name="detailed_tips">📋 বিস্তারিত পরামর্শ</string>
