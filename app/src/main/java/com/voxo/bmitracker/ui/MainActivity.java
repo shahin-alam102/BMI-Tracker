@@ -106,7 +106,7 @@ public class MainActivity extends BaseActivity {
                 String localizedCategory = databaseCategory;
 
                 if (databaseCategory.equalsIgnoreCase("Very Severely Underweight")) {
-                    localizedCategory = getString(R.string.status_very_severely_underweight);
+                    localizedCategory = getString(R.string.very_severely_underweight);
                 } else if (databaseCategory.equalsIgnoreCase("Severely Underweight")) {
                     localizedCategory = getString(R.string.status_severely_underweight);
                 } else if (databaseCategory.equalsIgnoreCase("Underweight")) {
@@ -553,8 +553,18 @@ public class MainActivity extends BaseActivity {
                 startActivity(intent);
             }
         } else if (itemId == R.id.menu_health_tips) {
-            Intent intent = new Intent(MainActivity.this, HealthTipsActivity.class);
-            startActivity(intent);
+            interstitialClickCount++; //
+            if (interstitialClickCount >= 3) {
+                interstitialClickCount = 0;
+                showInterstitialAd(() -> {
+                    Intent intent = new Intent(MainActivity.this, HealthTipsActivity.class);
+                    startActivity(intent);
+                });
+            } else {
+                Intent intent = new Intent(MainActivity.this, HealthTipsActivity.class);
+                startActivity(intent);
+            }
+
         } else if (itemId == R.id.menu_settings) {
             startActivity(new Intent(this, SettingsActivity.class));
         } else if (itemId == R.id.menu_about) {

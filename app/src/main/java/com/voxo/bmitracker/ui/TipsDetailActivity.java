@@ -1,57 +1,56 @@
 package com.voxo.bmitracker.ui;
 
 import android.os.Bundle;
-import android.widget.TextView;
-
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
-
 import com.voxo.bmitracker.R;
+import com.voxo.bmitracker.databinding.ActivityTipsDetailBinding;
 
 public class TipsDetailActivity extends BaseActivity {
+
+
+    private ActivityTipsDetailBinding binding;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_tips_detail);
 
-        Toolbar toolbar = findViewById(R.id.toolbarDetail);
-        setSupportActionBar(toolbar);
+        binding = ActivityTipsDetailBinding.inflate(getLayoutInflater());
+        setContentView(binding.getRoot());
+
+        setSupportActionBar(binding.toolbarDetail);
         if (getSupportActionBar() != null) {
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         }
-        toolbar.setNavigationOnClickListener(v -> onBackPressed());
+        binding.toolbarDetail.setNavigationOnClickListener(v -> onBackPressed());
 
-        TextView tvTitle = findViewById(R.id.tvDetailTitle);
-        TextView tvContent = findViewById(R.id.tvDetailContent);
+        if (binding != null) {
+            loadBannerAd(binding.adViewTips);
+        }
 
-        // কোন ক্যাটাগরি ক্লিক হয়েছে তা রিসিভ করা
         String category = getIntent().getStringExtra("CATEGORY_KEY");
-
         if (category != null) {
             switch (category) {
                 case "loss":
                     if (getSupportActionBar() != null) {
-                        getSupportActionBar().setTitle(R.string.title_weight_loss); // getString() ছাড়া সরাসরি আইডি
+                        getSupportActionBar().setTitle(R.string.title_weight_loss);
                     }
-                    tvTitle.setText(R.string.title_weight_loss); // সরাসরি আইডি
-                    tvContent.setText(R.string.content_weight_loss); // সরাসরি আইডি
+                    binding.tvDetailTitle.setText(R.string.title_weight_loss);
+                    binding.tvDetailContent.setText(R.string.content_weight_loss);
                     break;
 
                 case "gain":
                     if (getSupportActionBar() != null) {
                         getSupportActionBar().setTitle(R.string.title_weight_gain);
                     }
-                    tvTitle.setText(R.string.title_weight_gain);
-                    tvContent.setText(R.string.content_weight_gain);
+                    binding.tvDetailTitle.setText(R.string.title_weight_gain);
+                    binding.tvDetailContent.setText(R.string.content_weight_gain);
                     break;
 
                 case "healthy":
                     if (getSupportActionBar() != null) {
                         getSupportActionBar().setTitle(R.string.title_healthy_living);
                     }
-                    tvTitle.setText(R.string.title_healthy_living);
-                    tvContent.setText(R.string.content_healthy_living);
+                    binding.tvDetailTitle.setText(R.string.title_healthy_living);
+                    binding.tvDetailContent.setText(R.string.content_healthy_living);
                     break;
             }
         }
