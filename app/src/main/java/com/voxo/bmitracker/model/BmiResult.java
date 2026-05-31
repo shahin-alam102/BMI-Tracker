@@ -40,4 +40,6 @@ public class BmiResult {
     public int getDiffColor() {
         return diffColor;
     }
+
+
 }

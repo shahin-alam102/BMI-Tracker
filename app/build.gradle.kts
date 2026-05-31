@@ -34,6 +34,10 @@ android {
     buildFeatures {
         viewBinding = true
     }
+
+    testOptions {
+        unitTests.isReturnDefaultValues = true
+    }
 }
 
 dependencies {
@@ -53,5 +57,8 @@ dependencies {
     implementation(libs.room.runtime)
     annotationProcessor(libs.room.compiler)
     implementation (libs.play.services.ads)
+    testImplementation ("junit:junit:4.13.2")
+    testImplementation ("com.google.truth:truth:1.4.2")
+    testImplementation ("androidx.arch.core:core-testing:2.2.0")
 
 }
