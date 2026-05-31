@@ -141,7 +141,7 @@ public class HistoryAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
                 } else if (lowerStatus.contains("underweight")) {
                     localizedStatus = context.getString(R.string.status_underweight);
                 } else if (lowerStatus.contains("healthy")) {
-                    localizedStatus = context.getString(R.string.status_healthy);
+                    localizedStatus = context.getString(R.string.healthy_weight);
                 } else if (lowerStatus.contains("overweight")) {
                     localizedStatus = context.getString(R.string.status_overweight);
                 } else if (databaseStatus.contains("III") || databaseStatus.contains("3")) {

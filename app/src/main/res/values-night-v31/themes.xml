@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Base.Theme.BMITracker" parent="Theme.Material3.DayNight.NoActionBar">
+            <item name="android:windowSplashScreenAnimationDuration">1000</item>
+            <item name="android:windowSplashScreenAnimatedIcon">@mipmap/ic_launcher</item>
+            <item name="android:windowSplashScreenBackground">@color/screen_bg</item>
+
+        <!-- Primary brand color -->
+        <item name="colorPrimary">@color/appBar_background</item>
+        <item name="colorOnPrimary">@color/black</item>
+
+        <!-- Surface colors -->
+        <item name="colorSurface">@color/spinner_popup_background</item>
+        <item name="colorSurfaceVariant">@color/spinner_popup_background</item>
+        <item name="colorOnSurface">@color/text_main</item>
+        <item name="colorOnSurfaceVariant">@color/text_secondary_dynamic</item>
+        <item name="colorOutline">@color/spinner_text_soft</item>
+
+        <!-- Background -->
+        <item name="android:windowBackground">#121212</item>
+
+        <!-- Text colors -->
+        <item name="android:textColorPrimary">@color/text_main</item>
+        <item name="android:textColorSecondary">@color/text_secondary_dynamic</item>
+
+        <!-- Other -->
+        <item name="android:colorControlHighlight">@color/spinner_ripple_soft</item>
+        <item name="fontFamily">@font/noto_sans_bengali_regular</item>
+        <item name="android:fontFamily">@font/noto_sans_bengali_regular</item>
+    </style>
+</resources>
