@@ -1,4 +1,4 @@
-package com.voxo.bmitracker.ui;
+package com.voxo.primebmitracker.ui;
 
 import android.content.Context;
 import android.content.SharedPreferences;

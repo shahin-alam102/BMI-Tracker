@@ -1,6 +1,6 @@
-package com.voxo.bmitracker;
+package com.voxo.primebmitracker;
 
-import com.voxo.bmitracker.ui.BaseActivity;
+import com.voxo.primebmitracker.ui.BaseActivity;
 
 import android.app.Application;
 

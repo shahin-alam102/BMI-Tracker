@@ -1,11 +1,11 @@
-package com.voxo.bmitracker.ui;
+package com.voxo.primebmitracker.ui;
 
 import android.content.Intent;
 import android.os.Bundle;
-import androidx.appcompat.app.AppCompatActivity;
+
 import androidx.appcompat.widget.Toolbar;
 import androidx.cardview.widget.CardView;
-import com.voxo.bmitracker.R;
+import com.voxo.primebmitracker.R;
 
 public class HealthTipsActivity extends BaseActivity {
 

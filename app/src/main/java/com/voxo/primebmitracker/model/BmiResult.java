@@ -1,4 +1,4 @@
-package com.voxo.bmitracker.model;
+package com.voxo.primebmitracker.model;
 
 public class BmiResult {
     private final float bmi;

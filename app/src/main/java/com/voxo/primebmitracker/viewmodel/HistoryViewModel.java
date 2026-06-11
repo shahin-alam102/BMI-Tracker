@@ -1,4 +1,4 @@
-package com.voxo.bmitracker.viewmodel;
+package com.voxo.primebmitracker.viewmodel;
 
 import android.content.Context;
 
@@ -8,12 +8,12 @@ import androidx.lifecycle.Transformations;
 import androidx.lifecycle.ViewModel;
 
 import com.google.gson.Gson;
-import com.voxo.bmitracker.data.BmiHistoryMapper;
-import com.voxo.bmitracker.data.BmiHistoryMigrationHelper;
-import com.voxo.bmitracker.data.local.AppDatabase;
-import com.voxo.bmitracker.data.local.BmiHistoryDao;
-import com.voxo.bmitracker.data.local.BmiHistoryEntity;
-import com.voxo.bmitracker.model.BmiHistory;
+import com.voxo.primebmitracker.data.BmiHistoryMapper;
+import com.voxo.primebmitracker.data.BmiHistoryMigrationHelper;
+import com.voxo.primebmitracker.data.local.AppDatabase;
+import com.voxo.primebmitracker.data.local.BmiHistoryDao;
+import com.voxo.primebmitracker.data.local.BmiHistoryEntity;
+import com.voxo.primebmitracker.model.BmiHistory;
 
 import java.util.ArrayList;
 import java.util.Collections;

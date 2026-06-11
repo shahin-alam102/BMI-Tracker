@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">বিএমআই ট্র্যাকার</string>
+    <string name="app_name">প্রাইম বিএমআই ট্র্যাকার</string>
     <string name="bmi_calculator">বিএমআই ক্যালকুলেটর</string>
     <string name="reset">রিসেট</string>
     <string name="menu">Menu</string>

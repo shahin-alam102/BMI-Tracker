@@ -1,8 +1,8 @@
-package com.voxo.bmitracker.ui;
+package com.voxo.primebmitracker.ui;
 
 import android.os.Bundle;
-import com.voxo.bmitracker.R;
-import com.voxo.bmitracker.databinding.ActivityHealthTipsAccordingBmiBinding;
+import com.voxo.primebmitracker.R;
+import com.voxo.primebmitracker.databinding.ActivityHealthTipsAccordingBmiBinding;
 
 public class HealthTipsAccordingBmiActivity extends BaseActivity {
 

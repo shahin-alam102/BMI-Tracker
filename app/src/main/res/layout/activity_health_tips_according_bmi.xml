@@ -66,7 +66,7 @@
                     android:layout_height="wrap_content"
                     android:text="@string/bmi_summary"
                     android:textSize="18sp"
-                    android:textColor="#666666"
+                    android:textColor="@color/text_dynamic"
                     android:fontFamily="@font/noto_sans_bengali_regular" />
 
                 <TextView
@@ -113,7 +113,7 @@
                     android:text="@string/detailed_tips"
                     android:textSize="16sp"
                     android:textStyle="bold"
-                    android:textColor="#333333"
+                    android:textColor="@color/text_dynamic"
                     android:fontFamily="@font/noto_sans_bengali_regular"
                     android:layout_marginBottom="12dp" />
 
@@ -123,7 +123,7 @@
                     android:layout_height="wrap_content"
                     android:text=""
                     android:textSize="14sp"
-                    android:textColor="#555555"
+                    android:textColor="@color/text_dynamic"
                     android:lineSpacingExtra="6dp"
                     android:fontFamily="@font/noto_sans_bengali_regular" />
 

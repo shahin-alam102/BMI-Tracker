@@ -1,10 +1,10 @@
-package com.voxo.bmitracker.viewmodel;
+package com.voxo.primebmitracker.viewmodel;
 
 import static com.google.common.truth.Truth.assertThat;
 
 import androidx.arch.core.executor.testing.InstantTaskExecutorRule;
 
-import com.voxo.bmitracker.model.BmiResult;
+import com.voxo.primebmitracker.model.BmiResult;
 
 import org.junit.Before;
 import org.junit.Rule;

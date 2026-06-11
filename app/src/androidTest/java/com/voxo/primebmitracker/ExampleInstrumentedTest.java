@@ -1,4 +1,4 @@
-package com.voxo.bmitracker;
+package com.voxo.primebmitracker;
 
 import android.content.Context;
 

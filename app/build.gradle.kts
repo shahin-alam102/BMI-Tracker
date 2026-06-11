@@ -3,11 +3,11 @@ plugins {
 }
 
 android {
-    namespace = "com.voxo.bmitracker"
+    namespace = "com.voxo.primebmitracker"
     compileSdk = 36
 
     defaultConfig {
-        applicationId = "com.voxo.bmitracker"
+        applicationId = "com.voxo.primebmitracker"
         minSdk = 24
         targetSdk = 36
         versionCode = 1

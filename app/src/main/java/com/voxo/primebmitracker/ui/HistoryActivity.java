@@ -1,4 +1,4 @@
-package com.voxo.bmitracker.ui;
+package com.voxo.primebmitracker.ui;
 
 import android.os.Bundle;
 import android.view.MenuItem;
@@ -15,10 +15,10 @@ import androidx.recyclerview.widget.ItemTouchHelper;
 
 import com.google.android.gms.ads.AdLoader;
 import com.google.android.gms.ads.AdRequest;
-import com.voxo.bmitracker.R;
-import com.voxo.bmitracker.databinding.ActivityHistoryBinding;
-import com.voxo.bmitracker.model.BmiHistory;
-import com.voxo.bmitracker.viewmodel.HistoryViewModel;
+import com.voxo.primebmitracker.R;
+import com.voxo.primebmitracker.databinding.ActivityHistoryBinding;
+import com.voxo.primebmitracker.model.BmiHistory;
+import com.voxo.primebmitracker.viewmodel.HistoryViewModel;
 
 import java.util.ArrayList;
 import java.util.List;

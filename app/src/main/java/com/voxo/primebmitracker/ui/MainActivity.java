@@ -1,4 +1,4 @@
-package com.voxo.bmitracker.ui;
+package com.voxo.primebmitracker.ui;
 
 import android.content.Intent;
 import android.content.res.Configuration;
@@ -8,19 +8,18 @@ import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.View;
 import android.view.MenuItem;
-import android.widget.Button;
 import android.widget.PopupMenu;
-import com.voxo.bmitracker.R;
+import com.voxo.primebmitracker.R;
 import android.widget.TextView;
 import android.widget.TableRow;
 import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.lifecycle.ViewModelProvider;
 import com.github.anastr.speedviewlib.components.Section;
-import com.voxo.bmitracker.databinding.ActivityMainBinding;
-import com.voxo.bmitracker.model.BmiHistory;
-import com.voxo.bmitracker.viewmodel.BmiViewModel;
-import com.voxo.bmitracker.viewmodel.HistoryViewModel;
+import com.voxo.primebmitracker.databinding.ActivityMainBinding;
+import com.voxo.primebmitracker.model.BmiHistory;
+import com.voxo.primebmitracker.viewmodel.BmiViewModel;
+import com.voxo.primebmitracker.viewmodel.HistoryViewModel;
 import java.util.Locale;
 
 public class MainActivity extends BaseActivity {
@@ -580,7 +579,7 @@ public class MainActivity extends BaseActivity {
         Toast.makeText(this, message, Toast.LENGTH_SHORT).show();
     }
 
-    private void saveToHistory(com.voxo.bmitracker.model.BmiResult result) {
+    private void saveToHistory(com.voxo.primebmitracker.model.BmiResult result) {
         BmiHistory history = new BmiHistory(
                 result.getBmi(),
                 result.getCategory(),

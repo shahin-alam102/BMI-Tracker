@@ -1,4 +1,4 @@
-package com.voxo.bmitracker.model;
+package com.voxo.primebmitracker.model;
 
 import java.io.Serializable;
 import java.text.SimpleDateFormat;

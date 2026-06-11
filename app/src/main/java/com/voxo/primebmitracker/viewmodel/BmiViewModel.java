@@ -1,4 +1,4 @@
-package com.voxo.bmitracker.viewmodel;
+package com.voxo.primebmitracker.viewmodel;
 
 import android.graphics.Color;
 
@@ -6,7 +6,7 @@ import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
-import com.voxo.bmitracker.model.BmiResult;
+import com.voxo.primebmitracker.model.BmiResult;
 
 import java.util.Locale;
 

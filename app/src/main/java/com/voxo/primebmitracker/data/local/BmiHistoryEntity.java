@@ -1,4 +1,4 @@
-package com.voxo.bmitracker.data.local;
+package com.voxo.primebmitracker.data.local;
 
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;

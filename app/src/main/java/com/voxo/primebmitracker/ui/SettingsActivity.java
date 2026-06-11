@@ -1,4 +1,4 @@
-package com.voxo.bmitracker.ui;
+package com.voxo.primebmitracker.ui;
 
 import android.content.SharedPreferences;
 import android.content.res.Configuration;
@@ -10,7 +10,7 @@ import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 
-import com.voxo.bmitracker.R;
+import com.voxo.primebmitracker.R;
 
 import java.util.Locale;
 import java.util.Objects;

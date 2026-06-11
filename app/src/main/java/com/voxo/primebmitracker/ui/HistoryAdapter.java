@@ -1,4 +1,4 @@
-package com.voxo.bmitracker.ui;
+package com.voxo.primebmitracker.ui;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -14,8 +14,8 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.android.gms.ads.nativead.NativeAd;
 import com.google.android.gms.ads.nativead.NativeAdView;
-import com.voxo.bmitracker.R;
-import com.voxo.bmitracker.model.BmiHistory;
+import com.voxo.primebmitracker.R;
+import com.voxo.primebmitracker.model.BmiHistory;
 
 import java.util.ArrayList;
 import java.util.List;

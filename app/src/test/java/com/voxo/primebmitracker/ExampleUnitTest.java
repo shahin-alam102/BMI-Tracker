@@ -1,4 +1,4 @@
-package com.voxo.bmitracker;
+package com.voxo.primebmitracker;
 
 import org.junit.Test;
 

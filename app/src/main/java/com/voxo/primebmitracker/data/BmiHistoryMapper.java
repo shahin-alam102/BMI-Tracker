@@ -1,7 +1,7 @@
-package com.voxo.bmitracker.data;
+package com.voxo.primebmitracker.data;
 
-import com.voxo.bmitracker.data.local.BmiHistoryEntity;
-import com.voxo.bmitracker.model.BmiHistory;
+import com.voxo.primebmitracker.data.local.BmiHistoryEntity;
+import com.voxo.primebmitracker.model.BmiHistory;
 
 public final class BmiHistoryMapper {
 

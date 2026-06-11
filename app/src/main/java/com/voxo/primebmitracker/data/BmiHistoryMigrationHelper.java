@@ -1,12 +1,12 @@
-package com.voxo.bmitracker.data;
+package com.voxo.primebmitracker.data;
 
 import android.content.Context;
 import android.content.SharedPreferences;
 
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
-import com.voxo.bmitracker.data.local.BmiHistoryDao;
-import com.voxo.bmitracker.model.BmiHistory;
+import com.voxo.primebmitracker.data.local.BmiHistoryDao;
+import com.voxo.primebmitracker.model.BmiHistory;
 
 import java.lang.reflect.Type;
 import java.util.ArrayList;
